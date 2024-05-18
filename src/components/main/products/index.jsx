@@ -3,7 +3,7 @@ import './style.scss'
 
 const ProductsItem = () => {
     return (
-        <div>Iteam</div>
+        <div>Item</div>
     )
 }
 export default ProductsItem

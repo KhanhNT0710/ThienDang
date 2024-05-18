@@ -1,0 +1,372 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "imgProductId": 1,
+      "category": "Trang Trí Để Bàn",
+      "categoryId": 1,
+      "imgURL": "https://tamshoppe.vn/Thumb/Web/Resources/Uploaded/2/images/san-pham/do-go/chu-HOME-go-vintage-bac-au-15cm-8_w400_h300.jpg",
+      "name": "Chữ HOME gỗ Vintage Bắc Âu 15cm",
+      "brands": "Wood vintage",
+      "price": 280000,
+      "style": {
+        "style1": "Mẫu rời",
+        "style2": "Mẫu dính liền"
+      },
+      "productDetail": "<p>abc<p>",
+      "evaluate": 3
+    },
+    {
+      "id": 2,
+      "imgProductId": 2,
+      "category": "Trang Trí Sinh Nhật",
+      "categoryId": 5,
+      "imgURL": "https://tamshoppe.vn/Thumb/Web/Resources/Uploaded/2/images/san-pham/Party/set-trang-tri-sinh-nhat-hpbd-ngoi-sao-vang-bac-1_w400_h300.jpeg",
+      "name": "Set bóng sinh nhật HPBD ngôi sao vàng bạc",
+      "brands": "Wood vintage",
+      "price": 140000,
+      "style": {
+        "style1": "Mẫu rời",
+        "style2": "Mẫu dính liền"
+      },
+      "productDetail": "<p>abc<p>"
+    },
+    {
+      "id": 3,
+      "imgProductId": 3,
+      "category": "Đèn Xông Tinh Dầu",
+      "categoryId": 3,
+      "imgURL": "https://tamshoppe.vn/Thumb/Web/Resources/Uploaded/2/images/san-pham/Den-tinh-dau/may-khuech-tan-tinh-dau-ngon-lua-don-gian-1_w400_h300.jpg",
+      "name": "Máy khuếch tán tinh dầu ngọn lửa đơn giản ",
+      "brands": "Wood vintage",
+      "price": 360000,
+      "style": {
+        "style1": "Mẫu rời",
+        "style2": "Mẫu dính liền"
+      },
+      "productDetail": "<p>abc<p>"
+    },
+    {
+      "id": 4,
+      "imgProductId": 4,
+      "category": "Trang Trí Dạng Treo",
+      "categoryId": 2,
+      "imgURL": "https://tamshoppe.vn/Thumb/Web/Resources/Uploaded/2/images/san-pham/Lam-theo-yeu-cau/bang-hieu-go-hinh-lat-cat-xe-doc-than-cay-1_w400_h300.jpg",
+      "name": "Bảng hiệu gỗ hình lát cắt xẻ dọc thân cây",
+      "brands": "Wood vintage",
+      "price": 1500000,
+      "style": {
+        "style1": "Mẫu rời",
+        "style2": "Mẫu dính liền"
+      },
+      "productDetail": "<p>abc<p>"
+    },
+    {
+      "id": 5,
+      "imgProductId": 5,
+      "category": "Trang Trí Dạng Treo",
+      "categoryId": 2,
+      "imgURL": "https://tamshoppe.vn/Thumb/Web/Resources/Uploaded/2/images/san-pham/Lam-theo-yeu-cau/bang-hieu-go-hinh-lat-cat-xe-doc-than-cay-1_w400_h300.jpg",
+      "name": "Bảng hiệu gỗ hình lát cắt xẻ dọc thân cây",
+      "brands": "Wood vintage",
+      "price": 1500000,
+      "style": {
+        "style1": "Mẫu rời",
+        "style2": "Mẫu dính liền"
+      },
+      "productDetail": "<p>abc<p>"
+    },
+    {
+      "id": 6,
+      "imgProductId": 6,
+      "category": "Đèn Led Trang Trí",
+      "categoryId": 4,
+      "imgURL": "https://tamshoppe.vn/Thumb/Web/Resources/Uploaded/2/images/san-pham/Lam-theo-yeu-cau/bang-hieu-go-den-led-chu-nhat-bo-goc-16_w400_h300.jpg",
+      "name": "Bảng hiệu gỗ đèn Led chữ nhật bo góc",
+      "brands": "Wood vintage",
+      "price": 1000000,
+      "style": {
+        "style1": "Mẫu rời",
+        "style2": "Mẫu dính liền"
+      },
+      "productDetail": "<p>abc<p>"
+    },
+    {
+      "id": 7,
+      "imgProductId": 7,
+      "category": "Đồ Hand Made",
+      "categoryId": 6,
+      "imgURL": "https://tamshoppe.vn/Thumb/Web/Resources/Uploaded/2/images/san-pham/Lam-theo-yeu-cau/chu-go-vien-day-thung-theo-yeu-cau-2_w400_h300.jpg",
+      "name": "Chữ gỗ viền dây thừng",
+      "brands": "Wood vintage",
+      "price": 300000,
+      "style": {
+        "style1": "Mẫu rời",
+        "style2": "Mẫu dính liền"
+      },
+      "productDetail": "<p>abc<p>"
+    },
+    {
+      "id": 8,
+      "imgProductId": 8,
+      "category": "Quà Tặng",
+      "categoryId": 8,
+      "imgURL": "https://tamshoppe.vn/Thumb/Web/Resources/Uploaded/2/images/san-pham/Hoa-gia/hu-hoa-kho-lavender-that-thom-phong-6_w400_h300.jpg",
+      "name": "Hủ hoa khô Lavender thật thơm phòng",
+      "brands": "Wood vintage",
+      "price": 70000,
+      "style": {
+        "style1": "Mẫu rời",
+        "style2": "Mẫu dính liền"
+      },
+      "productDetail": "<p>abc<p>",
+      "evaluate": 3
+    },
+    {
+      "id": 9,
+      "imgProductId": 9,
+      "category": "Đồ Phong Thuỷ",
+      "categoryId": 7,
+      "imgURL": "https://tramthienvanhuong.com/duthi3.JPG",
+      "name": "Trầm cảnh để bàn",
+      "brands": "Wood vintage",
+      "price": 1200000,
+      "style": {
+        "style1": "Mẫu rời",
+        "style2": "Mẫu dính liền"
+      },
+      "productDetail": "<p>abc<p>"
+    },
+    {
+      "id": 10,
+      "imgProductId": 10,
+      "category": "Quà Tặng",
+      "categoryId": 8,
+      "imgURL": "https://tamshoppe.vn/Thumb/Web/Resources/Uploaded/2/images/san-pham/Hoa-gia/hu-hoa-kho-lavender-that-thom-phong-6_w400_h300.jpg",
+      "name": "Hủ hoa khô Lavender thật thơm phòng",
+      "brands": "Wood vintage",
+      "price": 70000,
+      "style": {
+        "style1": "Mẫu rời",
+        "style2": "Mẫu dính liền"
+      },
+      "productDetail": "<p>abc<p>"
+    },
+    {
+      "id": 11,
+      "imgProductId": 11,
+      "category": "Đèn Led Trang Trí",
+      "categoryId": 4,
+      "imgURL": "https://tamshoppe.vn/Thumb/Web/Resources/Uploaded/2/images/san-pham/Lam-theo-yeu-cau/bang-hieu-go-den-led-chu-nhat-bo-goc-16_w400_h300.jpg",
+      "name": "Bảng hiệu gỗ đèn Led chữ nhật bo góc",
+      "brands": "Wood vintage",
+      "price": 1000000,
+      "style": {
+        "style1": "Mẫu rời",
+        "style2": "Mẫu dính liền"
+      },
+      "productDetail": "<p>abc<p>"
+    },
+    {
+      "id": 12,
+      "imgProductId": 12,
+      "category": "Đèn Xông Tinh Dầu",
+      "categoryId": 3,
+      "imgURL": "https://tamshoppe.vn/Thumb/Web/Resources/Uploaded/2/images/san-pham/Den-tinh-dau/may-khuech-tan-tinh-dau-ngon-lua-don-gian-1_w400_h300.jpg",
+      "name": "Máy khuếch tán tinh dầu ngọn lửa đơn giản ",
+      "brands": "Wood vintage",
+      "price": 360000,
+      "style": {
+        "style1": "Mẫu rời",
+        "style2": "Mẫu dính liền"
+      },
+      "productDetail": "<p>abc<p>"
+    },
+    {
+      "id": 13,
+      "imgProductId": 13,
+      "category": "Đồ Hand Made",
+      "categoryId": 6,
+      "imgURL": "https://tamshoppe.vn/Thumb/Web/Resources/Uploaded/2/images/san-pham/Lam-theo-yeu-cau/chu-go-vien-day-thung-theo-yeu-cau-2_w400_h300.jpg",
+      "name": "Chữ gỗ viền dây thừng",
+      "brands": "Wood vintage",
+      "price": 300000,
+      "style": {
+        "style1": "Mẫu rời",
+        "style2": "Mẫu dính liền"
+      },
+      "productDetail": "<p>abc<p>"
+    },
+    {
+      "id": 14,
+      "imgProductId": 14,
+      "category": "Đồ Hand Made",
+      "categoryId": 6,
+      "imgURL": "https://tamshoppe.vn/Thumb/Web/Resources/Uploaded/2/images/san-pham/Lam-theo-yeu-cau/chu-go-vien-day-thung-theo-yeu-cau-2_w400_h300.jpg",
+      "name": "Chữ gỗ viền dây thừng",
+      "brands": "Wood vintage",
+      "price": 300000,
+      "style": {
+        "style1": "Mẫu rời",
+        "style2": "Mẫu dính liền"
+      },
+      "productDetail": "<p>abc<p>"
+    },
+    {
+      "id": 15,
+      "imgProductId": 15,
+      "category": "Quà Tặng",
+      "categoryId": 8,
+      "imgURL": "https://admin.tamshoppe.vn/Web/Resources/Uploaded/2/images/san-pham/Tong-hop/tam-go-lo-thuy-tinh-treo-tuong-thuy-canh-nau-den-rustic-5.jpg",
+      "name": "Tấm gỗ lọ thủy tinh treo tường thủy canh nâu đen Rustic ",
+      "brands": "Wood vintage",
+      "price": 90000,
+      "style": {
+        "style1": "Mẫu rời",
+        "style2": "Mẫu dính liền"
+      },
+      "productDetail": "<p>abc<p>"
+    },
+    {
+      "id": 16,
+      "imgProductId": 16,
+      "category": "Đèn Xông Tinh Dầu",
+      "categoryId": 3,
+      "imgURL": "https://tamshoppe.vn/Thumb/Web/Resources/Uploaded/2/images/san-pham/Den-tinh-dau/den-dot-nen-thom-de-go-chup-kim-loai-hinh-non-7_w400_h300.jpg",
+      "name": "Đèn đốt nến thơm đế gỗ chụp kim loại hình nón",
+      "brands": "Wood vintage",
+      "price": 400000,
+      "style": {
+        "style1": "Mẫu rời",
+        "style2": "Mẫu dính liền"
+      },
+      "productDetail": "<p>abc<p>"
+    }
+  ],
+  "imgsProducts": [
+    {
+      "id": 1,
+      "imgProduct1": "https://tamshoppe.vn/Thumb/Web/Resources/Uploaded/2/images/san-pham/do-go/chu-HOME-go-vintage-bac-au-15cm-11_w800_h600.jpg",
+      "imgProduct2": "https://tamshoppe.vn/Thumb/Web/Resources/Uploaded/2/images/san-pham/do-go/chu-HOME-go-vintage-bac-au-15cm-10_w400_h300.jpg",
+      "imgProduct3": "https://tamshoppe.vn/Thumb/Web/Resources/Uploaded/2/images/san-pham/do-go/chu-HOME-go-vintage-bac-au-15cm-9_w400_h300.jpg",
+      "imgProduct4": "https://tamshoppe.vn/Thumb/Web/Resources/Uploaded/2/images/san-pham/do-go/chu-HOME-go-vintage-bac-au-15cm-8_w400_h300.jpg"
+    },
+    {
+      "id": 9,
+      "imgProduct1": "https://tramthienvanhuong.com/duthi3.JPG",
+      "imgProduct2": "https://tramthienvanhuong.com/duthi2.JPG",
+      "imgProduct3": "https://tramthienvanhuong.com/duthi.JPG",
+      "imgProduct4": "https://tramthienvanhuong.com/duthi2.JPG"
+    }
+  ],
+  "users": [
+    {
+      "email": "nhdung2208test@gmail.com",
+      "phoneNumber": "0965513963",
+      "address": "Đà nẵng",
+      "confirmPassword": "123123123",
+      "password": "123123123",
+      "user": "dung1",
+      "gender": "male",
+      "age": "10",
+      "fullName": "Hữu Dũng",
+      "avatarURL": "https://png.pngtree.com/png-clipart/20190614/original/pngtree-cartoon-avatar-lovely-portrait-png-image_3797168.jpg",
+      "id": 1,
+      "dateOfBirth": "Mon, 31 Jul 2023 18:22:35 GMT"
+    },
+    {
+      "email": "n.t.khanh97@gmail.com",
+      "phoneNumber": "0935365499",
+      "address": "ha nong",
+      "confirmPassword": "123456",
+      "password": "123456",
+      "user": "abc",
+      "gender": "male",
+      "age": 1,
+      "fullName": "khanh",
+      "id": 2
+    },
+    {
+      "email": "n.t.khanh997@gmail.com",
+      "phoneNumber": "0935365497",
+      "address": "ha nong",
+      "confirmPassword": "123456",
+      "password": "123456",
+      "user": "abcded",
+      "gender": "male",
+      "age": 1,
+      "fullName": "khanh123",
+      "id": 3
+    }
+  ],
+  "category": [],
+  "comments": [
+    {
+      "star": "3",
+      "comment": "tot",
+      "nameProduct": "Chữ HOME gỗ Vintage Bắc Âu 15cm",
+      "idProduct": 1,
+      "category": "Trang Trí Để Bàn",
+      "fullName": "khanh123",
+      "userName": "abcded",
+      "phoneNumber": "0935365497",
+      "email": "n.t.khanh997@gmail.com",
+      "dateComment": "18/05/2024",
+      "id": 1
+    },
+    {
+      "star": "4",
+      "comment": "2",
+      "nameProduct": "Chữ HOME gỗ Vintage Bắc Âu 15cm",
+      "idProduct": 1,
+      "category": "Trang Trí Để Bàn",
+      "fullName": "khanh123",
+      "userName": "abcded",
+      "phoneNumber": "0935365497",
+      "email": "n.t.khanh997@gmail.com",
+      "dateComment": "18/05/2024",
+      "id": 2
+    },
+    {
+      "star": "2",
+      "comment": "asd",
+      "nameProduct": "Hủ hoa khô Lavender thật thơm phòng",
+      "idProduct": 8,
+      "category": "Quà Tặng",
+      "fullName": "khanh123",
+      "userName": "abcded",
+      "phoneNumber": "0935365497",
+      "email": "n.t.khanh997@gmail.com",
+      "dateComment": "18/05/2024",
+      "id": 3
+    },
+    {
+      "star": "4",
+      "comment": "",
+      "nameProduct": "Hủ hoa khô Lavender thật thơm phòng",
+      "idProduct": 8,
+      "category": "Quà Tặng",
+      "fullName": "khanh123",
+      "userName": "abcded",
+      "phoneNumber": "0935365497",
+      "email": "n.t.khanh997@gmail.com",
+      "dateComment": "18/05/2024",
+      "id": 4
+    },
+    {
+      "star": "4",
+      "comment": "asd",
+      "nameProduct": "Hủ hoa khô Lavender thật thơm phòng",
+      "idProduct": 8,
+      "category": "Quà Tặng",
+      "fullName": "khanh123",
+      "userName": "abcded",
+      "phoneNumber": "0935365497",
+      "email": "n.t.khanh997@gmail.com",
+      "dateComment": "18/05/2024",
+      "id": 5
+    }
+  ],
+  "commentsCalcuStarAverage": [],
+  "orders": []
+}
