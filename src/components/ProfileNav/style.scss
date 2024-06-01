@@ -21,7 +21,14 @@
     }
   }
 
-  &__list-information-grp {
+  &__list-information-grp {}
+
+  &__box-password {
+    display: none;
+  }
+
+  &__show-box {
+    display: block;
   }
 
   &__list-information {
@@ -47,5 +54,17 @@
   }
 }
 
-@media screen and (max-width: 1132px) {
+.change-pass-word-form {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+
+  &__btn-save {
+    display: flex;
+    gap: 5px;
+    justify-content: center;
+  }
+
 }
+
+@media screen and (max-width: 1132px) {}

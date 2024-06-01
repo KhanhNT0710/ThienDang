@@ -124,49 +124,7 @@ const ListProductCard = () => {
     <div className="list-product">
 
       <aside className="list-product__filter">
-        <div className="list-product__filter-price">
-          <h4>GIÁ THÀNH</h4>
-          <ul className="">
-            <Radio.Group onChange={handleFilterChange} value={filterFormValue.price}>
-              <li>
-                <Radio value={"less than 100.000đ"} > &#60;100.000đ</Radio>
-              </li>
-              <li>
-                <Radio value={"100.000đ - 300.000đ"}  >100.000đ - 300.000đ</Radio>
-              </li>
-              <li>
-                <Radio value={"300.000đ - 500.000đ"} >300.000đ - 500.000đ</Radio>
-              </li>
-              <li>
-                <Radio value={"greater than 500.000đ"} > &#62;500.000đ</Radio>
-              </li>
-            </Radio.Group>
-
-          </ul>
-        </div>
-        <div className="list-product__filter-vote">
-          <h4>ĐÁNH GIÁ</h4>
-          <ul className="">
-            <Radio.Group onChange={handleFilterEvaluate} value={filterFormValue.starRank} >
-              <li>
-                <Radio value={"1 sao"}  >1 sao</Radio>
-              </li>
-              <li>
-                <Radio value={"2 sao"}  >2 sao</Radio>
-              </li>
-              <li>
-                <Radio value={"3 sao"}  >3 sao</Radio>
-              </li>
-              <li>
-                <Radio value={"4 sao"}  >4 sao</Radio>
-              </li>
-              <li>
-                <Radio value={"5 sao"}  > 5 sao</Radio>
-              </li>
-            </Radio.Group>
-          </ul>
-        </div>
-        <div className="list-product__filter-vote">
+        <div className="list-product__filter-category">
           <h4>PHÂN LOẠI</h4>
           <ul className="">
             <Radio.Group onChange={handleFilterCategory} value={filterFormValue.category}  >
@@ -197,6 +155,49 @@ const ListProductCard = () => {
             </Radio.Group>
           </ul>
         </div>
+        <div className="list-product__filter-price">
+          <h4>GIÁ THÀNH</h4>
+          <ul className="">
+            <Radio.Group onChange={handleFilterChange} value={filterFormValue.price}>
+              <li>
+                <Radio value={"less than 100.000đ"} > &#60;100.000đ</Radio>
+              </li>
+              <li>
+                <Radio value={"100.000đ - 300.000đ"}  >100.000đ - 300.000đ</Radio>
+              </li>
+              <li>
+                <Radio value={"300.000đ - 500.000đ"} >300.000đ - 500.000đ</Radio>
+              </li>
+              <li>
+                <Radio value={"greater than 500.000đ"} > &#62;500.000đ</Radio>
+              </li>
+            </Radio.Group>
+
+          </ul>
+        </div>
+        <div className="list-product__filter-star">
+          <h4>ĐÁNH GIÁ</h4>
+          <ul className="">
+            <Radio.Group onChange={handleFilterEvaluate} value={filterFormValue.starRank} >
+              <li>
+                <Radio value={"1 sao"}  >1 sao</Radio>
+              </li>
+              <li>
+                <Radio value={"2 sao"}  >2 sao</Radio>
+              </li>
+              <li>
+                <Radio value={"3 sao"}  >3 sao</Radio>
+              </li>
+              <li>
+                <Radio value={"4 sao"}  >4 sao</Radio>
+              </li>
+              <li>
+                <Radio value={"5 sao"}  > 5 sao</Radio>
+              </li>
+            </Radio.Group>
+          </ul>
+        </div>
+
         <div className="list-product__filter-grp">
 
         </div>
@@ -210,32 +211,33 @@ const ListProductCard = () => {
         }}>Clear</button>
       </aside>
       <div className="list-product__content">
+        <Select
+          defaultValue="Sắp xếp theo:"
+          style={{
+            width: 150,
+          }}
+          onChange={handleFilterArrange}
+          options={[
+            {
+              value: "Name: A-Z",
+              label: "Name: A-Z",
+            },
+            {
+              value: "Name: Z-A",
+              label: "Name: Z-A",
+            },
+            {
+              value: "Price: Low to High",
+              label: "Price: Low to High",
+            },
+            {
+              value: "Price: High to Low",
+              label: "Price: High to Low",
+            },
+          ]}
+        />
         <div className="list-product__content-items">
-          <Select
-            defaultValue="Sắp xếp theo:"
-            style={{
-              width: 150,
-            }}
-            onChange={handleFilterArrange}
-            options={[
-              {
-                value: "Name: A-Z",
-                label: "Name: A-Z",
-              },
-              {
-                value: "Name: Z-A",
-                label: "Name: Z-A",
-              },
-              {
-                value: "Price: Low to High",
-                label: "Price: Low to High",
-              },
-              {
-                value: "Price: High to Low",
-                label: "Price: High to Low",
-              },
-            ]}
-          />
+
           <Row gutter={16}>{renderProducts(products)}</Row>
         </div>
         <div className="list-product__content-pagination">

@@ -163,13 +163,11 @@ const DetailProductCard = () => {
         // console.log(productInfo, "productInfo");
 
         if (isLogin) {
-            console.log(valueCommentBox, "valueCommentBox");
-
-            let sumStar = 0;
-            let resultStarAverage = 0;
+            let sumStar = Number(valueCommentBox.star);
+            let resultStarAverage = commentsCalcuStarAverage.length ? 0 : sumStar;
             commentsCalcuStarAverage.forEach((comment) => {
                 sumStar += parseFloat(comment?.star);
-                resultStarAverage = Math.round(sumStar / commentsCalcuStarAverage.length);
+                resultStarAverage = Math.round(sumStar / (commentsCalcuStarAverage.length + 1));
                 return resultStarAverage;
             });
 
@@ -462,7 +460,7 @@ const DetailProductCard = () => {
                                         )}
 
                                         <div className="detail-product-card-top__btn-add-cart">
-                                            <Button htmlType="submit">Add to cart</Button>
+                                            <Button htmlType="submit">Thêm vào giỏ hàng</Button>
                                         </div>
                                     </div>
                                 </div>

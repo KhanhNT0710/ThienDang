@@ -44,7 +44,7 @@ const FooterComponent = () => {
                 </Col>
 
                 <Col className="footer-item" xs={24} sm={12} md={8}>
-                    <iframe width="465" height="200" src="https://www.youtube.com/embed/jm3cZniR7YI?si=Wv6GmiL5FRYOauq7"
+                    <iframe width="400" height="200" src="https://www.youtube.com/embed/jm3cZniR7YI?si=Wv6GmiL5FRYOauq7"
                         title="YouTube video player"
                         frameborder="0"
                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"

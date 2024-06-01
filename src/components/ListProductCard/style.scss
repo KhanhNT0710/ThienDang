@@ -1,19 +1,22 @@
 .list-product {
   display: flex;
+
   &__filter {
-        line-height: 2;
+    line-height: 2;
     min-height: 1px;
     padding-right: 15px;
     padding-left: 15px;
     left: 50px;
     width: 100%;
     height: 100%;
- &-price {
-  ul {
-    list-style: none;
-  }
-  
- }
+
+    &-price {
+      ul {
+        list-style: none;
+      }
+
+    }
+
     &-grp {
       display: flex;
       justify-content: right;
@@ -23,11 +26,13 @@
   }
 
   &__content {
+    // display: flex;
     position: relative;
     min-height: 1px;
     padding-right: 15px;
     padding-left: 15px;
-left: 80px;
+    left: 80px;
+
     &-items {}
 
     &-pagination {

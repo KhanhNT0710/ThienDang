@@ -1,6 +1,8 @@
 import { Input, InputNumber } from "antd";
 import { CloseOutlined } from "@ant-design/icons";
 import { useDispatch, useSelector } from "react-redux";
+import { generatePath, useNavigate } from "react-router-dom";
+import { ROUTES } from "../../constants/routes";
 import React from "react";
 import {
   actClearCarts,
@@ -10,6 +12,7 @@ import {
 
 const CardTable = () => {
   const dispatch = useDispatch();
+  const navigate = useNavigate();
   const { carts } = useSelector((state) => state.cart);
 
   const formatNumber = (num) => {
@@ -37,22 +40,27 @@ const CardTable = () => {
 
   const handleDeleteProductInCarts = (productId) => {
     dispatch(actDeleteProductInCarts(productId));
-    // console.log(productId, "delete ne");
   };
+  const handleRedirectToDetailProduct = (id) => {
+    navigate(generatePath(ROUTES.DETAIL_PRODUCT_PAGE, { productId: id }));
+  }
 
   const handleClearCarts = () => {
     dispatch(actClearCarts());
   };
-
   const renderCartsList = (carts) => {
+    console.log(carts, "cartscartscartscartscartscarts");
     return carts.map((cart) => {
       return (
         <tr key={cart.id}>
           <td className="cart-page-shop-table__img-product">
             <img src={cart.imgURL} alt="" />
           </td>
-          <td className="cart-page-shop-table__name-product">
-            <p className="name">{`${cart.name} `}</p>
+          <td className="cart-page-shop-table__name-product" >
+            <p className="name"
+              onClick={() => handleRedirectToDetailProduct(cart.idProduct)}
+            >
+              {`${cart.name} `}</p>
             <p className="color">{`Style: ${cart.style}`}</p>
           </td>
           <td className="cart-page-shop-table__price-product">{`${formatNumber(

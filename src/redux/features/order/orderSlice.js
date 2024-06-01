@@ -1,6 +1,7 @@
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 import { orderApis } from "../../../apis/orderApis";
 import { message } from "antd";
+import { actClearCarts } from "../cart/cartSlice";
 
 const initialState = {
   orders: [],
@@ -20,6 +21,7 @@ export const actFetchAllOrders = createAsyncThunk(
 
 export const actAddOrder = createAsyncThunk("order/addOrder", async (order) => {
   const response = await orderApis.addOrder(order);
+  console.log(response, 'response');
   return response;
   // const response = await orderApis.addOrder(order);
   // return response;
@@ -40,7 +42,7 @@ const orderSlice = createSlice({
       state.isLoading = true;
     },
     sendOrderSuccess: (state, action) => {
-      state.orders.push(action.payload);
+      state.order = action.payload;
       message.success("Đặt hàng thành công! Success");
     },
     sendOrderFailure: (state, action) => {

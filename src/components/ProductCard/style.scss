@@ -1,18 +1,18 @@
 .product-card-wrapper {
   display: flex;
   justify-content: center;
+  gap: 25px;
 }
 
 .product-card {
-  padding: 20px;
-
   &__img {
     img {
-      width: 100%;
-      height: auto;
+      width: 140px;
+      height: 140px;
       object-fit: cover;
-      
     }
+
+    
   }
 &__img :hover { cursor: pointer	}
   &__name {
@@ -26,7 +26,7 @@
     p {
       cursor: pointer;
       color: #b37e6b;
-      text-decoration: underline;
+      text-decoration:none;
       transform: scale(1.1);
       transition: all 0.5s ease;
     }

@@ -146,13 +146,11 @@ const productSlice = createSlice({
           state.params._order = "asc";
           break;
       }
-      console.log({ ...state.params }, "state.params in filter price");
 
     },
 
     setFilterCategory: (state, action) => {
       state.filter = action.payload;
-      console.log(action.payload, "action.payload");
       switch (action.payload) {
         case "Trang Trí Để Bàn":
           state.params.category = "Trang Trí Để Bàn";
@@ -223,7 +221,6 @@ const productSlice = createSlice({
           state.params._order = "asc";
           break;
       }
-      console.log({ ...state.params }, "state.params in filter reducer");
 
     },
 

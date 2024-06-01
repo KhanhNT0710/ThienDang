@@ -53,6 +53,9 @@
     &__list-product {}
 
     &__product {
+        overflow: hidden;
+    position: relative;
+    display: inline-block;
         padding: 10px 5px;
         display: flex;
         flex-direction: column;
@@ -61,14 +64,27 @@
         gap: 5px;
 
         img {
+            display: block;
             max-width: 220px;
             height: 220px;
             object-fit: cover;
             width: 100%;
         }
-
+&__quickview {
+    display: none;
+      position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -50px;
+    width: 100%;
+    background-color: rgba(21, 166, 157, .6);
+    text-align: center;
+    display: block;
+    padding: 5px;
+    transition: all .45s ease;
+    line-height: 28px;
+    }
         p {
-            position: absolute;
             left: 0;
             right: 0;
             bottom: 40px;
@@ -82,8 +98,10 @@
             line-height: 24px;
             transition: all .45s ease;
             color: #15a69d;
-
         }
+    }
+    &__product:hover &__product__quickview {
+        display: block;
     }
 
     &__product-name {

@@ -12,5 +12,5 @@ export const ROUTES = {
   USER_CHANGE_PASSWORD_PAGE: "/user/password",
   USER_PURCHASE_HISTORY_PAGE: "/user/purchase-history",
   ORDER_PAGE: "/order",
-  CHECK_OUT_PAGE: "/checkout",
+  PAYMENT_PAGE: "/payment",
 };

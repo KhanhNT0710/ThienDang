@@ -43,18 +43,12 @@ const HeaderComponent = () => {
             key: "1",
             label: <Link to={ROUTES.USER_PROFILE_PAGE}>My Profile</Link>,
         },
+
         {
             type: "divider",
         },
         {
             key: "2",
-            label: <Link to={ROUTES.USER_CHANGE_PASSWORD_PAGE}>Change password</Link>,
-        },
-        {
-            type: "divider",
-        },
-        {
-            key: "3",
             label: (
                 <Link to={ROUTES.USER_PURCHASE_HISTORY_PAGE}>Purchase History</Link>
             ),
@@ -63,7 +57,7 @@ const HeaderComponent = () => {
             type: "divider",
         },
         {
-            key: "4",
+            key: "3",
             label: (
                 <Button
                     onClick={() => {
@@ -107,13 +101,13 @@ const HeaderComponent = () => {
                             </div>
                         )}
                         <ShoppingCartOutlined />
-
                     </div>
                     {!isLogin && (
                         <div className="header-left__loginRegisterGrp">
                             <div className="header-left__icon">
                                 <Dropdown menu={{ items }} placement="bottomLeft">
                                     <UserOutlined />
+
                                 </Dropdown>
                             </div>
                         </div>
@@ -133,10 +127,11 @@ const HeaderComponent = () => {
                                     ) : (
                                         <UserOutlined />
                                     )}
+
                                 </Dropdown>
                             </div>
                             <div className="header-left__user-name">
-                                <p>Hello, {userInfo?.user}</p>
+                                <p>Hello {userInfo?.fullName}</p>
                             </div>
                         </div>
                     )}
@@ -193,7 +188,7 @@ const HeaderComponent = () => {
                                     </Link>
                                 </li>
                                 <li className="header-navBar__listItem">
-                                    <Link to={ROUTES.PRODUCT_PAGE}>
+                                    <Link to={ROUTES.ABOUT_US_PAGE}>
                                         <span >GIỚI THIỆU</span>
                                     </Link>
                                 </li>

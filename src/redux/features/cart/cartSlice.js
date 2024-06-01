@@ -24,19 +24,19 @@ const cartSlice = createSlice({
         state.carts.push({ ...product });
       }
       localStorage.setItem(KEY_CARTS_LIST, JSON.stringify(state.carts));
-      message.success("Add product to carts success!");
+      message.success("Đã thêm vào giỏ hàng");
     },
 
     actDeleteProductInCarts: (state, action) => {
       state.carts = state.carts.filter((cart) => cart.id !== action.payload);
       localStorage.setItem(KEY_CARTS_LIST, JSON.stringify(state.carts));
-      message.success("Delete product in carts success!");
+      message.success("Đã xoá sản phẩm khỏi giỏ hàng");
     },
 
     actClearCarts: (state, action) => {
       state.carts = [];
       localStorage.setItem(KEY_CARTS_LIST, JSON.stringify(state.carts));
-      message.success("Clear carts success!");
+      message.success("Đã xoá sản phẩm khỏi giỏ hàng");
     },
 
     actUpdateQuantityOfProduct: (state, action) => {

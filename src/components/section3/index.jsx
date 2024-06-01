@@ -25,6 +25,7 @@ const Section3 = () => {
                                 src="https://admin.tamshoppe.vn/Web/Resources/Uploaded/2/images/bai-viet/do-trang-tri-ban-lam-viec-voi-cay-xanh-1.jpg"
                                 alt=""
                             />
+                            <span className='section3-list-hot-container__product__quickview'>Xem Thêm</span>
                             <p>TRANG TRÍ ĐỂ BÀN</p>
                         </a>
 
@@ -41,6 +42,7 @@ const Section3 = () => {
                                 src="https://cdn.chonongsanonline.com/uploads/all/CWXZfpyzHfFA9bCjYEVcYEuKjc9FNf0b1MbWZ4Dt.jpg"
                                 alt=""
                             />
+                            <span className='section3-list-hot-container__product__quickview'>Xem Thêm</span>
                             <p>TRANG TRÍ DẠNG TREO</p>
                         </a>
                     </Col>
@@ -56,6 +58,7 @@ const Section3 = () => {
                                 src="https://admin.tamshoppe.vn/Web/Resources/Uploaded/2/images/danh-muc-noi-bat/may-khuech-tan-tinh-dau-phun-khoi-sieu-am-khu-khuan6%20copy.jpg"
                                 alt=""
                             />
+                            <span className='section3-list-hot-container__product__quickview'>Xem Thêm</span>
                             <p>ĐÈN XÔNG - TNH DẦU</p>
                         </a>
 
@@ -72,6 +75,7 @@ const Section3 = () => {
                                 src="https://admin.tamshoppe.vn/Web/Resources/Uploaded/2/images/danh-muc-noi-bat/hop-den-fairy-light-mau-vang-am%20(10)%20copy.jpg"
                                 alt=""
                             />
+                            <span className='section3-list-hot-container__product__quickview'>Xem Thêm</span>
                             <p>ĐÈN LED TRANG TRÍ</p>
                         </a>
 
@@ -88,6 +92,7 @@ const Section3 = () => {
                                 src="https://admin.tamshoppe.vn/Web/Resources/Uploaded/2/images/danh-muc-noi-bat/bong-bong-chu-happy-birthday-15-copy%20copy.jpg"
                                 alt=""
                             />
+                            <span className='section3-list-hot-container__product__quickview'>Xem Thêm</span>
                             <p>TRANG TRÍ SINH NHẬT</p>
                         </a>
 
@@ -104,6 +109,7 @@ const Section3 = () => {
                                 src="https://admin.tamshoppe.vn/Web/Resources/Uploaded/2/images/danh-muc-noi-bat/cuon-day-thung-handmade%20(7)%20copy.jpg"
                                 alt=""
                             />
+                            <span className='section3-list-hot-container__product__quickview'>Xem Thêm</span>
                             <p>ĐỒ HAND MADE</p>
                         </a>
                     </Col>
@@ -119,6 +125,7 @@ const Section3 = () => {
                                 src="https://admin.tamshoppe.vn/Web/Resources/Uploaded/2/images/danh-muc-noi-bat/tuong-chu-tieu-trang-tri-dep-don-gian20%20copy.jpg"
                                 alt=""
                             />
+                            <span className='section3-list-hot-container__product__quickview'>Xem Thêm</span>
                             <p>ĐỒ PHONG THUỶ</p>
                         </a>
                     </Col>
@@ -134,6 +141,7 @@ const Section3 = () => {
                                 src="https://tamshoppe.vn/Thumb/Web/Resources/Uploaded/2/images/BLOG/phu-kien-goi-qua-dep-danh-cho-nguoi-co-tam_w400_h300.jpg"
                                 alt=""
                             />
+                            <span className='section3-list-hot-container__product__quickview'>Xem Thêm</span>
                             <p>QUÀ TẶNG</p>
                         </a>
                     </Col>

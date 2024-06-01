@@ -21,7 +21,7 @@ const CartPurchase = (props) => {
     }
     return numString;
   };
-
+  console.log(cartsInCheckoutBills, "cartsInCheckoutBills");
   const renderCartsModal = (cartsInCheckoutBills) => {
     return cartsInCheckoutBills.map((cart) => {
       return (
@@ -31,8 +31,7 @@ const CartPurchase = (props) => {
           </td>
           <td className="cart-page-shop-table__name-product">
             <p className="name">{cart.name}</p>
-            <p className="material">{`Material: ${cart.material}`}</p>
-            <p className="color">{`Color: ${cart.color}`}</p>
+            <p className="color">{`Style: ${cart.style}`}</p>
           </td>
           <td className="cart-page-shop-table__price-product">
             {formatNumber(cart.price)}
@@ -64,10 +63,10 @@ const CartPurchase = (props) => {
           <thead className="cart-page-shop-table__thead">
             <tr className="cart-page-shop-table__thead-tr">
               <th className="cart-page-shop-table__th2">Img</th>
-              <th className="cart-page-shop-table__th3">Product</th>
-              <th className="cart-page-shop-table__th4">Price</th>
-              <th className="cart-page-shop-table__th5">Quantity</th>
-              <th className="cart-page-shop-table__th6">Subtotal</th>
+              <th className="cart-page-shop-table__th3">Sản phẩm</th>
+              <th className="cart-page-shop-table__th4">Giá tiền</th>
+              <th className="cart-page-shop-table__th5">Số lượng</th>
+              <th className="cart-page-shop-table__th6">Tổng tiền</th>
             </tr>
           </thead>
           <tbody className="cart-page-shop-table__tbody">

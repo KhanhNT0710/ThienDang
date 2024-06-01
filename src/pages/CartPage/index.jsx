@@ -37,13 +37,17 @@ const CartPage = () => {
         return formatNumber(totalMoneyInBill);
     };
 
-    const handleRedirectToCheckOut = () => {
-        if (isLogin) {
-            //&& carts.length !== 0
-            navigate(ROUTES.ORDER_PAGE);
+    const handleRedirectToPayment = () => {
+        if (carts.length !== 0) {
+            if (isLogin) {
+                navigate(ROUTES.ORDER_PAGE);
+            } else {
+                navigate(ROUTES.LOGIN_PAGE);
+            }
         } else {
-            navigate(ROUTES.LOGIN_PAGE);
+            alert("Vui lòng thêm sản phẩm vào giỏ hàng trước")
         }
+
     };
 
     return (
@@ -57,15 +61,10 @@ const CartPage = () => {
                     <div className="cart-page-cart-totals">
                         <div className="cart-page-cart-totals__cart-totals">
                             <div className="cart-page-cart-totals__title">
-                                <h3>Cart totals</h3>
+                                <h3>Thông tin đơn hàng</h3>
                             </div>
                             <table className="cart-page-cart-totals__car-totals-table">
                                 <tbody>
-                                    <tr>
-                                        <td>Subtotal</td>
-                                        <td>{getTotalMoneyInBill()}</td>
-                                    </tr>
-
                                     <tr>
                                         <td>Shipping</td>
                                         <td>
@@ -81,7 +80,7 @@ const CartPage = () => {
                             </table>
 
                             <div className="cart-page-cart-totals__btn-proceed-to-checkout">
-                                <Button onClick={handleRedirectToCheckOut}>
+                                <Button onClick={handleRedirectToPayment}>
                                     Đặt Hàng
                                 </Button>
                             </div>

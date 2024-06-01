@@ -8,7 +8,7 @@ const Section2 = () => {
     const navigate = useNavigate();
 
     const handleRedirectToProductPage = () => {
-        navigate(ROUTES.PRODUCT_PAGE);
+        navigate(ROUTES.ABOUT_US_PAGE);
     };
 
     return (

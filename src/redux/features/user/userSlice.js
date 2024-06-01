@@ -3,6 +3,7 @@ import { userApis } from "../../../apis/userApis";
 import { message } from "antd";
 import { ROUTES } from "../../../constants/routes";
 import { globalNavigate } from "../../../utils/globalHistory";
+import { Navigate } from "react-router-dom";
 
 const initialState = {
   isLoading: false,
@@ -39,14 +40,11 @@ export const actCreateNewUser = createAsyncThunk(
 export const actLogin = createAsyncThunk(
   "users/login",
   async (formValue, thunkAPI) => {
-    // console.log(formValue, "form");
     const users = await userApis.getAllUsers();
-    // console.log(users, "users");
     const { user, password } = formValue;
     const foundUser = users.find(
       (u) => u.user === user && u.password === password
     );
-    // console.log(foundUser, "foundUser");
     // find() 1 obj trả về 1 obj {user: "", password:""}
     delete foundUser.confirmPassword;
     // delete bớt confirmPassword không cần sd
@@ -81,7 +79,8 @@ export const actUpdateUserById = createAsyncThunk(
     await userApis.updateUserById(id, userUpdate);
     thunkAPI.dispatch(setUserInfo(userUpdate));
     thunkAPI.dispatch(actFetchAllUsers());
-    return null;
+    // globalNavigate(ROUTES.HOME_PAGE);
+    return;
   }
 );
 
@@ -106,7 +105,7 @@ export const userSlice = createSlice({
       state.isLoading = false;
       state.isLogin = true;
       state.userInfo = action.payload;
-      message.success("Login success!");
+      message.success("Đăng nhập thành công!");
       localStorage.setItem("isLogin", true);
       localStorage.setItem("userInfo", JSON.stringify(action.payload));
       globalNavigate(ROUTES.HOME_PAGE);
@@ -115,20 +114,22 @@ export const userSlice = createSlice({
       state.isLoading = false;
       state.isLogin = false;
       state.userInfo = null;
-      message.error("User or Password was wrong!");
+      message.error("Tên đăng nhập hoặc mật khẩu không chính xác!");
       localStorage.setItem("isLogin", false);
       localStorage.setItem("userInfo", JSON.stringify({}));
     },
     logout: (state, action) => {
       state.isLogin = false;
-      // state.userInfo = null;
       localStorage.setItem("isLogin", false);
       localStorage.setItem("userInfo", JSON.stringify(null));
       globalNavigate(ROUTES.HOME_PAGE);
+      message.success("Đăng xuất thành công");
     },
     setUserInfo: (state, action) => {
       state.userInfo = action.payload;
+      console.log(action.payload, 'action.payload');
       localStorage.setItem("userInfo", JSON.stringify(action.payload));
+
     },
   },
 
@@ -138,13 +139,12 @@ export const userSlice = createSlice({
     });
     builder.addCase(actCreateNewUser.rejected, (state, action) => {
       state.errors = {};
-      // lấy cái thunkAPI.rejectWithValue ra hiển thị
       message.error(action.payload);
       state.isLoading = false;
     });
     builder.addCase(actCreateNewUser.fulfilled, (state, action) => {
       state.users = action.payload;
-      message.success("Create new user success!");
+      message.success("Đăng ký thành công");
       state.isLoading = false;
       globalNavigate(ROUTES.LOGIN_PAGE);
     });
@@ -154,7 +154,7 @@ export const userSlice = createSlice({
     });
     builder.addCase(actLogin.rejected, (state, action) => {
       state.errors = {};
-      message.error("User or Password incorrect!");
+      message.error("Mật khẩu không chính xác");
       state.isLoading = false;
       console.log("login failure", action.payload);
     });
@@ -168,8 +168,8 @@ export const userSlice = createSlice({
     });
 
     builder.addCase(actUpdateUserById.fulfilled, (state, action) => {
-      message.success("Update profile success!");
-      state.userInfo = action.payload;
+      message.success("Cập nhật thông tin cá nhân thành công");
+      // state.userInfo = action.payload;
     });
 
     builder.addCase(actUpdatePasswordById.fulfilled, (state, action) => {

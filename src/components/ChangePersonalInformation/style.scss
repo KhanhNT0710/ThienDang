@@ -1,0 +1,111 @@
+.change-infor-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 550px;
+  width: 50vw;
+
+  .change-infor-container {
+    padding: 24px;
+    border-radius: 4px;
+    background-color: #fff;
+
+    .change-infor-container__title {
+      text-align: center;
+      margin-bottom: 24px;
+
+      h3 {
+        font-size: 32px;
+        font-weight: 400;
+        color: #333;
+      }
+    }
+
+    .change-infor-form {
+
+      .change-infor-form__name,
+      .change-infor-form__age,
+      .change-infor-form__email,
+      .change-infor-form__address,
+      .change-infor-form__phone-number,
+      .change-infor-form__gender-grp,
+      .change-infor-form__birth-day {
+        margin-bottom: 10px;
+
+        label {
+          display: block;
+          margin-bottom: 5px;
+          font-size: 14px;
+          color: #333;
+          font-weight: bold;
+        }
+
+        input,
+        .ant-radio-group {
+          display: flex;
+          width: 100%;
+          padding: 10px;
+          font-size: 14px;
+          border-radius: 4px;
+          color: #333;
+        }
+      }
+
+      .change-infor-form__btn-save {
+        text-align: center;
+        display: flex;
+        gap: 10px;
+
+        button {
+          width: 100px !important;
+          height: 50px;
+          padding: 10px 20px;
+          font-size: 16px;
+          font-weight: bold;
+          color: #fff;
+          background-color: #b37e6b;
+          border: none;
+          border-radius: 4px;
+          cursor: pointer;
+          transition: background-color 0.3s ease;
+
+          span {
+            font-weight: 500;
+            font-size: 17px;
+          }
+
+          &:hover {
+            background-color: #b58979;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1132px) {
+  .change-infor-wrapper {
+    padding-top: 50px;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .change-infor-wrapper {
+    padding-top: 0;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .change-infor-wrapper {
+    width: 80vw;
+  }
+
+  .change-infor-container {
+    &__title {
+      h3 {
+        font-size: 28px !important;
+        font-weight: 500 !important;
+      }
+    }
+  }
+}

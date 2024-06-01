@@ -27,11 +27,8 @@ const ProductCard = (props) => {
   };
 
   const handleRedirectToDetailProductPage = () => {
-    console.log(id);
     navigate(generatePath(ROUTES.DETAIL_PRODUCT_PAGE, { productId: id }));
   };
-
-  // console.log(typeof formatNumber(price));
 
   return (
     <div className="product-card-wrapper">
