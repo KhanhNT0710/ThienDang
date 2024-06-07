@@ -1,7 +1,13 @@
-import React from "react";
+import React, { useEffect } from "react";
 import './style.scss'
+import { useParams } from "react-router-dom";
 
 const AboutPage = () => {
+  const params = useParams()
+  useEffect(() => {
+    window.scrollTo(0, 0)
+  }, [params])
+
   return (
     <div className="about-container">
       <h3>Yi Decor - Điểm Đến Cho Những Tâm Hồn Đam Mê Trang Trí Nội Thất </h3>

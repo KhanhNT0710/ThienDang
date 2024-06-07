@@ -288,7 +288,6 @@ const DetailProductCard = () => {
     const renderRelatedProductList = (relatedProductList) => {
         return relatedProductList.map((product) => {
             const handleRedirectToRelatedDetailProductPage = () => {
-                console.log(id);
                 navigate(generatePath(ROUTES.DETAIL_PRODUCT_PAGE, { productId: product?.id }));
             };
 
@@ -612,7 +611,9 @@ const DetailProductCard = () => {
                 </div>
                 <div className="detail-product-card-describe-wrapper">
                     <h3>Chi tiết sản phẩm</h3>
-                    <p>Chữ HOME gỗ Vintage Bắc Âu 15cm trang trí đẹp mắt. Chữ cái trang trí để bàn giúp bạn thể hiện thông điệp muốn truyền tải như chỉ dẫn, tên riêng, tên sự kiện… Sản phẩm đa dạng về mẫu mã chất liệu: chữ gỗ, chữ phủ kim tuyến, chữ đèn Led… Chúng giúp bạn hoàn thiện không gian thật chỉnh chu, đẹp mắt và ý nghĩa.</p>
+                    <p>Chữ HOME gỗ Vintage Bắc Âu 15cm trang trí đẹp mắt. Chữ cái trang trí để bàn giúp bạn thể hiện thông điệp muốn truyền tải như chỉ dẫn, tên riêng, tên sự kiện…</p>
+                    <p> Sản phẩm đa dạng về mẫu mã chất liệu: chữ gỗ, chữ phủ kim tuyến, chữ đèn Led…</p>
+                    <p>Chúng giúp bạn hoàn thiện không gian thật chỉnh chu, đẹp mắt và ý nghĩa.</p>
                     <img src="https://admin.tamshoppe.vn/Web/Resources/Uploaded/2/images/san-pham/do-go/chu-HOME-go-vintage-bac-au-15cm-11.jpg" alt="" />
                     <p>- Chữ làm bằng gỗ, phủ màu chà tróc giả cổ Vintage phong cách Bắc Âu đẹp mắt.</p>
                     <p>- Chữ cao 15cm, độ dày gỗ khoảng 2cm</p>

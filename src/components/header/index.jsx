@@ -7,17 +7,35 @@ import { Link, Route, useNavigate } from "react-router-dom";
 import { ROUTES } from "../../constants/routes";
 import { useDispatch, useSelector } from "react-redux";
 import { logout } from "../../redux/features/user/userSlice";
+import PostFilterForm from "../PostFilterForm";
+import { actFetchAllProducts, setNewPage, setSearchKey } from "../../redux/features/product/productSlice";
 
 const HeaderComponent = () => {
     const navigate = useNavigate();
     const [isToggle, setIsToggle] = useState(false);
     const { isLogin, userInfo } = useSelector((state) => state.user);
     const dispatch = useDispatch();
+    const searchKey = useSelector(state => state.product.searchKey)
+    const pagination = useSelector(state => state.product.pagination)
     const [isShowMenuMobile, setIsShowMenuMobile] =
         useState(false);
     const handleRedirectToCartPage = () => {
         navigate(ROUTES.CART_PAGE);
     };
+    const handleSearch = (event) => {
+        event.preventDefault()
+        dispatch(actFetchAllProducts({
+            _page: 1,
+            _limit: pagination.limitPerPage,
+            q: searchKey
+
+        }))
+        dispatch(setNewPage(1))
+    }
+
+    const handleFilterChange = (newFilter) => {
+        console.log(newFilter, 'newFilter');
+    }
     const { carts } = useSelector((state) => state.cart);
     const handleToggleShowMenu = () => {
         setIsShowMenuMobile(!isShowMenuMobile);
@@ -86,13 +104,12 @@ const HeaderComponent = () => {
                     <Link className="header-container-menu-bar__logo__link" to={ROUTES.HOME_PAGE}><img src={logo} alt="logo" /></Link>
 
                 </div>
-                <div className="header-container-menu-bar__search">
-                    <Input placeholder="Bạn muốn mua gì" />
-                    <Button type="primary" htmlType="submit">
+                <form className="header-container-menu-bar__search" >
+                    <PostFilterForm onSubmit={handleFilterChange} />
+                    <Button className="header-container-menu-bar__search-btn" type="submit" htmlType="submit">
                         <SearchOutlined />
                     </Button>
-
-                </div>
+                </form>
                 <div className="header-container-menu-bar__account" >
                     <div className="header-container-menu-bar__account-cart" onClick={handleRedirectToCartPage}>
                         {!!carts.length && (

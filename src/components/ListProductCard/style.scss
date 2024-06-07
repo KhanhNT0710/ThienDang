@@ -1,13 +1,13 @@
 .list-product {
   display: flex;
+  gap: 80px;
 
   &__filter {
     line-height: 2;
     min-height: 1px;
     padding-right: 15px;
     padding-left: 15px;
-    left: 50px;
-    width: 100%;
+    max-width: 350px;
     height: 100%;
 
     &-price {
@@ -31,9 +31,14 @@
     min-height: 1px;
     padding-right: 15px;
     padding-left: 15px;
-    left: 80px;
+    flex: 1;
 
-    &-items {}
+    &-items {
+      &__row{
+            gap: 20px;
+      }
+
+    }
 
     &-pagination {
       display: flex;

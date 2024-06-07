@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import ProductCard from "../ProductCard";
-import { Checkbox, Col, Pagination, Radio, Row, Select } from "antd";
+import { Col, Pagination, Radio, Row, Select } from "antd";
 import { useDispatch, useSelector } from "react-redux";
 import {
   actFetchAllProducts,
@@ -26,6 +26,7 @@ const ListProductCard = () => {
   );
 
   useEffect(() => {
+    window.scrollTo(0, 0)
     // truyền thêm params pagination
     dispatch(
       actFetchAllProducts({
@@ -95,6 +96,7 @@ const ListProductCard = () => {
   };
   const { filter } = useSelector((state) => state.product);
   useEffect(() => {
+    window.scrollTo(0, 0)
     dispatch(
       actFetchAllProducts({
         _page: 1,
@@ -123,7 +125,7 @@ const ListProductCard = () => {
   return (
     <div className="list-product">
 
-      <aside className="list-product__filter">
+      <div className="list-product__filter">
         <div className="list-product__filter-category">
           <h4>PHÂN LOẠI</h4>
           <ul className="">
@@ -209,12 +211,13 @@ const ListProductCard = () => {
             price: ''
           })
         }}>Clear</button>
-      </aside>
+      </div>
       <div className="list-product__content">
         <Select
           defaultValue="Sắp xếp theo:"
           style={{
             width: 150,
+            paddingBottom: '10px',
           }}
           onChange={handleFilterArrange}
           options={[
@@ -237,8 +240,7 @@ const ListProductCard = () => {
           ]}
         />
         <div className="list-product__content-items">
-
-          <Row gutter={16}>{renderProducts(products)}</Row>
+          <Row className="list-product__content-items__row" gutter={16} >{renderProducts(products)}</Row>
         </div>
         <div className="list-product__content-pagination">
           <Pagination

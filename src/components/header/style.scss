@@ -62,6 +62,9 @@
       height: 50px;
       align-items: center;
       gap: 5px;
+      &-btn {
+        background-color: #15a69d;
+      }
     }
 
     &__account {
@@ -198,7 +201,7 @@
 
     span.anticon {
       position: absolute;
-      right: -20px;
+      left: -20px;
       bottom: 3px;
       cursor: pointer;
       font-size: 10px;

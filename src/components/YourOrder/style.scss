@@ -6,7 +6,11 @@
 .your-order {
   width: 100%;
   padding-bottom: 50px;
-
+img {
+  height: 100px;
+  width: 100px;
+  object-fit: cover;
+}
   &__your-order {
     display: flex;
     justify-content: center;

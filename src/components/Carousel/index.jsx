@@ -22,7 +22,7 @@ const CarouselComponent = () => {
         <div className="carousel__item">
           <img
             className="carousel__item2"
-            src="https://vungdecor.com/wp-content/uploads/2023/03/goc-chup-anh-tai-nha3.png"
+            src="https://hoagood.com/wp-content/uploads/2020/04/Trang-tri-phong-tro-nho-cuc-xinh-110422-0000.jpg"
             alt=""
           />
         </div>

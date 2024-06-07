@@ -47,6 +47,7 @@ const YourOrder = (props) => {
         <React.Fragment key={product.id}>
           <tr>
             <td>
+              <img src={product.imgURL} alt="" />
               <p>
                 {product.name} × {product.quantity}
               </p>
@@ -67,7 +68,7 @@ const YourOrder = (props) => {
               )}
             </td>
             <td>
-              <h3>{formatNumber(product.price * product.quantity)}</h3>
+              <h4>{formatNumber(product.price * product.quantity)}</h4>
             </td>
           </tr>
         </React.Fragment>
@@ -106,7 +107,7 @@ const YourOrder = (props) => {
                   <h3>Subtotal</h3>
                 </td>
                 <td>
-                  <h3>{getTotalMoneyInBill()}</h3>
+                  <h4>{getTotalMoneyInBill()}</h4>
                 </td>
               </tr>
 
