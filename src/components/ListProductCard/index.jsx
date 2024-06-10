@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import ProductCard from "../ProductCard";
-import { Col, Pagination, Radio, Row, Select } from "antd";
+import { Button, Col, Pagination, Radio, Row, Select } from "antd";
 import { useDispatch, useSelector } from "react-redux";
 import {
   actFetchAllProducts,
@@ -13,6 +13,8 @@ import {
 } from "../../redux/features/product/productSlice";
 import SpinFC from "antd/es/spin";
 import "./style.scss";
+import { SearchOutlined } from "@ant-design/icons";
+import PostFilterForm from "../PostFilterForm";
 
 const ListProductCard = () => {
   const [filterFormValue, setFilterFormValue] = useState({
@@ -20,6 +22,7 @@ const ListProductCard = () => {
     starRank: '',
     category: ''
   })
+
   const dispatch = useDispatch();
   const { isLoading, products, pagination, searchKey, params } = useSelector(
     (state) => state.product
@@ -94,6 +97,21 @@ const ListProductCard = () => {
     dispatch(filterArrange(valueFilter));
 
   };
+  const handleSearch = (event) => {
+    event.preventDefault()
+    dispatch(actFetchAllProducts({
+      _page: 1,
+      _limit: pagination.limitPerPage,
+      q: searchKey
+
+    }))
+    dispatch(setNewPage(1))
+  }
+
+  const handleFilterChangeInput = (newFilter) => {
+    console.log(newFilter, 'newFilter');
+  }
+
   const { filter } = useSelector((state) => state.product);
   useEffect(() => {
     window.scrollTo(0, 0)
@@ -128,7 +146,7 @@ const ListProductCard = () => {
       <div className="list-product__filter">
         <div className="list-product__filter-category">
           <h4>PHÂN LOẠI</h4>
-          <ul className="">
+          <ul className="list-product__filter-radio">
             <Radio.Group onChange={handleFilterCategory} value={filterFormValue.category}  >
               <li>
                 <Radio value={"Trang Trí Để Bàn"}  >Trang Trí Để Bàn</Radio>
@@ -203,42 +221,53 @@ const ListProductCard = () => {
         <div className="list-product__filter-grp">
 
         </div>
-        <button onClick={() => {
-          dispatch(clearAllFilter());
-          setFilterFormValue({
-            saleCount: '',
-            starRank: '',
-            price: ''
-          })
-        }}>Clear</button>
+        <button
+          className="list-product__filter-btn"
+          onClick={() => {
+            dispatch(clearAllFilter());
+            setFilterFormValue({
+              saleCount: '',
+              starRank: '',
+              price: ''
+            })
+          }}>Clear</button>
       </div>
       <div className="list-product__content">
-        <Select
-          defaultValue="Sắp xếp theo:"
-          style={{
-            width: 150,
-            paddingBottom: '10px',
-          }}
-          onChange={handleFilterArrange}
-          options={[
-            {
-              value: "Name: A-Z",
-              label: "Name: A-Z",
-            },
-            {
-              value: "Name: Z-A",
-              label: "Name: Z-A",
-            },
-            {
-              value: "Price: Low to High",
-              label: "Price: Low to High",
-            },
-            {
-              value: "Price: High to Low",
-              label: "Price: High to Low",
-            },
-          ]}
-        />
+        <form className="list-product__search" >
+          <PostFilterForm onSubmit={handleFilterChangeInput} />
+          <Button className="list-product__search-btn" type="submit" htmlType="submit">
+            <SearchOutlined />
+          </Button>
+        </form>
+        <div className="list-product__content-filter" >
+          <Select
+            defaultValue="Sắp xếp theo:"
+            style={{
+              width: 150,
+
+            }}
+            onChange={handleFilterArrange}
+            options={[
+              {
+                value: "Name: A-Z",
+                label: "Name: A-Z",
+              },
+              {
+                value: "Name: Z-A",
+                label: "Name: Z-A",
+              },
+              {
+                value: "Price: Low to High",
+                label: "Price: Low to High",
+              },
+              {
+                value: "Price: High to Low",
+                label: "Price: High to Low",
+              },
+            ]}
+          />
+        </div>
+
         <div className="list-product__content-items">
           <Row className="list-product__content-items__row" gutter={16} >{renderProducts(products)}</Row>
         </div>

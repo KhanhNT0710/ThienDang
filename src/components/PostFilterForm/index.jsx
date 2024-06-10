@@ -45,16 +45,26 @@ const PostFilterForm = ({ onSubmit }) => {
     }, [searchTerm, dispatch, onSubmit]);
 
     return (
-        <form className="input-search">
-            <Input
-                type="search"
-                placeholder="Bạn muốn mua gì"
-                value={searchTerm}
-                onChange={handleSearchTermChange}
-                suffix={<CloseCircleOutlined onClick={handleClear} style={{ color: 'rgba(0,0,0,.45)', cursor: 'pointer' }} />}
-            />
+        <div>
+            <form className="input-search">
+                <Input
+                    type="search"
+                    placeholder="Bạn muốn mua gì"
+                    value={searchTerm}
+                    onChange={handleSearchTermChange}
+                    suffix={<CloseCircleOutlined onClick={handleClear} style={{ color: 'rgba(0,0,0,.45)', cursor: 'pointer' }} />}
+                />
+            </form>
+            {/* <div className="result-search">
+                {searchTerm.map((d, i) => (
+                    <div key={i}>
+                        {d.name}
+                    </div>
+                ))}
+            </div> */}
+        </div>
 
-        </form>
+
     );
 };
 

@@ -69,10 +69,10 @@
       "imgProductId": 5,
       "category": "Trang Trí Dạng Treo",
       "categoryId": 2,
-      "imgURL": "https://tamshoppe.vn/Thumb/Web/Resources/Uploaded/2/images/san-pham/Lam-theo-yeu-cau/bang-hieu-go-hinh-lat-cat-xe-doc-than-cay-1_w400_h300.jpg",
-      "name": "Bảng hiệu gỗ hình lát cắt xẻ dọc thân cây",
+      "imgURL": "https://tamshoppe.vn/Thumb/Web/Resources/Uploaded/2/images/san-pham/phong-cach-bien/bang-welcome-bai-cat-song-bien-3-sao-8_w400_h300.jpg",
+      "name": "Bảng welcome bãi cát sóng biển",
       "brands": "Wood vintage",
-      "price": 1500000,
+      "price": 250000,
       "style": {
         "style1": "Mẫu rời",
         "style2": "Mẫu dính liền"
@@ -92,7 +92,8 @@
         "style1": "Mẫu rời",
         "style2": "Mẫu dính liền"
       },
-      "productDetail": "<p>abc<p>"
+      "productDetail": "<p>abc<p>",
+      "evaluate": 4
     },
     {
       "id": 7,
@@ -146,10 +147,10 @@
       "imgProductId": 10,
       "category": "Quà Tặng",
       "categoryId": 8,
-      "imgURL": "https://tamshoppe.vn/Thumb/Web/Resources/Uploaded/2/images/san-pham/Hoa-gia/hu-hoa-kho-lavender-that-thom-phong-6_w400_h300.jpg",
-      "name": "Hủ hoa khô Lavender thật thơm phòng",
+      "imgURL": "https://static.chus.vn/images/thumbnails/767/767/detailed/207/a00cce1e7b3368b5e093e7c1a6e42b08_w767_h1105.jpg",
+      "name": "Nến Thơm Gourmand",
       "brands": "Wood vintage",
-      "price": 70000,
+      "price": 150000,
       "style": {
         "style1": "Mẫu rời",
         "style2": "Mẫu dính liền"
@@ -161,10 +162,10 @@
       "imgProductId": 11,
       "category": "Đèn Led Trang Trí",
       "categoryId": 4,
-      "imgURL": "https://tamshoppe.vn/Thumb/Web/Resources/Uploaded/2/images/san-pham/Lam-theo-yeu-cau/bang-hieu-go-den-led-chu-nhat-bo-goc-16_w400_h300.jpg",
-      "name": "Bảng hiệu gỗ đèn Led chữ nhật bo góc",
+      "imgURL": "https://4.bp.blogspot.com/-N32KKDJY6sI/VSa2LSoBt-I/AAAAAAAAMf8/HTQPUt71HZU/s1600/BANG%2BHIEU%2BGO%2B3.jpg",
+      "name": "Bảng hiệu gỗ đèn Led thiết kế tự nhiên",
       "brands": "Wood vintage",
-      "price": 1000000,
+      "price": 2000000,
       "style": {
         "style1": "Mẫu rời",
         "style2": "Mẫu dính liền"
@@ -176,10 +177,10 @@
       "imgProductId": 12,
       "category": "Đèn Xông Tinh Dầu",
       "categoryId": 3,
-      "imgURL": "https://tamshoppe.vn/Thumb/Web/Resources/Uploaded/2/images/san-pham/Den-tinh-dau/may-khuech-tan-tinh-dau-ngon-lua-don-gian-1_w400_h300.jpg",
-      "name": "Máy khuếch tán tinh dầu ngọn lửa đơn giản ",
+      "imgURL": "https://tamshoppe.vn/Thumb/Web/Resources/Uploaded/2/images/san-pham/Den-tinh-dau/may-khuech-tan-tinh-dau-gom-san-dang-bom-den-trang-1_w800_h600.jpg",
+      "name": "Máy khuếch tán tinh dầu gốm sần dáng bom",
       "brands": "Wood vintage",
-      "price": 360000,
+      "price": 700000,
       "style": {
         "style1": "Mẫu rời",
         "style2": "Mẫu dính liền"
@@ -191,10 +192,10 @@
       "imgProductId": 13,
       "category": "Đồ Hand Made",
       "categoryId": 6,
-      "imgURL": "https://tamshoppe.vn/Thumb/Web/Resources/Uploaded/2/images/san-pham/Lam-theo-yeu-cau/chu-go-vien-day-thung-theo-yeu-cau-2_w400_h300.jpg",
-      "name": "Chữ gỗ viền dây thừng",
+      "imgURL": "https://tamshoppe.vn/Thumb/Web/Resources/Uploaded/2/images/san-pham/De-ban/chai-thuy-tinh-quan-day-thung-tru-tron-cao-19cm-4_w800_h600.jpg",
+      "name": "Chai thuỷ tinh quấn dây thừng",
       "brands": "Wood vintage",
-      "price": 300000,
+      "price": 35000,
       "style": {
         "style1": "Mẫu rời",
         "style2": "Mẫu dính liền"
@@ -245,6 +246,22 @@
         "style2": "Mẫu dính liền"
       },
       "productDetail": "<p>abc<p>"
+    },
+    {
+      "id": 17,
+      "imgProductId": 17,
+      "category": "Đồ Hand Made",
+      "categoryId": 6,
+      "imgURL": "https://tamshoppe.vn/Thumb/Web/Resources/Uploaded/2/images/san-pham/HOA-KHO/bo-lua-mach-kho-trang-tri-150gr-12_w400_h300.jpg",
+      "name": "Bó lúa mạch khô trang trí",
+      "brands": "Wood vintage",
+      "price": 55000,
+      "style": {
+        "style1": "Mẫu rời",
+        "style2": "Mẫu dính liền"
+      },
+      "productDetail": "<p>abc<p>",
+      "evaluate": 2
     }
   ],
   "imgsProducts": [
@@ -256,11 +273,39 @@
       "imgProduct4": "https://tamshoppe.vn/Thumb/Web/Resources/Uploaded/2/images/san-pham/do-go/chu-HOME-go-vintage-bac-au-15cm-8_w400_h300.jpg"
     },
     {
+      "id": 5,
+      "imgProduct1": "https://tamshoppe.vn/Thumb/Web/Resources/Uploaded/2/images/san-pham/phong-cach-bien/bang-welcome-bai-cat-song-bien-3-sao-2_w800_h600.jpg",
+      "imgProduct2": "https://tamshoppe.vn/Thumb/Web/Resources/Uploaded/2/images/san-pham/phong-cach-bien/bang-welcome-bai-cat-song-bien-3-sao-8_w400_h300.jpg",
+      "imgProduct3": "https://tamshoppe.vn/Thumb/Web/Resources/Uploaded/2/images/san-pham/phong-cach-bien/bang-welcome-bai-cat-song-bien-3-sao-3_w400_h300.jpg",
+      "imgProduct4": "https://tamshoppe.vn/Thumb/Web/Resources/Uploaded/2/images/san-pham/phong-cach-bien/bang-welcome-bai-cat-song-bien-3-sao-1_w400_h300.jpg"
+    },
+    {
       "id": 9,
       "imgProduct1": "https://tramthienvanhuong.com/duthi3.JPG",
       "imgProduct2": "https://tramthienvanhuong.com/duthi2.JPG",
       "imgProduct3": "https://tramthienvanhuong.com/duthi.JPG",
       "imgProduct4": "https://tramthienvanhuong.com/duthi2.JPG"
+    },
+    {
+      "id": 12,
+      "imgProduct1": "https://tamshoppe.vn/Thumb/Web/Resources/Uploaded/2/images/san-pham/Den-tinh-dau/may-khuech-tan-tinh-dau-gom-san-dang-bom-den-trang-1_w800_h600.jpg",
+      "imgProduct2": "https://tamshoppe.vn/Thumb/Web/Resources/Uploaded/2/images/san-pham/Den-tinh-dau/may-khuech-tan-tinh-dau-gom-san-dang-bom-den-trang-11_w400_h300.jpg",
+      "imgProduct3": "https://tamshoppe.vn/Thumb/Web/Resources/Uploaded/2/images/san-pham/Den-tinh-dau/huong-dan-su-dung-may-khuech-tan-tinh-dqau-gom-den-san_w400_h300.jpg",
+      "imgProduct4": "https://tamshoppe.vn/Thumb/Web/Resources/Uploaded/2/images/san-pham/Den-tinh-dau/may-khuech-tan-tinh-dau-gom-san-dang-bom-den-trang-3_w400_h300.jpg"
+    },
+    {
+      "id": 13,
+      "imgProduct1": "https://tamshoppe.vn/Thumb/Web/Resources/Uploaded/2/images/san-pham/De-ban/chai-thuy-tinh-quan-day-thung-tru-tron-cao-19cm-4_w800_h600.jpg",
+      "imgProduct2": "https://tamshoppe.vn/Thumb/Web/Resources/Uploaded/2/images/san-pham/De-ban/chai-thuy-tinh-quan-day-thung-tru-tron-cao-19cm-2_w400_h300.jpg",
+      "imgProduct3": "https://tamshoppe.vn/Thumb/Web/Resources/Uploaded/2/images/san-pham/De-ban/chai-thuy-tinh-quan-day-thung-tru-tron-cao-19cm-8_w400_h300.jpg",
+      "imgProduct4": "https://tamshoppe.vn/Thumb/Web/Resources/Uploaded/2/images/san-pham/De-ban/chai-thuy-tinh-quan-day-thung-tru-tron-cao-19cm-1_w400_h300.jpg"
+    },
+    {
+      "id": 17,
+      "imgProduct1": "https://tamshoppe.vn/Thumb/Web/Resources/Uploaded/2/images/san-pham/HOA-KHO/bo-lua-mach-kho-trang-tri-150gr-12_w400_h300.jpg",
+      "imgProduct2": "https://tamshoppe.vn/Thumb/Web/Resources/Uploaded/2/images/san-pham/HOA-KHO/bo-lua-mach-kho-trang-tri-150gr-12_w400_h300.jpg",
+      "imgProduct3": "https://tamshoppe.vn/Thumb/Web/Resources/Uploaded/2/images/san-pham/HOA-KHO/bo-lua-mach-kho-trang-tri-150gr-3_w400_h300.jpg",
+      "imgProduct4": "https://tamshoppe.vn/Thumb/Web/Resources/Uploaded/2/images/san-pham/HOA-KHO/bo-lua-mach-kho-trang-tri-150gr-10_w400_h300.jpg"
     }
   ],
   "users": [
@@ -539,6 +584,32 @@
       "email": "n.t.khanh97@gmail.com",
       "dateComment": "01/06/2024",
       "id": 17
+    },
+    {
+      "star": "2",
+      "comment": "tạm được",
+      "nameProduct": "Bó lúa mạch khô trang trí",
+      "idProduct": 17,
+      "category": "Đồ Hand Made",
+      "fullName": "khanh",
+      "userName": "abc",
+      "phoneNumber": "0935365499",
+      "email": "n.t.khanh97@gmail.com",
+      "dateComment": "07/06/2024",
+      "id": 18
+    },
+    {
+      "star": "4",
+      "comment": "tot",
+      "nameProduct": "Bảng hiệu gỗ đèn Led chữ nhật bo góc",
+      "idProduct": 6,
+      "category": "Đèn Led Trang Trí",
+      "fullName": "khanh",
+      "userName": "abc",
+      "phoneNumber": "0935365499",
+      "email": "n.t.khanh97@gmail.com",
+      "dateComment": "10/06/2024",
+      "id": 19
     }
   ],
   "commentsCalcuStarAverage": [],
@@ -2559,7 +2630,6 @@
       "totalMoney": "",
       "id": 24
     },
-    
     {
       "payment": "Ship COD",
       "feeShip": "0",

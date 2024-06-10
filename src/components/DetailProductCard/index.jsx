@@ -264,7 +264,7 @@ const DetailProductCard = () => {
                     className="detail-product-card-comment__review--item"
                 >
                     <div className="detail-product-card-comment__review--avatar-user">
-                        <img src={comment?.avatarURL} alt="" />
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQNL_ZnOTpXSvhf1UaK7beHey2BX42U6solRA&s" alt="" />
                     </div>
                     <div className="detail-product-card-comment__review--grp-right">
                         <div className="detail-product-card-comment__review--user-name">
@@ -377,7 +377,7 @@ const DetailProductCard = () => {
                             <form
                                 onSubmit={handleSubmit(onValid)}
                                 style={{
-                                    width: "100%",
+                                    width: "70%",
                                     display: "flex",
                                     flexDirection: "column",
                                     textAlign: "center",
@@ -389,11 +389,11 @@ const DetailProductCard = () => {
                                     <h3>{productInfo.name}</h3>
                                 </div>
                                 <div className="detail-product-card-top__product-price">
-                                    <h3>{formatNumber(productInfo.price)}</h3>
+                                    <h3 className="detail-product-card-top__product-price-h3" >{formatNumber(productInfo.price)}đ</h3>
                                 </div>
                                 <div className="detail-product-card-top__product-color">
                                     <div className="detail-product-card-top__product-color-title">
-                                        <h5>Style:</h5>
+                                        <h4>Style:</h4>
                                     </div>
                                     <div className="detail-product-card-top__product-style-selected">
                                         <Controller
@@ -406,7 +406,6 @@ const DetailProductCard = () => {
                                                         style={{ width: "100%" }}
                                                         defaultValue={`${style?.style1}`}
                                                         placeholder="Chọn mẫu thiết kế"
-                                                        // onChange={handleChangeSelectBox}
                                                         options={[
                                                             {
                                                                 value: `${style?.style1}`,
@@ -497,7 +496,7 @@ const DetailProductCard = () => {
                                 lg={24}
                                 className="detail-product-card-bottom__related-products-grp--title"
                             >
-                                <h3>Related products</h3>
+                                <h3>Sản Phẩm Liên Quan</h3>
                             </Col>
 
                             <Row className="detail-product-card-bottom__related-products-grp-item-grp">
@@ -510,7 +509,7 @@ const DetailProductCard = () => {
                 <div className="detail-product-card-comment-wrapper">
                     <div className="detail-product-card-comment">
                         <div className="detail-product-card-comment__name-product">
-                            <p>Reviews product: {productInfo.name}</p>
+                            <p>Reviews sản phẩm: {productInfo.name}</p>
                         </div>
 
                         <div className="detail-product-card-comment__star-average">
@@ -527,11 +526,11 @@ const DetailProductCard = () => {
                             </div>
                             <div className="detail-product-card-comment__star-average--grp-btn-open-review-box">
                                 <div className="detail-product-card-comment__star-average--question">
-                                    <p>Have you been used this product yet?</p>
+                                    <p>Bạn muốn để lại đánh giá sản phẩm này?</p>
                                 </div>
                                 <div className="detail-product-card-comment__star-average--btn">
                                     <Button onClick={handleToggleBoxReview}>
-                                        Send your review
+                                        Gửi đánh giá
                                     </Button>
                                 </div>
                             </div>

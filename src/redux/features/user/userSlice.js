@@ -25,11 +25,11 @@ export const actCreateNewUser = createAsyncThunk(
       const foundPhoneNumber = users.find((u) => u.phoneNumber === phoneNumber);
       // nếu user đã tồn tại => trả về lỗi
       if (foundUser) {
-        return thunkAPI.rejectWithValue("User has been existed!");
+        return thunkAPI.rejectWithValue("User đã được sử dụng!");
       } else if (foundEmail) {
-        return thunkAPI.rejectWithValue("Email has been existed!");
+        return thunkAPI.rejectWithValue("Email đã được sử dụng!");
       } else if (foundPhoneNumber) {
-        return thunkAPI.rejectWithValue("Number phone has been existed!");
+        return thunkAPI.rejectWithValue("SDT đã được sử dụng!");
       } else {
         await userApis.createNewUser(formValue);
       }

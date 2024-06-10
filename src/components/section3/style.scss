@@ -7,6 +7,10 @@
     margin-top: 15px;
 
     &__title {
+          box-sizing: border-box;
+            background-color: rgb(235 231 231);
+            height: 30px;
+            width: 90%;
         &-link {
             line-height: 24px;
             text-align: center;
@@ -22,6 +26,7 @@
             color: #15a69d;
             vertical-align: middle;
             text-decoration: none;
+          
 
             h3:before {
                 right: 100%;
@@ -45,23 +50,29 @@
                 top: 18px;
             }
         }
-        
+
     }
 
     &__product-hot-grp {}
 
     &__list-product {}
 
+    &__product:hover {
+        transition: all 0.3s ease;
+        transform: scale(1.15);
+    }
+
     &__product {
         overflow: hidden;
-    position: relative;
-    display: inline-block;
+        position: relative;
+        display: inline-block;
         padding: 10px 5px;
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
         gap: 5px;
+        cursor: pointer;
 
         img {
             display: block;
@@ -70,20 +81,22 @@
             object-fit: cover;
             width: 100%;
         }
-&__quickview {
-    display: none;
-      position: absolute;
-    left: 0;
-    right: 0;
-    bottom: -50px;
-    width: 100%;
-    background-color: rgba(21, 166, 157, .6);
-    text-align: center;
-    display: block;
-    padding: 5px;
-    transition: all .45s ease;
-    line-height: 28px;
-    }
+
+        &__quickview {
+            display: none;
+            position: absolute;
+            left: 0;
+            right: 0;
+            bottom: -50px;
+            width: 100%;
+            background-color: rgba(21, 166, 157, .6);
+            text-align: center;
+            display: block;
+            padding: 5px;
+            transition: all .45s ease;
+            line-height: 28px;
+        }
+
         p {
             left: 0;
             right: 0;
@@ -100,6 +113,7 @@
             color: #15a69d;
         }
     }
+
     &__product:hover &__product__quickview {
         display: block;
     }

@@ -105,7 +105,7 @@ const commentSlice = createSlice({
       state.comment = action.payload;
       state.comments.push(action.payload);
       state.commentsCalcuStarAverage.push(action.payload);
-      message.success("add review product success!");
+      message.success("Đánh giá sản phẩm thành công!");
     });
 
     builder.addCase(actEditCommentById.pending, (state, action) => {

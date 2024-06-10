@@ -18,6 +18,7 @@ const Section1 = () => {
                 <div className="section1-list-hot-container__product-hot-grp">
                     <Row className="section1-list-hot-container__list-product">
                         <Col
+                            onClick={handleRedirectProductPage}
                             className="section1-list-hot-container__product"
                             xs={12}
                             sm={12}
@@ -38,6 +39,7 @@ const Section1 = () => {
                         </Col>
 
                         <Col
+                            onClick={handleRedirectProductPage}
                             className="section1-list-hot-container__product"
                             xs={12}
                             sm={12}
@@ -50,7 +52,7 @@ const Section1 = () => {
                                 alt=""
                             />
                             <p className="section1-list-hot-container__product-name">
-                                Set 7 chai tinh dầu thiên nhiên Scentastic 10ml - Tặng hộp gỗ
+                                Set 7 chai tinh dầu thiên nhiên
                             </p>
                             <p className="section1-list-hot-container__product-price">
                                 420.000
@@ -58,6 +60,7 @@ const Section1 = () => {
                         </Col>
 
                         <Col
+                            onClick={handleRedirectProductPage}
                             className="section1-list-hot-container__product"
                             xs={12}
                             sm={12}
@@ -78,6 +81,7 @@ const Section1 = () => {
                         </Col>
 
                         <Col
+                            onClick={handleRedirectProductPage}
                             className="section1-list-hot-container__product"
                             xs={12}
                             sm={12}
@@ -90,7 +94,7 @@ const Section1 = () => {
                                 alt=""
                             />
                             <p className="section1-list-hot-container__product-name">
-                                Set bóng sinh nhật HPBD ngôi sao vàng bạc
+                                Set bóng sinh nhật HPBD ngôi sao
                             </p>
                             <p className="section1-list-hot-container__product-price">
                                 145.000

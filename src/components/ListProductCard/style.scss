@@ -1,14 +1,20 @@
 .list-product {
   display: flex;
-  gap: 80px;
+  gap: 100px;
 
   &__filter {
     line-height: 2;
     min-height: 1px;
+    padding-top: 40px;
     padding-right: 15px;
     padding-left: 15px;
     max-width: 350px;
     height: 100%;
+    text-align: left;
+
+    .list-product__filter-radio {
+      align-self: flex-start;
+    }
 
     &-price {
       ul {
@@ -23,6 +29,18 @@
       gap: 20px;
 
     }
+
+    &-btn {
+      width: 100px;
+      height: 30px;
+      box-sizing: border-box;
+      border: 1px solid black;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+    &-btn:hover {
+      background-color: gainsboro;
+    }
   }
 
   &__content {
@@ -32,10 +50,28 @@
     padding-right: 15px;
     padding-left: 15px;
     flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    .list-product__search {
+      width: 500px;
+      display: flex;
+      height: 50px;
+      align-items: center;
+      gap: 5px;
+      &-btn {
+        background-color: #15a69d;
+      }
+    }
+
+    &-filter {
+      align-self: flex-end;
+    }
 
     &-items {
-      &__row{
-            gap: 20px;
+      &__row {
+        gap: 50px;
       }
 
     }

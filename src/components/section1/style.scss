@@ -16,6 +16,10 @@
             color: #15a69d;
             vertical-align: middle;
             text-decoration: none;
+            box-sizing: border-box;
+            background-color: rgb(235 231 231);
+            height: 30px;
+            width: 90%;
 
             h3:before {
                 right: 100%;
@@ -54,6 +58,11 @@
 
         &__list-product {}
 
+        &__product:hover {
+            transition: all 0.3s ease;
+            transform: scale(1.12);
+        }
+
         &__product {
             padding: 10px 5px;
             display: flex;
@@ -61,10 +70,13 @@
             justify-content: center;
             align-items: center;
             gap: 8px;
+            cursor: pointer;
 
             img {
+                height: 240px;
                 max-width: 290px;
                 width: 100%;
+                object-fit: cover;
             }
         }
 
