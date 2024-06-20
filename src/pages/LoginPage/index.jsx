@@ -33,7 +33,6 @@ const LoginPage = () => {
   } = methods;
 
   const onValid = (formValue) => {
-    // console.log(formValue, "formValue");
     dispatch(actLogin(formValue));
   };
 

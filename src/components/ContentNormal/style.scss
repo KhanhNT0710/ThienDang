@@ -3,6 +3,9 @@
 }
 
 .content-normal-container {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
   margin: auto;
   width: 100vw;
   //   max-width: 2000px;

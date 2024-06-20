@@ -9,11 +9,11 @@ import Section1 from "../section1";
 const ContentNormal = () => {
   return (
     <div className="content-normal-container">
-      <CarouselComponent />
-      <Section3 />
-      <Section1 />
-      <Section2 />
-      <Section4 />
+      <div>      <CarouselComponent /></div>
+      <div>      <Section2 /></div>
+      <div>      <Section1 /></div>
+      <div>      <Section4 />
+      </div>
     </div>
   );
 };

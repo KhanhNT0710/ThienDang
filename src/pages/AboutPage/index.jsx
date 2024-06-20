@@ -10,23 +10,38 @@ const AboutPage = () => {
 
   return (
     <div className="about-container">
-      <h3>Yi Decor - Điểm Đến Cho Những Tâm Hồn Đam Mê Trang Trí Nội Thất </h3>
+      <h3>Đèn Lồng: Ánh Sáng của Văn Hóa và Truyền Thống </h3>
       <img src="https://media-cdn-v2.laodong.vn/Storage/NewsPortal/2020/11/8/852676/Trang-Tri-Phong-Tro-.jpg" alt="" />
-      <p>Trong một thế giới ngày càng phát triển và nhộn nhịp, ngôi nhà không chỉ là nơi trú ngụ mà còn là nơi thể hiện cá tính và phong cách sống của mỗi người. Hiểu được điều đó, Yi Decor ra đời như một đứa con tinh thần với mục đích ban đầu là thoả mãn đam mê của những người yêu thích trang trí nội thất. Trang web Yi Decor không chỉ là nơi mua bán các sản phẩm decor làm đẹp ngôi nhà, mà còn là một không gian chia sẻ và tìm tòi những ý tưởng sáng tạo mới.</p>
-      <h3> Sứ Mệnh Và Tầm Nhìn Của Yi Decor</h3>
+      <p>Treo đèn lồng là một phong tục lâu đời và giàu ý nghĩa ở nhiều nền văn hóa châu Á, đặc biệt là ở Trung Quốc, Nhật Bản và Việt Nam. Đèn lồng không chỉ mang lại ánh sáng vật lý mà còn chứa đựng nhiều giá trị tinh thần và văn hóa sâu sắc. Bài viết này sẽ khám phá các khía cạnh ý nghĩa của việc treo đèn lồng và cách chúng đã góp phần vào việc bảo tồn và truyền bá những giá trị văn hóa truyền thống.</p>
+      <h3> Lịch Sử và Nguồn Gốc</h3>
       <img src="https://file.hstatic.net/200000507187/article/mau-decor-trang-tri-phong-tro-sinh-vien-31_e92b0d5bd49c4ebbbaf7600c35344646.jpg" alt="" />
-      <p>Ban đầu, Yi Decor được xây dựng với mục tiêu đơn giản là tạo ra một cộng đồng cho những ai yêu thích các góc decor đẹp mắt. Chúng tôi hiểu rằng mỗi người đều có một góc nhìn riêng về cái đẹp và cách thể hiện nó qua việc trang trí ngôi nhà của mình. Chính vì vậy, Yi Decor không chỉ là một cửa hàng trực tuyến mà còn là một nơi để những ai có cùng đam mê có thể gặp gỡ, trao đổi và học hỏi lẫn nhau.</p>
-      <h3>Đam Mê Là Động Lực Chính</h3>
+      <p>Đèn lồng có lịch sử lâu đời, bắt đầu từ Trung Quốc cổ đại, nơi chúng được sử dụng trong các lễ hội, tôn giáo và nghi lễ. Theo thời gian, việc sử dụng đèn lồng đã lan rộng sang nhiều quốc gia khác và trở thành một phần không thể thiếu của văn hóa châu Á.
+      </p>
+      <p>Ở Trung Quốc, đèn lồng xuất hiện từ thời kỳ Tây Hán (206 TCN – 25 SCN). Chúng ban đầu được sử dụng để chiếu sáng nhưng sau đó trở thành biểu tượng của sự may mắn và hạnh phúc.
+      </p>
+      <p>Ở Nhật Bản, đèn lồng được gọi là "chōchin" và thường được sử dụng trong các đền thờ và lễ hội. Chúng thể hiện sự tôn kính đối với các thần linh và linh hồn tổ tiên.</p>
+      <p>Ở Việt Nam, đèn lồng thường xuất hiện trong các lễ hội như Tết Trung Thu và Tết Nguyên Đán, biểu tượng cho sự đoàn tụ gia đình và hy vọng vào một năm mới thịnh vượng.</p>
+      <h3>Ý Nghĩa Văn Hóa và Tâm Linh</h3>
       <img src="https://images.fpt.shop/unsafe/filters:quality(5)/fptshop.com.vn/uploads/images/tin-tuc/144804/Originals/i9sqnszashn71.png" alt="" />
-      <p>Điều đặc biệt ở Yi Decor là trang web này được thành lập từ tình yêu và đam mê với nghệ thuật trang trí. Tất cả các sản phẩm trên Yi Decor đều được chọn lọc kỹ lưỡng để đảm bảo chất lượng và thẩm mỹ. Chúng tôi mong muốn mang đến cho khách hàng những sản phẩm không chỉ đẹp mắt mà còn mang lại cảm giác thoải mái và ấm cúng cho ngôi nhà của họ. Đó có thể là những chiếc đèn bàn tinh tế, những bức tranh treo tường đầy nghệ thuật hay những món đồ trang trí nhỏ xinh nhưng đầy ý nghĩa.</p>
-      <h3>Xu Hướng Trang Trí Mới Của Giới Trẻ</h3>
-      <p>Hiện nay, xu hướng trang trí phòng xinh đang rất thịnh hành trong giới trẻ. Những căn phòng nhỏ nhưng được bày trí một cách thông minh và đẹp mắt không chỉ là nơi sinh hoạt hàng ngày mà còn là không gian để thư giãn, làm việc và thể hiện phong cách cá nhân. Yi Decor luôn cập nhật những xu hướng mới nhất trong lĩnh vực trang trí nội thất để mang đến cho khách hàng những sản phẩm hợp thời và độc đáo. Chúng tôi hiểu rằng mỗi chi tiết nhỏ đều có thể tạo nên sự khác biệt lớn và giúp biến một không gian sống trở nên đặc biệt hơn.</p>
-      <h3>Nơi Chia Sẻ Và Tìm Tòi Ý Tưởng</h3>
-      <p>        Yi Decor không chỉ đơn thuần là nơi mua sắm, mà còn là một cộng đồng nơi mọi người có thể chia sẻ và tìm tòi những ý tưởng trang trí mới lạ. Chúng tôi luôn khuyến khích khách hàng của mình chia sẻ những góc decor yêu thích, những trải nghiệm và cảm hứng của họ khi trang trí ngôi nhà. Qua đó, mọi người có thể học hỏi lẫn nhau và cùng nhau tạo nên những không gian sống đẹp đẽ và sáng tạo.</p>
-      <h3> Hướng Tới Tương Lai</h3>
+      <p>Ánh Sáng của Hi Vọng: Đèn lồng thường được thắp sáng trong các lễ hội và dịp quan trọng, tượng trưng cho ánh sáng dẫn đường và hi vọng. Chúng mang đến sự lạc quan và khích lệ con người vượt qua khó khăn trong cuộc sống.
+      </p>
+      <p>Sự Đoàn Tụ và Gắn Kết: Đèn lồng là biểu tượng của sự đoàn tụ và gắn kết gia đình. Trong các lễ hội như Tết Trung Thu, các gia đình thường cùng nhau làm đèn lồng và thắp sáng, thể hiện tinh thần đoàn kết và yêu thương.</p>
+      <p>Bảo Tồn Truyền Thống: Việc làm và treo đèn lồng là cách để các thế hệ sau ghi nhớ và bảo tồn các giá trị truyền thống. Nó giúp gắn kết con người với cội nguồn và lịch sử của mình.
+      </p>
+      <h3>Biểu Tượng của Sự May Mắn và Bình An</h3>
+      <p>Trong nhiều nền văn hóa, đèn lồng được coi là biểu tượng của sự may mắn và bình an. Người ta tin rằng ánh sáng từ đèn lồng sẽ xua tan tà ma và mang lại sự an lành cho gia đình.</p>
+      <p>Ở Trung Quốc, đèn lồng đỏ thường được treo trong các dịp cưới hỏi và năm mới, tượng trưng cho sự hạnh phúc và thịnh vượng.
+      </p>
+      <p>Ở Nhật Bản, đèn lồng thường được treo ở các đền thờ để cầu nguyện cho sự bình an và thịnh vượng cho cả gia đình.
+      </p>
+
+      <h3>  Ảnh Hưởng Đến Nghệ Thuật và Văn Hóa Đương Đại</h3>
       <img src="https://admin.tamshoppe.vn/Web/Resources/Uploaded/2/images/bai-viet/1.jpeg" alt="" />
-      <p> Trong tương lai, Yi Decor không chỉ dừng lại ở việc cung cấp các sản phẩm decor mà còn hướng tới việc kết nối những người làm đồ handmade, đồ thủ công muốn bán các sản phẩm của mình. Chúng tôi tin rằng những món đồ handmade không chỉ mang lại giá trị thẩm mỹ mà còn chứa đựng tình cảm và tâm huyết của người làm ra. Yi Decor sẽ là cầu nối giữa những người làm đồ thủ công và những khách hàng yêu thích các sản phẩm độc đáo, mang đậm dấu ấn cá nhân.
-        Yi Decor được xây dựng từ tình yêu và đam mê với nghệ thuật trang trí nội thất. Chúng tôi không chỉ muốn mang đến những sản phẩm decor đẹp mắt mà còn mong muốn tạo ra một cộng đồng cho những ai yêu thích trang trí ngôi nhà. Với sứ mệnh này, Yi Decor không ngừng nỗ lực để trở thành điểm đến lý tưởng cho những tâm hồn đam mê trang trí, nơi mọi người có thể chia sẻ, tìm tòi và biến những ý tưởng sáng tạo thành hiện thực. Hãy cùng Yi Decor biến ngôi nhà của bạn thành một không gian sống đẹp đẽ và đầy cảm hứng!</p>
+      <p>Đèn lồng không chỉ tồn tại trong các phong tục truyền thống mà còn ảnh hưởng đến nghệ thuật và văn hóa đương đại. Chúng trở thành nguồn cảm hứng cho nhiều tác phẩm nghệ thuật, thiết kế và sự kiện văn hóa hiện đại.
+      </p>
+      <p>Nghệ Thuật Đương Đại: Đèn lồng được sử dụng trong nhiều tác phẩm nghệ thuật và trình diễn đương đại, tạo nên sự kết hợp giữa truyền thống và hiện đại.</p>
+
+      <p>Sự Kiện Văn Hóa: Nhiều lễ hội đèn lồng hiện đại không chỉ có sự tham gia của người dân địa phương mà còn thu hút du khách quốc tế, giúp quảng bá văn hóa và du lịch.</p>
     </div>
   );
 };

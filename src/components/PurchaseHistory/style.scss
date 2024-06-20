@@ -13,7 +13,7 @@
   gap: 20px;
   justify-content: center;
   align-items: center;
-  width: 100%;
+  width: 90%;
 
   &__table-grp {
     width: 100vw;
@@ -23,12 +23,12 @@
   }
 
   &__shop-table {
+    
     width: 100%;
     max-width: 1440px;
     border-collapse: collapse;
 
     thead {
-      background-color: rgb(248, 248, 248);
       border-bottom: rgb(215, 215, 215);
     }
 

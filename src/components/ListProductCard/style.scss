@@ -82,5 +82,51 @@
     }
   }
 
+}
+@media screen and (max-width: 900px) {
+  .list-product {
+    &__filter {
+      &-category, &-price, &-star {
+        padding: 8px;
+        h4 {
+          margin-bottom: 8px;
+        }
+      }
+
+      .list-product__filter-btn {
+        margin-top: 16px;
+        padding: 8px;
+      }
+    }
+
+    &__content {
+      &-filter {
+        flex-direction: column;
+        gap: 10px;
+
+        .ant-select {
+          width: 100%;
+        }
+      }
+
+      &-items {
+        .ant-col {
+          flex: 0 0 100%;
+          max-width: 100%;
+        }
+      }
+    }
+  }
+
+  .list-product__search {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 10px;
+
+    &-btn {
+      width: 100%;
+      justify-content: center;
+    }
+  }
 
 }

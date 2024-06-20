@@ -85,7 +85,7 @@ const YourOrder = (props) => {
             : "your-order__your-order"
             }`}
         >
-          {!!isPaymentPage ? <h3>Order details</h3> : <h3>Your order</h3>}
+          {!!isPaymentPage ? <h3>Order details</h3> : <h3>Đơn hàng của bạn</h3>}
         </div>
         <div
           className={`${!!isPaymentPage

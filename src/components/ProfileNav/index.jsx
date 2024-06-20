@@ -105,7 +105,12 @@ const ProfileNav = () => {
                     control={control}
                     name="currentPassword"
                     render={({ field }) => {
-                      return <Input type="password" placeholder="Nhập mật khẩu hiện tại..." {...field} />;
+                      return <Input.Password
+                        type="password"
+                        placeholder="Nhập mật khẩu hiện tại..."
+                        autoComplete="on"
+                        {...field}
+                      />;
                     }}
                   />
                 </div>
@@ -115,7 +120,7 @@ const ProfileNav = () => {
                     control={control}
                     name="newPassword"
                     render={({ field }) => {
-                      return <Input type="password" placeholder="Nhập mật khẩu mới..." {...field} />;
+                      return <Input.Password autoComplete="on" type="password" placeholder="Nhập mật khẩu mới..." {...field} />;
                     }}
                   />
                   {!!errors.newPassword?.message && (
@@ -130,7 +135,7 @@ const ProfileNav = () => {
                     control={control}
                     name="confirmPassword"
                     render={({ field }) => {
-                      return <Input type="password" placeholder="Nhập lại mật khẩu mới..." {...field} />;
+                      return <Input.Password type="password" placeholder="Nhập lại mật khẩu mới..." autoComplete="on" {...field} />;
                     }}
                   />
                   {!!errors.confirmPassword?.message && (

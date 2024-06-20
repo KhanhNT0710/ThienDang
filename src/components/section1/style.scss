@@ -1,5 +1,7 @@
 .section1-container {
-
+h3 {
+    font-weight: 200;
+}
     .section1-container-title {
         .section1-container-title-link {
             line-height: 24px;
@@ -10,7 +12,7 @@
             display: inline-block;
             position: relative;
             font-size: 18px;
-            font-weight: 600;
+            font-weight: 200 !important;
             line-height: 36px;
             text-transform: uppercase;
             color: #15a69d;
@@ -19,7 +21,7 @@
             box-sizing: border-box;
             background-color: rgb(235 231 231);
             height: 30px;
-            width: 90%;
+            width: 85%;
 
             h3:before {
                 right: 100%;
@@ -81,8 +83,6 @@
         }
 
         &__product-name {
-            font-size: 15px;
-            font-weight: 400;
         }
 
         &__product-price {
@@ -112,5 +112,20 @@
                 font-weight: 500;
             }
         }
+    }
+
+    h4 {
+        text-transform: uppercase;
+        font-size: 18px;
+        font-weight: 500;
+        text-shadow: 1px 1px 1px rgba(0, 0, 0, .5);
+        text-align: center;
+        padding: 0 15px;
+        text-transform: uppercase;
+        line-height: 24px;
+        transition: all .45s ease;
+        color: brown;
+        line-height: 24px;
+
     }
 }

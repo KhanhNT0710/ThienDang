@@ -28,7 +28,6 @@ export const productApis = {
   },
 
   updateProductById: async (idProduct, productUpdate) => {
-    console.log(productUpdate, "productUpdate");
     const response = await axios.patch(
       `${process.env.REACT_APP_BE_URL}products/${idProduct}`,
       productUpdate

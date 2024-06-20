@@ -13,30 +13,11 @@ const Section1 = () => {
 
     return (
         <div className="section1-container" >
-            <div className="section1-container-title" > <Link className="section1-container-title-link" to={ROUTES.PRODUCT_PAGE}><h3>XU HƯỚNG</h3></Link> </div>
+            <div className="section1-container-title" > <Link className="section1-container-title-link" to={ROUTES.PRODUCT_PAGE}><h3>ĐÈN LỒNG TRUYỀN THỐNG</h3></Link> </div>
             <div className="section1-list-hot-container">
                 <div className="section1-list-hot-container__product-hot-grp">
                     <Row className="section1-list-hot-container__list-product">
-                        <Col
-                            onClick={handleRedirectProductPage}
-                            className="section1-list-hot-container__product"
-                            xs={12}
-                            sm={12}
-                            md={8}
-                            lg={6}
-                            xl={6}
-                        >
-                            <img
-                                src="https://tamshoppe.vn/Thumb/Web/Resources/Uploaded/2/images/san-pham/Den-Led/day-den-kep-anh-led-vang-am-2_w400_h300.jpg"
-                                alt=""
-                            />
-                            <p className="section1-list-hot-container__product-name">
-                                Dây đèn kẹp ảnh Led vàng ấm 5m 30 kẹp
-                            </p>
-                            <p className="section1-list-hot-container__product-price">
-                                100.000
-                            </p>
-                        </Col>
+
 
                         <Col
                             onClick={handleRedirectProductPage}
@@ -48,17 +29,15 @@ const Section1 = () => {
                             xl={6}
                         >
                             <img
-                                src="https://tamshoppe.vn/Thumb/Web/Resources/Uploaded/2/images/san-pham/tinh-dau-thien-nhien-qua-tang-y-nghia-6_w400_h300.jpeg"
+                                src="https://hoiandenlong.com/den/den-long-truyen-thong/8.png"
                                 alt=""
                             />
-                            <p className="section1-list-hot-container__product-name">
-                                Set 7 chai tinh dầu thiên nhiên
-                            </p>
+                            <h4 className="section1-list-hot-container__product-name">
+                                Đèn lồng vải phi in 3d
+                            </h4>
                             <p className="section1-list-hot-container__product-price">
-                                420.000
                             </p>
                         </Col>
-
                         <Col
                             onClick={handleRedirectProductPage}
                             className="section1-list-hot-container__product"
@@ -69,17 +48,15 @@ const Section1 = () => {
                             xl={6}
                         >
                             <img
-                                src="https://tamshoppe.vn/Thumb/Web/Resources/Uploaded/2/images/san-pham/Lam-theo-yeu-cau/bang-hieu-khung-cui-quan-day-thung-rustic-1_w400_h300.jpg"
+                                src="https://hoiandenlong.com/den/den-long-truyen-thong/9.png"
                                 alt=""
                             />
-                            <p className="section1-list-hot-container__product-name">
-                                Bảng hiệu khung củi quấn dây thừng Rustic
-                            </p>
+                            <h4 className="section1-list-hot-container__product-name">
+                                Đèn lồng vải phi trơn
+                            </h4>
                             <p className="section1-list-hot-container__product-price">
-                                550.000
                             </p>
                         </Col>
-
                         <Col
                             onClick={handleRedirectProductPage}
                             className="section1-list-hot-container__product"
@@ -90,16 +67,36 @@ const Section1 = () => {
                             xl={6}
                         >
                             <img
-                                src="https://tamshoppe.vn/Thumb/Web/Resources/Uploaded/2/images/san-pham/Party/set-trang-tri-sinh-nhat-chu-hpbd-ngoi-sao-vang-bac-new_w400_h300.jpg"
+                                src="https://hoiandenlong.com/den/den-long-truyen-thong/12.png"
                                 alt=""
                             />
-                            <p className="section1-list-hot-container__product-name">
-                                Set bóng sinh nhật HPBD ngôi sao
-                            </p>
+                            <h4 className="section1-list-hot-container__product-name">
+                                Đèn lồng vải tơ tằm
+                            </h4>
                             <p className="section1-list-hot-container__product-price">
-                                145.000
                             </p>
                         </Col>
+                        <Col
+                            onClick={handleRedirectProductPage}
+                            className="section1-list-hot-container__product"
+                            xs={12}
+                            sm={12}
+                            md={8}
+                            lg={6}
+                            xl={6}
+                        >
+                            <img
+                                src="https://hoiandenlong.com/den/den-long-truyen-thong/13.png"
+                                alt=""
+                            />
+                            <h4 className="section1-list-hot-container__product-name">
+                                Đèn lồng vải đủi
+                            </h4>
+                            <p className="section1-list-hot-container__product-price">
+                            </p>
+                        </Col>
+
+
                     </Row>
                 </div>
                 <div className="section1-list-hot-container__btn-shopping">

@@ -21,7 +21,6 @@ const CartPurchase = (props) => {
     }
     return numString;
   };
-  console.log(cartsInCheckoutBills, "cartsInCheckoutBills");
   const renderCartsModal = (cartsInCheckoutBills) => {
     return cartsInCheckoutBills.map((cart) => {
       return (

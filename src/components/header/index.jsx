@@ -15,7 +15,9 @@ const HeaderComponent = () => {
     const [isToggle, setIsToggle] = useState(false);
     const { isLogin, userInfo } = useSelector((state) => state.user);
     const dispatch = useDispatch();
-
+    const handleFilterChangeInput = (newFilter) => {
+        console.log(newFilter, 'newFilter');
+    }
     const [isShowMenuMobile, setIsShowMenuMobile] =
         useState(false);
     const handleRedirectToCartPage = () => {
@@ -81,67 +83,31 @@ const HeaderComponent = () => {
 
     return (
         <div className="header-container">
-            <div className="header-container-top-header">
-                <div className="header-container-top-header__title">Yi Decor - Trang trí góc nhà</div>
+            {/* <div className="header-container-top-header">
+                <div className="header-container-top-header__title">Đèn Lồng Thiên Đăng </div>
                 <div className="header-container-top-header__contact">
                     <a href="/"><FacebookOutlined /></a>
                     <a href="/"><MailOutlined /></a>
-                    <a href="/"><PhoneOutlined /></a>
+                    <a href="tel:+84123456789"><PhoneOutlined /></a>
                 </div>
-            </div>
+            </div> */}
             <div className="header-container-menu-bar row d-flex">
                 <div className="header-container-menu-bar__logo ">
-                    <Link className="header-container-menu-bar__logo__link" to={ROUTES.HOME_PAGE}><img src={logo} alt="logo" /></Link>
+                    <Link className="header-container-menu-bar__logo__link" to={ROUTES.HOME_PAGE}><img src="https://hoiandenlong.com/den/logo/slogan.png" alt="logo" /></Link>
                 </div>
-                <div>
-                    {/* <img src="https://misahouse.com/wp-content/uploads/2019/03/banner-1.jpg" alt="" /> */}
-                </div>
-                <div className="header-container-menu-bar__account" >
-                    <div className="header-container-menu-bar__account-cart" onClick={handleRedirectToCartPage}>
-                        {!!carts.length && (
-                            <div className="header-container-menu-bar__account-cart-shoppingCartCount">
-                                <p>{carts.length}</p>
-                            </div>
-                        )}
-                        <ShoppingCartOutlined />
-                    </div>
-                    {!isLogin && (
-                        <div className="header-left__loginRegisterGrp">
-                            <div className="header-left__icon">
-                                <Dropdown menu={{ items }} placement="bottomLeft">
-                                    <UserOutlined />
-                                </Dropdown>
-                            </div>
-                        </div>
-                    )}
-                    {isLogin && (
-                        <div className="header-left__user-grp">
-                            <div className="header-left__user-avatar">
-                                <Dropdown
-                                    menu={{ items: itemsLoginSuccess }}
-                                    trigger={"click"}
-                                    placement="bottomLeft"
-                                >
-                                    {userInfo?.avatarURL ? (
-                                        <div className="header-left__avatar-user">
-                                            <img src={userInfo?.avatarURL} alt="" />
-                                        </div>
-                                    ) : (
-                                        <UserOutlined />
-                                    )}
 
-                                </Dropdown>
-                            </div>
-                            <div className="header-left__user-name">
-                                <p>Hello {userInfo?.fullName}</p>
-                            </div>
-                        </div>
-                    )}
-
+                <div className="header-container-menu-bar__search" >
+                    <form className="list-product__search" >
+                        <PostFilterForm onSubmit={handleFilterChangeInput} />
+                        <Button className="list-product__search-btn" type="submit" htmlType="submit">
+                            <SearchOutlined />
+                        </Button>
+                    </form>
                 </div>
+
             </div>
-            <div style={{ backgroundColor: "#15a69d" }}>
-                <div className="header-container-nav" style={{ maxWidth: '968px', margin: '0 auto' }}>
+            <div style={{ backgroundColor: "brown" }}>
+                <div className="header-container-nav" style={{ maxWidth: '900px', margin: '0 auto' }}>
                     <div className="header-navBar">
 
                         <div
@@ -158,7 +124,7 @@ const HeaderComponent = () => {
                                         </Link>
                                     </div>
                                     <ul className="header-navBar__subNavProduct" >
-                                        <li className="header-navBar__subNavProduct-item" value={"Trang Trí Để Bàn"} onClick={handleRedirectToProductPage}>
+                                        <li className="header-navBar__subNavProduct-item" onClick={handleRedirectToProductPage}>
                                             <span>Trang trí để bàn</span>
                                         </li>
                                         <li className="header-navBar__subNavProduct-item" onClick={handleRedirectToProductPage}>
@@ -200,9 +166,8 @@ const HeaderComponent = () => {
                                     </Link>
                                 </li>
                                 <li className="header-navBar__listItem">
-                                    <Link to={ROUTES.PRODUCT_PAGE}>
-                                        <span >LIÊN HỆ</span>
-                                    </Link>
+                                    <a href="tel:+84123456789"> <span >LIÊN HỆ</span></a>
+
                                 </li>
                             </ul>
                         </div>

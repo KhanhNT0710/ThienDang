@@ -87,7 +87,6 @@ const productSlice = createSlice({
 
     setFilterPrice: (state, action) => {
       state.filter = action.payload;
-      console.log(action.payload, "action.payload");
       switch (action.payload) {
         case "less than 100.000đ":
           state.params.price_gte = 0;
@@ -118,13 +117,11 @@ const productSlice = createSlice({
           state.params._order = "asc";
           break;
       }
-      console.log({ ...state.params }, "state.params in filter price");
 
     },
 
     setFilterEvaluate: (state, action) => {
       state.filter = action.payload;
-      console.log(action.payload, "action.payload");
       switch (action.payload) {
         case "1 sao":
           state.params.evaluate = 1;
@@ -181,7 +178,6 @@ const productSlice = createSlice({
           state.params._order = "asc";
           break;
       }
-      console.log({ ...state.params }, "state.params in filter category");
 
     },
     clearAllFilter: (state, action) => {

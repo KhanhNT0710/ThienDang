@@ -53,7 +53,6 @@ const ChangePersonalInformation = () => {
     formState: { errors },
     reset,
   } = methods;
-  // console.log(errors, "errors");
 
   const onValid = (formValue) => {
     dispatch(
@@ -66,7 +65,7 @@ const ChangePersonalInformation = () => {
   };
 
   useEffect(() => {
-    console.log(userInfo, 'userInfo');
+
 
     dispatch(actFetchUserById(userInfo.id));
     //   // reset form về giá trị của userInfo => hiển thị lên form profile

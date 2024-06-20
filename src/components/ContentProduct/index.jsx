@@ -36,7 +36,7 @@ const ContentProduct = () => {
           />
         </div>
         <div className="content-product-all-container__description">
-          <h3>Sản phẩm Yi Decor</h3>
+          <h3>Sản phẩm Đèn Lồng Thiên Đăng</h3>
         </div>
         <div className="content-product-container">
 

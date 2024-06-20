@@ -12,7 +12,6 @@ const cartSlice = createSlice({
   reducers: {
     actAddProductToCarts: (state, action) => {
       const product = action.payload;
-      console.log(product, "add cart ne");
       // const { id, name, imgURL, price, quantity } = product;
       const existedItemIndex = state.carts.findIndex(
         (cart) => cart.id === product.id
@@ -30,13 +29,11 @@ const cartSlice = createSlice({
     actDeleteProductInCarts: (state, action) => {
       state.carts = state.carts.filter((cart) => cart.id !== action.payload);
       localStorage.setItem(KEY_CARTS_LIST, JSON.stringify(state.carts));
-      message.success("Đã xoá sản phẩm khỏi giỏ hàng");
     },
 
     actClearCarts: (state, action) => {
       state.carts = [];
       localStorage.setItem(KEY_CARTS_LIST, JSON.stringify(state.carts));
-      message.success("Đã xoá sản phẩm khỏi giỏ hàng");
     },
 
     actUpdateQuantityOfProduct: (state, action) => {

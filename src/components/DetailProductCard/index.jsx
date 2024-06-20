@@ -127,13 +127,12 @@ const DetailProductCard = () => {
     );
     // const productsListRelated = products; //viết như này sẽ lỗi, phải clone ra
     const productsClone = [...products];
+    console.log(productsClone, "productsClone");
     const indexThisProduct = productsClone.findIndex((product) => {
         return parseFloat(params.productId) === product.id;
     });
-    console.log(indexThisProduct, "indexThisProduct");
     productsClone.splice(indexThisProduct, 1);
     const relatedProductList = productsClone.slice(0, 4);
-    console.log(productsClone, "productsClone");
 
     const onValid = (formValueOrder) => {
         dispatch(

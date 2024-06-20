@@ -28,7 +28,6 @@ const PurchaseHistory = () => {
     setIsModalOpen(true);
 
     const indexThisBills = checkoutBillsClone.findIndex((_cart) => {
-      console.log(_cart, "_cart");
       return _cart.id === id;
     });
     setCartsInCheckoutBills(checkoutBillsClone[indexThisBills].carts);

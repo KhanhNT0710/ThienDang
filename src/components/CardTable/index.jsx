@@ -49,7 +49,6 @@ const CardTable = () => {
     dispatch(actClearCarts());
   };
   const renderCartsList = (carts) => {
-    console.log(carts, "cartscartscartscartscartscarts");
     return carts.map((cart) => {
       return (
         <tr key={cart.id}>
@@ -112,12 +111,7 @@ const CardTable = () => {
         <tr>
           <td colSpan={6}>
             <div className="cart-page-shop-table__tfoot-grp">
-              <div className="cart-page-shop-table__tfoot-grp-left">
-                <Input placeholder="Coupon code " />
-                <button className="cart-page-shop-table__btn-apply-coupon">
-                  <span>Apply Coupon</span>
-                </button>
-              </div>
+
 
               <div style={{ display: "flex", gap: 40 }}>
 
