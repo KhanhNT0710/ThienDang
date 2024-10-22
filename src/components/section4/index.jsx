@@ -15,7 +15,7 @@ const Section4 = () => {
                         lg={8}
                         xl={8}
                     >
-                        <img src="https://hoiandenlong.com/den/Xuong-san-xuat/1.png" alt="" />
+                        <img src="https://denlongthiendang.com/den/Xuong-san-xuat/1.png" alt="" />
                     </Col>
                     <Col className='section4-list-container'
                         xs={12}
@@ -24,7 +24,7 @@ const Section4 = () => {
                         lg={8}
                         xl={8}
                     >
-                        <img src="https://hoiandenlong.com/den/Xuong-san-xuat/2.png" alt="" />
+                        <img src="https://denlongthiendang.com/den/Xuong-san-xuat/2.png" alt="" />
                     </Col>
                     <Col className='section4-list-container'
                         xs={12}
@@ -33,7 +33,7 @@ const Section4 = () => {
                         lg={8}
                         xl={8}
                     >
-                        <img src="https://hoiandenlong.com/den/Xuong-san-xuat/3.png" alt="" />
+                        <img src="https://denlongthiendang.com/den/Xuong-san-xuat/3.png" alt="" />
                     </Col>
                     <Col className='section4-list-container'
                         xs={12}
@@ -42,7 +42,7 @@ const Section4 = () => {
                         lg={8}
                         xl={8}
                     >
-                        <img src="https://hoiandenlong.com/den/Xuong-san-xuat/4.png" alt="" />
+                        <img src="https://denlongthiendang.com/den/Xuong-san-xuat/4.png" alt="" />
                     </Col>
                     <Col className='section4-list-container'
                         xs={12}
@@ -51,7 +51,7 @@ const Section4 = () => {
                         lg={8}
                         xl={8}
                     >
-                        <img src="https://hoiandenlong.com/den/Xuong-san-xuat/5.png" alt="" />
+                        <img src="https://denlongthiendang.com/den/Xuong-san-xuat/5.png" alt="" />
                     </Col>
                     <Col className='section4-list-container'
                         xs={12}
@@ -60,7 +60,7 @@ const Section4 = () => {
                         lg={8}
                         xl={8}
                     >
-                        <img src="https://hoiandenlong.com/den/Xuong-san-xuat/6.png" alt="" />
+                        <img src="https://denlongthiendang.com/den/Xuong-san-xuat/6.png" alt="" />
                     </Col>
                 </Row>
 

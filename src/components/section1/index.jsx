@@ -1,108 +1,210 @@
-import React from "react";
-import "./style.scss";
-import { Button, Col, Row } from "antd";
+import React, { useState } from "react";
+import Slider from "react-slick";
+import './style.scss'
+import { Link } from "react-router-dom";
 import { ROUTES } from "../../constants/routes";
-import { Link, useNavigate } from "react-router-dom";
+import { Col, Row } from "antd";
 
 const Section1 = () => {
-    const navigate = useNavigate();
+    const [display, setDisplay] = useState(true);
+    const [width, setWidth] = useState(1200);
 
-    const handleRedirectProductPage = () => {
-        navigate(ROUTES.PRODUCT_PAGE);
+    const settings = {
+        infinite: true,
+        speed: 500,
+        slidesToShow: 5,
+        slidesToScroll: 1
     };
 
     return (
         <div className="section1-container" >
             <div className="section1-container-title" > <Link className="section1-container-title-link" to={ROUTES.PRODUCT_PAGE}><h3>ĐÈN LỒNG TRUYỀN THỐNG</h3></Link> </div>
-            <div className="section1-list-hot-container">
-                <div className="section1-list-hot-container__product-hot-grp">
-                    <Row className="section1-list-hot-container__list-product">
+            <Row className='section1-container__list-product'>
+                <Col className='section1-container__product'
+                    xs={12}
+                    sm={12}
+                    md={8}
+                    lg={6}
+                    xl={6}
+                >
+                    <div>
+                        <img
+                            src="https://denlongthiendang.com/den/truyen-thong/den-du.jpg"
+                            alt=""
+                        />
+                        <h4>ĐÈN LỒNG DÙ</h4>
+                    </div>
+                </Col>
+                <Col className='section1-container__product'
+                    xs={12}
+                    sm={12}
+                    md={8}
+                    lg={6}
+                    xl={6}
+                >
+                    <div>
+                        <img
+                            src="https://denlongthiendang.com/den/truyen-thong/den-toi.jpg"
+                            alt=""
+                        />
+                        <h4>ĐÈN LỒNG TỎI</h4>
+                    </div>
+                </Col>
+                <Col className='section1-container__product'
+                    xs={12}
+                    sm={12}
+                    md={8}
+                    lg={6}
+                    xl={6}
+                >
+                    <div>
+                        <img
+                            src="https://denlongthiendang.com/den/truyen-thong/dia-bay.jpg"
+                            alt=""
+                        />
+                        <h4>ĐÈN ĐĨA BAY</h4>
+                    </div>
+                </Col>
+                <Col className='section1-container__product'
+                    xs={12}
+                    sm={12}
+                    md={8}
+                    lg={6}
+                    xl={6}
+                >
+                    <div>
+                        <img
+                            src="https://denlongthiendang.com/den/truyen-thong/kim-cuong.jpg"
+                            alt=""
+                        />
+                        <h4>ĐÈN KIM CƯƠNG</h4>
+                    </div>
+                </Col>
+                <Col className='section1-container__product'
+                    xs={12}
+                    sm={12}
+                    md={8}
+                    lg={6}
+                    xl={6}
+                >
+                    <div>
+                        <img
+                            src="https://denlongthiendang.com/den/truyen-thong/kim-cuong-nguoc.jpg"
+                            alt=""
+                        />
+                        <h4>ĐÈN KIM CƯƠNG NGƯỢC</h4>
+                    </div>
+
+                </Col>
+                <Col className='section1-container__product'
+                    xs={12}
+                    sm={12}
+                    md={8}
+                    lg={6}
+                    xl={6}
+                >
+                    <div>
+                        <img
+                            src="https://denlongthiendang.com/den/truyen-thong/na.jpg"
+                            alt=""
+                        />
+                        <h4>ĐÈN QUẢ NA</h4>
+                    </div>
+
+                </Col>
+                <Col className='section1-container__product'
+                    xs={12}
+                    sm={12}
+                    md={8}
+                    lg={6}
+                    xl={6}
+                >
+                    <div>
+                        <img
+                            src="https://denlongthiendang.com/den/truyen-thong/toi-nguoc.jpg"
+                            alt=""
+                        />
+                        <h4>ĐÈN TỎI NGƯỢC</h4>
+                    </div>
+                </Col>
+                <Col className='section1-container__product'
+                    xs={12}
+                    sm={12}
+                    md={8}
+                    lg={6}
+                    xl={6}
+                >
+                    <div>
+                        <img
+                            src="https://denlongthiendang.com/den/truyen-thong/tron.jpg"
+                            alt=""
+                        />
+                        <h4>ĐÈN TRÒN</h4>
+                    </div>
+                </Col>
+                <Col className='section1-container__product'
+                    xs={12}
+                    sm={12}
+                    md={8}
+                    lg={6}
+                    xl={6}
+                >
+                    <div>
+                        <img
+                            src="https://denlongthiendang.com/den/truyen-thong/u.jpg"
+                            alt=""
+                        />
+                        <h4>ĐÈN BÁNH Ú</h4>
+                    </div>
+                </Col>
+                <Col className='section1-container__product'
+                    xs={12}
+                    sm={12}
+                    md={8}
+                    lg={6}
+                    xl={6}
+                >
+                    <div>
+                        <img
+                            src="https://denlongthiendang.com/den/truyen-thong/vai-phi-3d.jpg"
+                            alt=""
+                        />
+                        <h4>ĐÈN VẢI PHI IN 3D</h4>
+                    </div>
+                </Col>
+                <Col className='section1-container__product'
+                    xs={12}
+                    sm={12}
+                    md={8}
+                    lg={6}
+                    xl={6}
+                >
+                    <div>
+                        <img
+                            src="https://denlongthiendang.com/den/truyen-thong/vai-phi-tron.jpg"
+                            alt=""
+                        />
+                        <h4>ĐÈN VẢI PHI TRƠN</h4>
+                    </div>
+                </Col>
+                <Col className='section1-container__product'
+                    xs={12}
+                    sm={12}
+                    md={8}
+                    lg={6}
+                    xl={6}
+                >
+                    <div>
+                        <img
+                            src="https://denlongthiendang.com/den/truyen-thong/vai-to-tam-2.jpg"
+                            alt=""
+                        />
+                        <h4>ĐÈN VẢI TƠ TẰM</h4>
+                    </div>
+                </Col>
 
 
-                        <Col
-                            onClick={handleRedirectProductPage}
-                            className="section1-list-hot-container__product"
-                            xs={12}
-                            sm={12}
-                            md={8}
-                            lg={6}
-                            xl={6}
-                        >
-                            <img
-                                src="https://hoiandenlong.com/den/den-long-truyen-thong/8.png"
-                                alt=""
-                            />
-                            <h4 className="section1-list-hot-container__product-name">
-                                Đèn lồng vải phi in 3d
-                            </h4>
-                            <p className="section1-list-hot-container__product-price">
-                            </p>
-                        </Col>
-                        <Col
-                            onClick={handleRedirectProductPage}
-                            className="section1-list-hot-container__product"
-                            xs={12}
-                            sm={12}
-                            md={8}
-                            lg={6}
-                            xl={6}
-                        >
-                            <img
-                                src="https://hoiandenlong.com/den/den-long-truyen-thong/9.png"
-                                alt=""
-                            />
-                            <h4 className="section1-list-hot-container__product-name">
-                                Đèn lồng vải phi trơn
-                            </h4>
-                            <p className="section1-list-hot-container__product-price">
-                            </p>
-                        </Col>
-                        <Col
-                            onClick={handleRedirectProductPage}
-                            className="section1-list-hot-container__product"
-                            xs={12}
-                            sm={12}
-                            md={8}
-                            lg={6}
-                            xl={6}
-                        >
-                            <img
-                                src="https://hoiandenlong.com/den/den-long-truyen-thong/12.png"
-                                alt=""
-                            />
-                            <h4 className="section1-list-hot-container__product-name">
-                                Đèn lồng vải tơ tằm
-                            </h4>
-                            <p className="section1-list-hot-container__product-price">
-                            </p>
-                        </Col>
-                        <Col
-                            onClick={handleRedirectProductPage}
-                            className="section1-list-hot-container__product"
-                            xs={12}
-                            sm={12}
-                            md={8}
-                            lg={6}
-                            xl={6}
-                        >
-                            <img
-                                src="https://hoiandenlong.com/den/den-long-truyen-thong/13.png"
-                                alt=""
-                            />
-                            <h4 className="section1-list-hot-container__product-name">
-                                Đèn lồng vải đủi
-                            </h4>
-                            <p className="section1-list-hot-container__product-price">
-                            </p>
-                        </Col>
-
-
-                    </Row>
-                </div>
-                <div className="section1-list-hot-container__btn-shopping">
-                    <Button onClick={handleRedirectProductPage}>XEM THÊM </Button>
-                </div>
-            </div>
+            </Row>
 
         </div>
     );

@@ -49,7 +49,7 @@ const PostFilterForm = ({ onSubmit }) => {
             <form className="input-search">
                 <Input
                     type="search"
-                    placeholder="Bạn muốn mua gì"
+                    placeholder="Tìm kiếm"
                     value={searchTerm}
                     onChange={handleSearchTermChange}
                     suffix={<CloseCircleOutlined onClick={handleClear} style={{ color: 'rgba(0,0,0,.45)', cursor: 'pointer' }} />}

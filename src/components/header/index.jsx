@@ -9,6 +9,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { logout } from "../../redux/features/user/userSlice";
 import PostFilterForm from "../PostFilterForm";
 import { actFetchAllProducts, setNewPage, setSearchKey } from "../../redux/features/product/productSlice";
+import { useTranslation } from 'react-i18next';
 
 const HeaderComponent = () => {
     const navigate = useNavigate();
@@ -93,7 +94,7 @@ const HeaderComponent = () => {
             </div> */}
             <div className="header-container-menu-bar row d-flex">
                 <div className="header-container-menu-bar__logo ">
-                    <Link className="header-container-menu-bar__logo__link" to={ROUTES.HOME_PAGE}><img src="https://hoiandenlong.com/den/logo/slogan.png" alt="logo" /></Link>
+                    <Link className="header-container-menu-bar__logo__link" to={ROUTES.HOME_PAGE}><img src="https://denlongthiendang.com/den/logo/slogan.png" alt="logo" /></Link>
                 </div>
 
                 <div className="header-container-menu-bar__search" >

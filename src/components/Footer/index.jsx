@@ -56,7 +56,7 @@ const FooterComponent = () => {
                         <p className="footer-item__description">Bồng Lai - Điện Minh - Điện Bàn - Quảng Nam</p>
                         <p className="footer-item__description"><a target="_blank" href="https://zalo.me/0988015093">Điện thoại: 0988015093</a></p>
                         <p className="footer-item__description"><a target="_blank" href="https://maps.app.goo.gl/BSec4jZepiQVDknx9">Google Map</a></p>
-                        <p className="footer-item__description"><a href="mailto:sales@gocnha.vn" title="sales@gocnha.vn">sales@gocnha.vn</a></p>
+                        <p className="footer-item__description"><a href="mailto:denlongthiendang@gmail.com" title="denlongthiendang@gmail.com">denlongthiendang@gmail.com</a></p>
                     </div>
                     <div className="footer-item__bottom">
                         <FacebookOutlined />

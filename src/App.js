@@ -18,6 +18,8 @@ import PaymentPage from './pages/PaymentPage';
 import OrderPage from './pages/OrderPage';
 import UserPurchaseHistoryPage from './pages/UserPurchaseHistoryPage';
 import AboutPage from './pages/AboutPage';
+import i18next from 'i18next';
+import ManaProductPage from './pages/ManaProductPage';
 
 function App() {
   const dispatch = useDispatch();
@@ -38,6 +40,7 @@ function App() {
             <Route path={ROUTES.HOME_PAGE} element={<HomePage />} />
             <Route path={ROUTES.CART_PAGE} element={<CartPage />} />
             <Route path={ROUTES.PRODUCT_PAGE} element={<ProductPage />} />
+            <Route path={ROUTES.MANA_PRODUCT_PAGE} element={<ManaProductPage />} />
             <Route path={ROUTES.BLOG_PAGE} element={<BlogPage />} />
             <Route path={ROUTES.ABOUT_US_PAGE} element={<AboutPage />} />
             <Route path={ROUTES.DETAIL_PRODUCT_PAGE} element={<DetailProductPage />} />

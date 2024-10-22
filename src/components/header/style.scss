@@ -3,21 +3,22 @@
   flex-direction: column;
   gap: 10px;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans', sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
-  //  background-image: url('https://hoiandenlong.com/den/logo/bia.png') ;
-  height: 200px !important;
-
+  //  background-image: url('https://denlongthiendang.com/den/logo/bia.png') ;
+  height: 170px !important;
+background-color: #f8f6f4;
+position: fixed;
+z-index: 2000;
   .header-container-menu-bar {
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: 5px;
     align-self: center;
 
     &__logo {
       &__link {
         img {
           width: 300px;
-          height: 100px;
-          align-items: center;
+          height: 75px;
         }
       }
     }

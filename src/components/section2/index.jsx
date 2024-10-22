@@ -30,7 +30,7 @@ const Section2 = () => {
                     <div className="section2-right">
                         <img
                             className="section2-right__img"
-                            src="https://hoiandenlong.com/den/slide/5.png"
+                            src="https://denlongthiendang.com/den/slide/5.png"
                             alt=""
                         />
                     </div>
