@@ -29,7 +29,7 @@ const Section1 = () => {
                 >
                     <div>
                         <img
-                            src="https://denlongthiendang.com/den/truyen-thong/den-du.jpg"
+                            src="http://denlongthiendang.com/den/truyen-thong/den-du.jpg"
                             alt=""
                         />
                         <h4>ĐÈN LỒNG DÙ</h4>
@@ -44,7 +44,7 @@ const Section1 = () => {
                 >
                     <div>
                         <img
-                            src="https://denlongthiendang.com/den/truyen-thong/den-toi.jpg"
+                            src="http://denlongthiendang.com/den/truyen-thong/den-toi.jpg"
                             alt=""
                         />
                         <h4>ĐÈN LỒNG TỎI</h4>
@@ -59,7 +59,7 @@ const Section1 = () => {
                 >
                     <div>
                         <img
-                            src="https://denlongthiendang.com/den/truyen-thong/dia-bay.jpg"
+                            src="http://denlongthiendang.com/den/truyen-thong/dia-bay.jpg"
                             alt=""
                         />
                         <h4>ĐÈN ĐĨA BAY</h4>
@@ -74,7 +74,7 @@ const Section1 = () => {
                 >
                     <div>
                         <img
-                            src="https://denlongthiendang.com/den/truyen-thong/kim-cuong.jpg"
+                            src="http://denlongthiendang.com/den/truyen-thong/kim-cuong.jpg"
                             alt=""
                         />
                         <h4>ĐÈN KIM CƯƠNG</h4>
@@ -89,7 +89,7 @@ const Section1 = () => {
                 >
                     <div>
                         <img
-                            src="https://denlongthiendang.com/den/truyen-thong/kim-cuong-nguoc.jpg"
+                            src="http://denlongthiendang.com/den/truyen-thong/kim-cuong-nguoc.jpg"
                             alt=""
                         />
                         <h4>ĐÈN KIM CƯƠNG NGƯỢC</h4>
@@ -105,7 +105,7 @@ const Section1 = () => {
                 >
                     <div>
                         <img
-                            src="https://denlongthiendang.com/den/truyen-thong/na.jpg"
+                            src="http://denlongthiendang.com/den/truyen-thong/na.jpg"
                             alt=""
                         />
                         <h4>ĐÈN QUẢ NA</h4>
@@ -121,7 +121,7 @@ const Section1 = () => {
                 >
                     <div>
                         <img
-                            src="https://denlongthiendang.com/den/truyen-thong/toi-nguoc.jpg"
+                            src="http://denlongthiendang.com/den/truyen-thong/toi-nguoc.jpg"
                             alt=""
                         />
                         <h4>ĐÈN TỎI NGƯỢC</h4>
@@ -136,7 +136,7 @@ const Section1 = () => {
                 >
                     <div>
                         <img
-                            src="https://denlongthiendang.com/den/truyen-thong/tron.jpg"
+                            src="http://denlongthiendang.com/den/truyen-thong/tron.jpg"
                             alt=""
                         />
                         <h4>ĐÈN TRÒN</h4>
@@ -151,7 +151,7 @@ const Section1 = () => {
                 >
                     <div>
                         <img
-                            src="https://denlongthiendang.com/den/truyen-thong/u.jpg"
+                            src="http://denlongthiendang.com/den/truyen-thong/u.jpg"
                             alt=""
                         />
                         <h4>ĐÈN BÁNH Ú</h4>
@@ -166,7 +166,7 @@ const Section1 = () => {
                 >
                     <div>
                         <img
-                            src="https://denlongthiendang.com/den/truyen-thong/vai-phi-3d.jpg"
+                            src="http://denlongthiendang.com/den/truyen-thong/vai-phi-3d.jpg"
                             alt=""
                         />
                         <h4>ĐÈN VẢI PHI IN 3D</h4>
@@ -181,7 +181,7 @@ const Section1 = () => {
                 >
                     <div>
                         <img
-                            src="https://denlongthiendang.com/den/truyen-thong/vai-phi-tron.jpg"
+                            src="http://denlongthiendang.com/den/truyen-thong/vai-phi-tron.jpg"
                             alt=""
                         />
                         <h4>ĐÈN VẢI PHI TRƠN</h4>
@@ -196,7 +196,7 @@ const Section1 = () => {
                 >
                     <div>
                         <img
-                            src="https://denlongthiendang.com/den/truyen-thong/vai-to-tam-2.jpg"
+                            src="http://denlongthiendang.com/den/truyen-thong/vai-to-tam-2.jpg"
                             alt=""
                         />
                         <h4>ĐÈN VẢI TƠ TẰM</h4>

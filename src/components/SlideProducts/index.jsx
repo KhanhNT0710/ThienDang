@@ -32,77 +32,77 @@ function SlideProduct() {
                     {...settings}>
                     <div>
                         <img
-                            src="https://denlongthiendang.com/den/san-pham-noi-bat/den-5-mau-co-phat-dan-khung-tre.jpg"
+                            src="http://denlongthiendang.com/den/san-pham-noi-bat/den-5-mau-co-phat-dan-khung-tre.jpg"
                             alt=""
                         />
                         <h4>ĐÈN MÀU CỜ PHẬT ĐẢN</h4>
                     </div>
                     <div>
                         <img
-                            src="https://denlongthiendang.com/den/san-pham-noi-bat/den-long-chuong-khung-thep.jpg"
+                            src="http://denlongthiendang.com/den/san-pham-noi-bat/den-long-chuong-khung-thep.jpg"
                             alt=""
                         />
                         <h4>ĐÈN CHUÔNG KHUNG THÉP</h4>
                     </div>
                     <div>
                         <img
-                            src="https://denlongthiendang.com/den/san-pham-noi-bat/den-long-tru-khung-thep.jpg"
+                            src="http://denlongthiendang.com/den/san-pham-noi-bat/den-long-tru-khung-thep.jpg"
                             alt=""
                         />
                         <h4>ĐÈN TRỤ KHUNG THÉP</h4>
                     </div>
                     <div>
                         <img
-                            src="https://denlongthiendang.com/den/san-pham-noi-bat/vai-phi-3d-khung-tre.jpg"
+                            src="http://denlongthiendang.com/den/san-pham-noi-bat/vai-phi-3d-khung-tre.jpg"
                             alt=""
                         />
                         <h4>ĐÈN VẢI PHI IN 3D KHUNG TRE</h4>
                     </div>
                     <div>
                         <img
-                            src="https://denlongthiendang.com/den/san-pham-noi-bat/vai-phi-3d-mau-toi.jpg"
+                            src="http://denlongthiendang.com/den/san-pham-noi-bat/vai-phi-3d-mau-toi.jpg"
                             alt=""
                         />
                         <h4>ĐÈN VẢI PHI IN 3D MẪU TỎI</h4>
                     </div>
                     <div>
                         <img
-                            src="https://denlongthiendang.com/den/san-pham-noi-bat/den-long-dan-day-khung-thep.jpg"
+                            src="http://denlongthiendang.com/den/san-pham-noi-bat/den-long-dan-day-khung-thep.jpg"
                             alt=""
                         />
                         <h4>ĐÈN ĐAN DÂY KHUNG THÉP</h4>
                     </div>
                     <div>
                         <img
-                            src="https://denlongthiendang.com/den/san-pham-noi-bat/den-long-trai-tim-khung-thep.jpg"
+                            src="http://denlongthiendang.com/den/san-pham-noi-bat/den-long-trai-tim-khung-thep.jpg"
                             alt=""
                         />
                         <h4>ĐÈN TRÁI TIM KHUNG THÉP</h4>
                     </div>
                     <div>
                         <img
-                            src="https://denlongthiendang.com/den/san-pham-noi-bat/den-long-vai-dui-khung-tre.jpg"
+                            src="http://denlongthiendang.com/den/san-pham-noi-bat/den-long-vai-dui-khung-tre.jpg"
                             alt=""
                         />
                         <h4>ĐÈN VẢI ĐỦI KHUNG TRE</h4>
                     </div>
                     <div>
                         <img
-                            src="https://denlongthiendang.com/den/san-pham-noi-bat/den-long-vai-to-tam-khung-tre.jpg"
+                            src="http://denlongthiendang.com/den/san-pham-noi-bat/den-long-vai-to-tam-khung-tre.jpg"
                             alt=""
                         />
                         <h4>ĐÈN VẢI TƠ TẰM KHUNG TRE</h4>
                     </div>
                     <div>
                         <img
-                            src="https://denlongthiendang.com/den/san-pham-noi-bat/den-vai-phi-3d-nhieu-mau.jpg"
+                            src="http://denlongthiendang.com/den/san-pham-noi-bat/den-vai-phi-3d-nhieu-mau.jpg"
                             alt=""
                         />
                         <h4>ĐÈN VẢI PHI IN 3D NHIỀU MÀU</h4>
                     </div>
                     <div>
                         <img
-                            src="https://denlongthiendang.com/den/san-pham-noi-bat/phi-3d.jpg"
+                            src="http://denlongthiendang.com/den/san-pham-noi-bat/phi-3d.jpg"
                             alt=""
                         />
                         <h4>ĐÈN VẢI PHI IN 3D KHUNG TRE</h4>

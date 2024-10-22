@@ -94,7 +94,7 @@ const HeaderComponent = () => {
             </div> */}
             <div className="header-container-menu-bar row d-flex">
                 <div className="header-container-menu-bar__logo ">
-                    <Link className="header-container-menu-bar__logo__link" to={ROUTES.HOME_PAGE}><img src="https://denlongthiendang.com/den/logo/slogan.png" alt="logo" /></Link>
+                    <Link className="header-container-menu-bar__logo__link" to={ROUTES.HOME_PAGE}><img src="http://denlongthiendang.com/den/logo/slogan.png" alt="logo" /></Link>
                 </div>
 
                 <div className="header-container-menu-bar__search" >

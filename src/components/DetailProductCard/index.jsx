@@ -263,7 +263,7 @@ const DetailProductCard = () => {
                     className="detail-product-card-comment__review--item"
                 >
                     <div className="detail-product-card-comment__review--avatar-user">
-                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQNL_ZnOTpXSvhf1UaK7beHey2BX42U6solRA&s" alt="" />
+                        <img src="http://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQNL_ZnOTpXSvhf1UaK7beHey2BX42U6solRA&s" alt="" />
                     </div>
                     <div className="detail-product-card-comment__review--grp-right">
                         <div className="detail-product-card-comment__review--user-name">
@@ -612,18 +612,18 @@ const DetailProductCard = () => {
                     <p>Chữ HOME gỗ Vintage Bắc Âu 15cm trang trí đẹp mắt. Chữ cái trang trí để bàn giúp bạn thể hiện thông điệp muốn truyền tải như chỉ dẫn, tên riêng, tên sự kiện…</p>
                     <p> Sản phẩm đa dạng về mẫu mã chất liệu: chữ gỗ, chữ phủ kim tuyến, chữ đèn Led…</p>
                     <p>Chúng giúp bạn hoàn thiện không gian thật chỉnh chu, đẹp mắt và ý nghĩa.</p>
-                    <img src="https://admin.tamshoppe.vn/Web/Resources/Uploaded/2/images/san-pham/do-go/chu-HOME-go-vintage-bac-au-15cm-11.jpg" alt="" />
+                    <img src="http://admin.tamshoppe.vn/Web/Resources/Uploaded/2/images/san-pham/do-go/chu-HOME-go-vintage-bac-au-15cm-11.jpg" alt="" />
                     <p>- Chữ làm bằng gỗ, phủ màu chà tróc giả cổ Vintage phong cách Bắc Âu đẹp mắt.</p>
                     <p>- Chữ cao 15cm, độ dày gỗ khoảng 2cm</p>
                     <p>- Có 02 kiểu chọn: Chữ dính liền hoặc chữ rời.</p>
                     <p>- Gỗ tùy miếng sẽ cho lên màu đậm nhạt chênh lệch khác nhau một ít.</p>
                     <p>- Mối ghép gỗ, vân gỗ, sớ gỗ, mắc gỗ tự nhiên khác nhau tùy thuộc vào từng đợt gỗ.</p>
-                    <img src="https://admin.tamshoppe.vn/Web/Resources/Uploaded/2/images/san-pham/do-go/chu-HOME-go-vintage-bac-au-15cm-1.jpg" alt="" />
+                    <img src="http://admin.tamshoppe.vn/Web/Resources/Uploaded/2/images/san-pham/do-go/chu-HOME-go-vintage-bac-au-15cm-1.jpg" alt="" />
                     <h5>Công dụng & cách sử dụng:</h5>
                     <p>- Trưng bày tủ kệ, trang trí nhà cửa đẹp mắt</p>
                     <p>- Có thể dán lên tường bằng silicon Apolo hoặc các loại băng keo 2 mặt siêu dính.</p>
                     <p>- SP sử dụng được ở ngoài trời, lưu ý treo vị trí hạn chế nắng mưa sẽ được bền hơn</p>
-                    <img src="https://admin.tamshoppe.vn/Web/Resources/Uploaded/2/images/san-pham/do-go/chu-HOME-go-vintage-bac-au-15cm-2.jpg" alt="" />
+                    <img src="http://admin.tamshoppe.vn/Web/Resources/Uploaded/2/images/san-pham/do-go/chu-HOME-go-vintage-bac-au-15cm-2.jpg" alt="" />
                 </div>
             </div>
 
