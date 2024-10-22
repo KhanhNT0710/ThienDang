@@ -151,11 +151,11 @@ const HeaderComponent = () => {
                                         </li>
                                     </ul>
                                 </li>
-                                <li className="header-navBar__listItem">
+                                {/* <li className="header-navBar__listItem">
                                     <Link to={ROUTES.PRODUCT_PAGE}>
                                         <span >SẢN PHẨM</span>
                                     </Link>
-                                </li>
+                                </li> */}
                                 <li className="header-navBar__listItem">
                                     <Link to={ROUTES.ABOUT_US_PAGE}>
                                         <span >GIỚI THIỆU</span>
@@ -167,7 +167,7 @@ const HeaderComponent = () => {
                                     </Link>
                                 </li>
                                 <li className="header-navBar__listItem">
-                                    <a href="tel:+84123456789"> <span >LIÊN HỆ</span></a>
+                                    <a href="tel:0988015093"> <span >LIÊN HỆ</span></a>
 
                                 </li>
                             </ul>
