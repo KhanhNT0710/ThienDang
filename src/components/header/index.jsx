@@ -102,7 +102,7 @@ const HeaderComponent = () => {
             to={ROUTES.HOME_PAGE}
           >
             <img
-              src="http://denlongthiendang.com/den/logo/slogan.png"
+              src="https://denlongthiendang.com/den/logo/slogan.png"
               alt="logo"
             />
           </Link>

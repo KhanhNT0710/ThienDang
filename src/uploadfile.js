@@ -13,7 +13,7 @@ const handler = async (req, res) => {
                 }
 
                 // Giả sử bạn đã xử lý và lưu file ở đây
-                const imageUrl = `http://denlongthiendang.com/uploads/${req.file.originalname}`;
+                const imageUrl = `https://denlongthiendang.com/uploads/${req.file.originalname}`;
 
                 // Trả về URL của file
                 res.status(200).json({ filePath: imageUrl });

@@ -14,42 +14,42 @@ const CarouselComponent = () => {
         <div className="carousel__item">
           <img
             className="carousel__item1"
-            src="http://denlongthiendang.com/den/slide/11.png"
+            src="https://denlongthiendang.com/den/slide/11.png"
             alt=""
           />
         </div>
         <div className="carousel__item">
           <img
             className="carousel__item1"
-            src="http://denlongthiendang.com/den/slide/2.png"
+            src="https://denlongthiendang.com/den/slide/2.png"
             alt=""
           />
         </div>
         <div className="carousel__item">
           <img
             className="carousel__item1"
-            src="http://denlongthiendang.com/den/slide/3.png"
+            src="https://denlongthiendang.com/den/slide/3.png"
             alt=""
           />
         </div>
         <div className="carousel__item">
           <img
             className="carousel__item1"
-            src="http://denlongthiendang.com/den/slide/4.png"
+            src="https://denlongthiendang.com/den/slide/4.png"
             alt=""
           />
         </div>
         <div className="carousel__item">
           <img
             className="carousel__item1"
-            src="http://denlongthiendang.com/den/slide/5.png"
+            src="https://denlongthiendang.com/den/slide/5.png"
             alt=""
           />
         </div>
         <div className="carousel__item">
           <img
             className="carousel__item1"
-            src="http://denlongthiendang.com/den/slide/6.png"
+            src="https://denlongthiendang.com/den/slide/6.png"
             alt=""
           />
         </div>
@@ -57,21 +57,21 @@ const CarouselComponent = () => {
         <div className="carousel__item">
           <img
             className="carousel__item1"
-            src="http://denlongthiendang.com/den/slide/8.png"
+            src="https://denlongthiendang.com/den/slide/8.png"
             alt=""
           />
         </div>
         <div className="carousel__item">
           <img
             className="carousel__item1"
-            src="http://denlongthiendang.com/den/slide/9.png"
+            src="https://denlongthiendang.com/den/slide/9.png"
             alt=""
           />
         </div>
         <div className="carousel__item">
           <img
             className="carousel__item1"
-            src="http://denlongthiendang.com/den/slide/10.png"
+            src="https://denlongthiendang.com/den/slide/10.png"
             alt=""
           />
         </div>

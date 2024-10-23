@@ -37,7 +37,7 @@ const handler = async (req, res) => {
                 }
 
                 // Lưu thông tin vào db.json
-                const imageUrl = `http://denlongthiendang.com/uploads/${req.file.filename}`;
+                const imageUrl = `https://denlongthiendang.com/uploads/${req.file.filename}`;
                 const imageData = { url: imageUrl };
 
                 // Ghi lại URL vào db.json

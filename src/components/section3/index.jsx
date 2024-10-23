@@ -23,7 +23,7 @@ const Section3 = () => {
                     >
                         <div>
                             <img
-                                src="http://admin.tamshoppe.vn/Web/Resources/Uploaded/2/images/bai-viet/do-trang-tri-ban-lam-viec-voi-cay-xanh-1.jpg"
+                                src="https://admin.tamshoppe.vn/Web/Resources/Uploaded/2/images/bai-viet/do-trang-tri-ban-lam-viec-voi-cay-xanh-1.jpg"
                                 alt=""
                             />
                             <span className='section3-list-hot-container__product__quickview'>Xem Thêm</span>
@@ -41,7 +41,7 @@ const Section3 = () => {
                     >
                         <div>
                             <img
-                                src="http://cdn.chonongsanonline.com/uploads/all/CWXZfpyzHfFA9bCjYEVcYEuKjc9FNf0b1MbWZ4Dt.jpg"
+                                src="https://cdn.chonongsanonline.com/uploads/all/CWXZfpyzHfFA9bCjYEVcYEuKjc9FNf0b1MbWZ4Dt.jpg"
                                 alt=""
                             />
                             <span className='section3-list-hot-container__product__quickview'>Xem Thêm</span>
@@ -58,7 +58,7 @@ const Section3 = () => {
                     >
                         <div>
                             <img
-                                src="http://admin.tamshoppe.vn/Web/Resources/Uploaded/2/images/danh-muc-noi-bat/may-khuech-tan-tinh-dau-phun-khoi-sieu-am-khu-khuan6%20copy.jpg"
+                                src="https://admin.tamshoppe.vn/Web/Resources/Uploaded/2/images/danh-muc-noi-bat/may-khuech-tan-tinh-dau-phun-khoi-sieu-am-khu-khuan6%20copy.jpg"
                                 alt=""
                             />
                             <span className='section3-list-hot-container__product__quickview'>Xem Thêm</span>
@@ -76,7 +76,7 @@ const Section3 = () => {
                     >
                         <div>
                             <img
-                                src="http://admin.tamshoppe.vn/Web/Resources/Uploaded/2/images/danh-muc-noi-bat/hop-den-fairy-light-mau-vang-am%20(10)%20copy.jpg"
+                                src="https://admin.tamshoppe.vn/Web/Resources/Uploaded/2/images/danh-muc-noi-bat/hop-den-fairy-light-mau-vang-am%20(10)%20copy.jpg"
                                 alt=""
                             />
                             <span className='section3-list-hot-container__product__quickview'>Xem Thêm</span>
@@ -92,7 +92,7 @@ const Section3 = () => {
                     >
                         <div>
                             <img
-                                src="http://admin.tamshoppe.vn/Web/Resources/Uploaded/2/images/danh-muc-noi-bat/hop-den-fairy-light-mau-vang-am%20(10)%20copy.jpg"
+                                src="https://admin.tamshoppe.vn/Web/Resources/Uploaded/2/images/danh-muc-noi-bat/hop-den-fairy-light-mau-vang-am%20(10)%20copy.jpg"
                                 alt=""
                             />
                             <span className='section3-list-hot-container__product__quickview'>Xem Thêm</span>
@@ -108,7 +108,7 @@ const Section3 = () => {
                     >
                         <div>
                             <img
-                                src="http://admin.tamshoppe.vn/Web/Resources/Uploaded/2/images/danh-muc-noi-bat/hop-den-fairy-light-mau-vang-am%20(10)%20copy.jpg"
+                                src="https://admin.tamshoppe.vn/Web/Resources/Uploaded/2/images/danh-muc-noi-bat/hop-den-fairy-light-mau-vang-am%20(10)%20copy.jpg"
                                 alt=""
                             />
                             <span className='section3-list-hot-container__product__quickview'>Xem Thêm</span>
