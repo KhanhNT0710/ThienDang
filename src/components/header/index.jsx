@@ -128,9 +128,8 @@ const HeaderComponent = () => {
         >
           <div className="header-navBar">
             <div
-              className={`header-navBar__list-grp ${
-                isToggle ? "header-navBar__list-grp-show" : ""
-              }`}
+              className={`header-navBar__list-grp ${isToggle ? "header-navBar__list-grp-show" : ""
+                }`}
             >
               <ul className="header-navBar__list">
                 <li className="header-navBar__listItem header-navBar__shopItem">
