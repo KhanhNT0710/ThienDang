@@ -311,15 +311,15 @@
   ],
   "users": [
     {
-      "email": "nhdung2208test@gmail.com",
-      "phoneNumber": "0965513963",
+      "email": "trongkhanh010@gmail.com",
+      "phoneNumber": "0906295703",
       "address": "Đà nẵng",
-      "confirmPassword": "123123123",
-      "password": "123123123",
-      "user": "dung1",
+      "confirmPassword": "123456780aA@",
+      "password": "123456780aA@",
+      "user": "admin",
       "gender": "male",
       "age": "10",
-      "fullName": "Hữu Dũng",
+      "fullName": "Admin",
       "avatarURL": "",
       "id": 1,
       "dateOfBirth": "Mon, 31 Jul 2023 18:22:35 GMT"
@@ -336,45 +336,8 @@
       "fullName": "khanh",
       "id": 2,
       "dateOfBirth": "Mon, 31 Jul 2023 18:22:35 GMT"
-    },
-    {
-      "email": "n.t.khanh997@gmail.com",
-      "phoneNumber": "0935365498",
-      "address": "ha nong",
-      "confirmPassword": "abcd12",
-      "password": "abcd12",
-      "user": "abcded",
-      "gender": "male",
-      "age": "1",
-      "fullName": "khanh",
-      "id": 3,
-      "dateOfBirth": "Sun, 28 Sep 1997 17:00:00 GMT"
-    },
-    {
-      "email": "trongkhanh071111@gmail.com",
-      "phoneNumber": "0935365490",
-      "address": "ha nong",
-      "confirmPassword": "123456",
-      "password": "123456",
-      "user": "abc123",
-      "gender": "male",
-      "age": 1,
-      "fullName": "khanh",
-      "id": 4
-    },
-    {
-      "email": "trongkhanh@gmail.com",
-      "phoneNumber": "0935365477",
-      "address": "ha nong",
-      "confirmPassword": "123123",
-      "password": "123123",
-      "user": "abcdef",
-      "gender": "male",
-      "age": "20",
-      "fullName": "ngo trong khanh",
-      "id": 5,
-      "dateOfBirth": "Sun, 12 May 2024 17:00:00 GMT"
     }
+   
   ],
   "category": [],
   "comments": [

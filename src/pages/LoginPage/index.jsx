@@ -89,15 +89,6 @@ const LoginPage = () => {
             <div className="login-page-container__btn-login">
               <Button htmlType="submit">Đăng nhập</Button>
             </div>
-            <div className="login-page-container__register">
-              <p>Bạn chưa có tài khoản?</p>
-              <p
-                className="login-page-container__register-btn"
-                onClick={handleRedirectToRegisterPage}
-              >
-                Đăng ký
-              </p>
-            </div>
           </form>
         </div>
       </div>
