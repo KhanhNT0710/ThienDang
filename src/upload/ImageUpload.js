@@ -1,4 +1,3 @@
-// src/ImageUpload.js
 import React, { useState } from 'react';
 import axios from 'axios';
 
@@ -21,14 +20,13 @@ const ImageUpload = () => {
         formData.append('file', selectedFile);
 
         try {
-            // Upload hình ảnh lên server Vercel
-            const response = await axios.post('https://thien-dang.vercel.app/api/upload', formData, {
+            const response = await axios.post('https://denlongthiendang.com/api/upload', formData, {
                 headers: {
                     'Content-Type': 'multipart/form-data',
                 },
             });
 
-            const uploadedImageUrl = response.data.filePath; // URL hình ảnh đã upload
+            const uploadedImageUrl = response.data.filePath;
             setImageUrl(uploadedImageUrl);
             setMessage('Image uploaded successfully!');
 
