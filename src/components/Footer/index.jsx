@@ -66,7 +66,7 @@ const FooterComponent = () => {
                     <div className=" footer-item__bottom"><p> <CopyrightOutlined /> &nbsp; KhanhNT</p></div>
                 </Col>
 
-                <Col className="footer-item" xs={24} sm={12} md={8}>
+                <Col className="footer-item mobile_none" xs={24} sm={12} md={8}>
                     <div className="footer-item__title">
                         <h3>CHÍNH SÁCH</h3>
                     </div>

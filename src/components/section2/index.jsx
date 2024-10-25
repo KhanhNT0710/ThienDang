@@ -3,6 +3,7 @@ import { Button, Col, Row } from "antd";
 import "./style.scss";
 import { useNavigate } from "react-router-dom";
 import { ROUTES } from "../../constants/routes";
+import { API_URL } from "../../apis/api";
 
 const Section2 = () => {
     const navigate = useNavigate();
@@ -30,7 +31,7 @@ const Section2 = () => {
                     <div className="section2-right">
                         <img
                             className="section2-right__img"
-                            src="https://denlongthiendang.com/den/slide/5.png"
+                            src={`${API_URL}/den/slide/5.png`}
                             alt=""
                         />
                     </div>

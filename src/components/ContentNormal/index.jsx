@@ -7,6 +7,7 @@ import Section4 from "../section4";
 import Section1 from "../section1";
 import Section5 from "../section5";
 import SLideProduct from "../SlideProducts";
+import OpenLanterns from "../OpenLanterns";
 
 const ContentNormal = () => {
   return (
@@ -18,6 +19,7 @@ const ContentNormal = () => {
       <div>      <Section1 /></div>
       <div> <SLideProduct /> </div>
       <div>      <Section4 />      </div>
+      <OpenLanterns />
     </div>
   );
 };

@@ -30,13 +30,11 @@ h3 {
     line-height: 36px;
 }
 }
-@media (max-width: 768px) {
+@media (max-width: 600px) {
   .main-layout-container__content {
-    margin-top: 100px;
+    margin-top: 150px;
   }
   }
   @media (max-width: 480px) {
-      .main-layout-container__content {
-        margin-top: 50px;
-      }
+      
   }

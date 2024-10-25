@@ -149,29 +149,27 @@ const ListProductCard = () => {
           <ul className="list-product__filter-radio">
             <Radio.Group onChange={handleFilterCategory} value={filterFormValue.category}  >
               <li>
-                <Radio value={"Trang Trí Để Bàn"}  >Trang Trí Để Bàn</Radio>
+                <Radio value={"Đèn lồng Hội An"}  >Đèn lồng Hội An</Radio>
               </li>
               <li>
-                <Radio value={"Trang Trí Dạng Treo"} >Trang Trí Dạng Treo</Radio>
+                <Radio value={"Đèn lồng ngoài trời"} >Đèn lồng ngoài trời</Radio>
               </li>
               <li>
-                <Radio value={"Đèn Xông Tinh Dầu"} >Đèn Xông Tinh Dầu</Radio>
+                <Radio value={"Đèn lồng trong nhà"} >Đèn lồng trong nhà</Radio>
               </li>
               <li>
-                <Radio value={"Đèn Led Trang Trí"} > Đèn Led Trang Trí</Radio>
+                <Radio value={"Đèn vải in, vẽ hoạ tiết"} > Đèn vải in, vẽ hoạ tiết</Radio>
               </li>
               <li>
-                <Radio value={"Trang Trí Sinh Nhật"} > Trang Trí Sinh Nhật</Radio>
+                <Radio value={"Đèn truyền thống khung tre"} > Đèn truyền thống khung tre</Radio>
               </li>
               <li>
-                <Radio value={"Đồ Hand Made"} > Đồ Hand Made</Radio>
+                <Radio value={"Mẹt trang trí"} > Mẹt trang trí</Radio>
               </li>
               <li>
-                <Radio value={"Đồ Phong Thuỷ"} > Đồ Phong Thuỷ</Radio>
+                <Radio value={"Combo yêu thích"} >Combo yêu thích</Radio>
               </li>
-              <li>
-                <Radio value={"Quà Tặng"} > Quà Tặng</Radio>
-              </li>
+
             </Radio.Group>
           </ul>
         </div>
@@ -250,19 +248,19 @@ const ListProductCard = () => {
             options={[
               {
                 value: "Name: A-Z",
-                label: "Name: A-Z",
+                label: "Tên từ A-Z",
               },
               {
                 value: "Name: Z-A",
-                label: "Name: Z-A",
+                label: "Tên từ Z-A",
               },
               {
                 value: "Price: Low to High",
-                label: "Price: Low to High",
+                label: "Giá thấp tới cao",
               },
               {
                 value: "Price: High to Low",
-                label: "Price: High to Low",
+                label: "Giá cao tới thấp",
               },
             ]}
           />

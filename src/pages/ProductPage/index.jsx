@@ -9,7 +9,7 @@ const ProductPage = () => {
   }, [params])
 
   return (
-    <div>
+    <div style={{ width: "100%" }}>
       <ContentProduct />
     </div>
   );

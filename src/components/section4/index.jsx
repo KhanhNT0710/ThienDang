@@ -1,6 +1,7 @@
 import React from 'react'
 import './style.scss'
 import { Col, Row } from 'antd'
+import { API_URL } from '../../apis/api'
 
 const Section4 = () => {
     return (
@@ -15,7 +16,7 @@ const Section4 = () => {
                         lg={8}
                         xl={8}
                     >
-                        <img src="https://denlongthiendang.com/den/Xuong-san-xuat/1.png" alt="" />
+                        <img src={`${API_URL}/den/Xuong-san-xuat/1.png`} alt="" />
                     </Col>
                     <Col className='section4-list-container'
                         xs={12}
@@ -24,7 +25,7 @@ const Section4 = () => {
                         lg={8}
                         xl={8}
                     >
-                        <img src="https://denlongthiendang.com/den/Xuong-san-xuat/2.png" alt="" />
+                        <img src={`${API_URL}/den/Xuong-san-xuat/2.png`} alt="" />
                     </Col>
                     <Col className='section4-list-container'
                         xs={12}
@@ -33,7 +34,7 @@ const Section4 = () => {
                         lg={8}
                         xl={8}
                     >
-                        <img src="https://denlongthiendang.com/den/Xuong-san-xuat/3.png" alt="" />
+                        <img src={`${API_URL}/den/Xuong-san-xuat/3.png`} alt="" />
                     </Col>
                     <Col className='section4-list-container'
                         xs={12}
@@ -42,7 +43,7 @@ const Section4 = () => {
                         lg={8}
                         xl={8}
                     >
-                        <img src="https://denlongthiendang.com/den/Xuong-san-xuat/4.png" alt="" />
+                        <img src={`${API_URL}/den/Xuong-san-xuat/4.png`} alt="" />
                     </Col>
                     <Col className='section4-list-container'
                         xs={12}
@@ -51,7 +52,7 @@ const Section4 = () => {
                         lg={8}
                         xl={8}
                     >
-                        <img src="https://denlongthiendang.com/den/Xuong-san-xuat/5.png" alt="" />
+                        <img src={`${API_URL}/den/Xuong-san-xuat/5.png`} alt="" />
                     </Col>
                     <Col className='section4-list-container'
                         xs={12}
@@ -60,7 +61,7 @@ const Section4 = () => {
                         lg={8}
                         xl={8}
                     >
-                        <img src="https://denlongthiendang.com/den/Xuong-san-xuat/6.png" alt="" />
+                        <img src={`${API_URL}/den/Xuong-san-xuat/6.png`} alt="" />
                     </Col>
                 </Row>
 

@@ -128,5 +128,22 @@
       justify-content: center;
     }
   }
+.list-product {
+  width: 100%;
+  gap: 5px;
+  .list-product__filter {
+    width: 30%;
+  }
+  .list-product__content {
+    width: 70%;
+  }
+  .list-product__search {
+    width: 100%;
+    .input-search {
+          width: 100%;
+
+    }
+  }
+}
 
 }

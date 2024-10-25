@@ -16,6 +16,7 @@ import { ROUTES } from "../../constants/routes";
 import { useDispatch, useSelector } from "react-redux";
 import { logout } from "../../redux/features/user/userSlice";
 import PostFilterForm from "../PostFilterForm";
+import { API_URL } from "../../apis/api";
 import {
   actFetchAllProducts,
   setNewPage,
@@ -102,7 +103,7 @@ const HeaderComponent = () => {
             to={ROUTES.HOME_PAGE}
           >
             <img
-              src="https://denlongthiendang.com/den/logo/slogan.png"
+              src={`${API_URL}/den/logo/slogan.png`}
               alt="logo"
             />
           </Link>
@@ -112,7 +113,7 @@ const HeaderComponent = () => {
           <form className="list-product__search">
             <PostFilterForm onSubmit={handleFilterChangeInput} />
             <Button
-              className="list-product__search-btn"
+              className="list-product__search-btn mobile_none"
               type="submit"
               htmlType="submit"
             >
@@ -121,7 +122,7 @@ const HeaderComponent = () => {
           </form>
         </div>
       </div>
-      <div style={{ backgroundColor: "brown" }}>
+      <div className="mobile_none" style={{ backgroundColor: "brown" }}>
         <div
           className="header-container-nav"
           style={{ maxWidth: "900px", margin: "0 auto" }}
@@ -145,50 +146,46 @@ const HeaderComponent = () => {
                       className="header-navBar__subNavProduct-item"
                       onClick={handleRedirectToProductPage}
                     >
-                      <span>Trang trí để bàn</span>
+                      <span>Đèn lồng Hội An</span>
                     </li>
                     <li
                       className="header-navBar__subNavProduct-item"
                       onClick={handleRedirectToProductPage}
                     >
-                      <span>Trang trí dạng treo</span>
+                      <span>Đèn lồng ngoài trời</span>
                     </li>
                     <li
                       className="header-navBar__subNavProduct-item"
                       onClick={handleRedirectToProductPage}
                     >
-                      <span>Đèn xông - Tinh dầu</span>
+                      <span>Đèn lồng trong nhà</span>
                     </li>
                     <li
                       className="header-navBar__subNavProduct-item"
                       onClick={handleRedirectToProductPage}
                     >
-                      <span>Đèn led trang trí</span>
+                      <span>Đèn vải in, vẽ hoạ tiết</span>
                     </li>
                     <li
                       className="header-navBar__subNavProduct-item"
                       onClick={handleRedirectToProductPage}
                     >
-                      <span>Trang trí sinh nhật</span>
+                      <span>Đèn truyền thống khung tre</span>
                     </li>
                     <li
                       className="header-navBar__subNavProduct-item"
                       onClick={handleRedirectToProductPage}
                     >
-                      <span>Đồ Hand Made</span>
+                      <span>Mẹt trang trí</span>
                     </li>
                     <li
                       className="header-navBar__subNavProduct-item"
                       onClick={handleRedirectToProductPage}
                     >
-                      <span>Đồ phong thuỷ</span>
+                      <span>Combo yêu thích</span>
                     </li>
-                    <li
-                      className="header-navBar__subNavProduct-item"
-                      onClick={handleRedirectToProductPage}
-                    >
-                      <span>Quà tặng</span>
-                    </li>
+
+
                   </ul>
                 </li>
                 <li className="header-navBar__listItem">
