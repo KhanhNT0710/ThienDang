@@ -1,0 +1,34 @@
+h4 {
+        font-family: system-ui;
+            color: brown;
+            font-size: 16px;
+
+}
+
+.slider-container {
+     margin: 0 10px;
+        padding: 0 15px;
+&__title {
+          box-sizing: border-box;
+            background-color: rgb(235 231 231);
+            height: 30px;
+            margin-bottom: 15px;
+        &-link {
+            line-height: 24px;
+            text-align: center;
+            overflow: hidden;
+            margin-bottom: 15px;
+            text-shadow: 1px 1px 1px rgba(0, 0, 0, .5);
+            display: inline-block;
+            position: relative;
+            font-size: 18px;
+            font-weight: 200;
+            line-height: 36px;
+            text-transform: uppercase;
+            color: brown;
+            vertical-align: middle;
+            text-decoration: none;
+          
+        }
+    }
+}
