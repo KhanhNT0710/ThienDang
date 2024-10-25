@@ -142,7 +142,6 @@ const ListProductCard = () => {
 
   return (
     <div className="list-product">
-
       <div className="list-product__filter">
         <div className="list-product__filter-category">
           <h4>PHÂN LOẠI</h4>
