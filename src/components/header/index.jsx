@@ -109,7 +109,7 @@ const HeaderComponent = () => {
           </Link>
         </div>
 
-        <div className="header-container-menu-bar__search">
+        <div className="header-container-menu-bar__search mobile_none">
           <form className="list-product__search">
             <PostFilterForm onSubmit={handleFilterChangeInput} />
             <Button
