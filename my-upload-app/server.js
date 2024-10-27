@@ -40,5 +40,4 @@ app.post('/upload', upload.single('file'), (req, res) => {
 // Khởi động server
 const PORT = process.env.PORT || 3000; // Sử dụng PORT từ Vercel hoặc cổng 3000
 app.listen(PORT, () => {
-    console.log(`Server is running on port ${PORT}`);
 });

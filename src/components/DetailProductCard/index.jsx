@@ -127,7 +127,6 @@ const DetailProductCard = () => {
     );
     // const productsListRelated = products; //viết như này sẽ lỗi, phải clone ra
     const productsClone = [...products];
-    console.log(productsClone, "productsClone");
     const indexThisProduct = productsClone.findIndex((product) => {
         return parseFloat(params.productId) === product.id;
     });
@@ -159,7 +158,6 @@ const DetailProductCard = () => {
             avatarURL,
             dateComment: dayjs(new Date()).format("DD/MM/YYYY"),
         };
-        // console.log(productInfo, "productInfo");
 
         if (isLogin) {
             let sumStar = Number(valueCommentBox.star);

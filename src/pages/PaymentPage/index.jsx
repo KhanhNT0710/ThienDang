@@ -11,7 +11,6 @@ const PaymentPage = () => {
   const { order } = useSelector((state) => state.order);
   const navigate = useNavigate();
 
-  console.log(order, 'order');
   return (
     <div className="check-out-container">
       <div className="check-out">

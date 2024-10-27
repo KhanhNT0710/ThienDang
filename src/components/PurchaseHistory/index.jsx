@@ -60,7 +60,6 @@ const PurchaseHistory = () => {
   };
 
   const renderDetail = (paymentBills) => {
-    console.log(paymentBills, "cartsInPaymentBillscartsInPaymentBills");
     return paymentBills?.map((_cart) => {
       return (
         <tr key={_cart.id}>
@@ -84,7 +83,6 @@ const PurchaseHistory = () => {
     });
   };
 
-  console.log(cartsInCheckoutBills, "cartsInCheckoutBills");
 
   return (
     <div className="purchase-history-wrapper">

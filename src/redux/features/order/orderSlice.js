@@ -21,7 +21,6 @@ export const actFetchAllOrders = createAsyncThunk(
 
 export const actAddOrder = createAsyncThunk("order/addOrder", async (order) => {
   const response = await orderApis.addOrder(order);
-  console.log(response, 'response');
   return response;
   // const response = await orderApis.addOrder(order);
   // return response;
@@ -67,7 +66,6 @@ const orderSlice = createSlice({
     });
 
     builder.addCase(actAddOrder.fulfilled, (state, action) => {
-      // console.log(action.payload, "action.payload add order ne");
       state.order = action.payload;
       state.orders.push(action.payload);
       message.success("Đặt hàng thành công!");

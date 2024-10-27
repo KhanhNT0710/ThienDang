@@ -30,7 +30,6 @@ const HeaderComponent = () => {
   const { isLogin, userInfo } = useSelector((state) => state.user);
   const dispatch = useDispatch();
   const handleFilterChangeInput = (newFilter) => {
-    console.log(newFilter, "newFilter");
   };
   const [isShowMenuMobile, setIsShowMenuMobile] = useState(false);
   const handleRedirectToCartPage = () => {
@@ -97,7 +96,7 @@ const HeaderComponent = () => {
                 </div>
             </div> */}
       <div className="header-container-menu-bar row d-flex">
-        <div className="header-container-menu-bar__logo ">
+        <div className="header-container-menu-bar__logo " style={{ alignSelf: "center" }}>
           <Link
             className="header-container-menu-bar__logo__link"
             to={ROUTES.HOME_PAGE}

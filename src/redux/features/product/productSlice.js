@@ -32,15 +32,19 @@ const initialState = {
 
 export const actFetchAllProducts = createAsyncThunk(
   "products/fetchAllProducts",
-  // Lấy total từ header response của json-server - key: json-server total count
   async (params = {}) => {
-    const response = await productApis.getAllProducts({
-      ...params,
-    });
-    return {
-      data: response.data,
-      total: response.headers.get("X-Total-Count"),
-    };
+    try {
+      const response = await productApis.getAllProducts({
+        ...params,
+      });
+
+      return {
+        data: response, // Dữ liệu sản phẩm
+      };
+    } catch (error) {
+      console.error("Error fetching all products:", error);
+      throw error;
+    }
   }
 );
 
@@ -241,7 +245,6 @@ const productSlice = createSlice({
       state.isLoading = false;
     });
     builder.addCase(actFetchAllProducts.fulfilled, (state, action) => {
-      // console.log(action.payload.data, "products fetch all");
       state.products = action.payload.data;
       state.pagination.total = action.payload.total;
       state.isLoading = false;

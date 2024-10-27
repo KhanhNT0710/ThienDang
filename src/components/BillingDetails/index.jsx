@@ -18,7 +18,6 @@ const BillingDetails = (props) => {
     dispatch(actFetchUserById(userInfo.id));
     const userInfoClone = { ...userInfo };
     delete userInfoClone.id;
-    // console.log(userInfo, "userInfo in billing details");
     reset({ ...userInfoClone });
     // eslint-disable-next-line
   }, []);

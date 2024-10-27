@@ -1,0 +1,70 @@
+.product-upload-container {
+ display: flex;
+    flex-direction: column;
+    gap: 5px;
+    
+   
+}
+.slider-image {
+    max-width: 500px;
+}
+.image-slider {
+    justify-items: center;
+}
+#custom_name_product {
+    color: #000;
+}
+.product_creat {
+    width: 100%;
+    nav {
+        width: 30%;
+    }
+}
+.btn_upload_product {
+    float: inline-end;
+}
+.slider-image {
+  position: relative;
+  /* max-height: 80vh; */
+}
+
+.slider-image img {
+  width: 100%;
+  height: 700px;
+  object-fit: cover;
+  object-position: center;
+}
+
+.slider-image .button-prev,
+.slider-image .button-next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.slider-image .button-prev {
+  left: 10px;
+}
+
+.slider-image .button-next {
+  right: 10px;
+}
+/* Ví dụ áp dụng cho class .image-slider */
+.image-slider {
+    -webkit-touch-callout: none; /* Vô hiệu hóa touch callout */
+    -webkit-user-select: none; /* Vô hiệu hóa lựa chọn văn bản */
+    user-select: none; /* Vô hiệu hóa lựa chọn văn bản cho tất cả các trình duyệt hỗ trợ */
+}
+
+/* Ví dụ thêm cho các phần tử khác nếu cần */
+.slider-image {
+    -webkit-touch-callout: none;
+}
+
+

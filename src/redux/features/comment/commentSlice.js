@@ -46,7 +46,6 @@ export const actFetchCommentById = createAsyncThunk(
   "comment/fetchCommentById",
   async (id) => {
     const response = await commentApis.getCommentById(id);
-    console.log(response, "fetch comment by id");
     return response.data;
   }
 );
@@ -117,7 +116,6 @@ const commentSlice = createSlice({
       message.error("update review product failure!");
     });
     builder.addCase(actEditCommentById.fulfilled, (state, action) => {
-      console.log(action.payload, "edit comment fulfilled ne");
       message.success("update review product success!");
     });
   },

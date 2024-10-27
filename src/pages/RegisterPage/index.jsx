@@ -61,7 +61,6 @@ const RegisterPage = () => {
   } = methods;
 
   const onValid = (formValue) => {
-    // console.log(formValue, "formValue");
     dispatch(actCreateNewUser(formValue));
     reset();
   };

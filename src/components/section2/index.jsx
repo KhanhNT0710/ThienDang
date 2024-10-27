@@ -28,7 +28,7 @@ const Section2 = () => {
                 </Col>
 
                 <Col xs={24} sm={24} md={12} lg={12} xl={12}>
-                    <div className="section2-right">
+                    <div className="section2-right mobile_none">
                         <img
                             className="section2-right__img"
                             src={`${API_URL}/den/slide/5.png`}

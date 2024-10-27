@@ -1,10 +1,16 @@
 .section1-container {
-    max-width: 85%;
+    width: 100%;
+    padding: 0 30px;
+    justify-self: center;
+    &__list-product {
+        padding: 0 40px;
+    }
 h3 {
     font-weight: 200;
 }
     .section1-container-title {
         .section1-container-title-link {
+            width: 100%;
             line-height: 24px;
             text-align: center;
             overflow: hidden;
@@ -22,7 +28,6 @@ h3 {
             box-sizing: border-box;
             background-color: rgb(235 231 231);
             height: 30px;
-            width: 85%;
 
             h3:before {
                 right: 100%;
@@ -59,7 +64,7 @@ h3 {
 
         &__product-hot-grp {}
 
-        &__list-product {}
+        
 
         &__product:hover {
             transition: all 0.3s ease;
@@ -129,4 +134,9 @@ h3 {
         line-height: 24px;
 
     }
+}
+@media (max-width: 500px) {
+  .section1-container__list-product {
+    padding: 0;
+}    
 }

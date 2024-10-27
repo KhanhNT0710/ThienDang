@@ -21,7 +21,6 @@ const BlogPage = () => {
   const { products } = useSelector((state) => state.product);
 
   const productsClone = [...products];
-  console.log(productsClone, "productsClone");
   useEffect(() => {
     dispatch(actFetchProductById(params.productId));
     dispatch(actFetchUserById(userInfo.id));

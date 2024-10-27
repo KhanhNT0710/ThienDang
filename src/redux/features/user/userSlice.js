@@ -101,7 +101,6 @@ export const userSlice = createSlice({
       state.isLoading = action.payload;
     },
     loginSuccess: (state, action) => {
-      // console.log("ádasdasdasd");
       state.isLoading = false;
       state.isLogin = true;
       state.userInfo = action.payload;
@@ -127,7 +126,6 @@ export const userSlice = createSlice({
     },
     setUserInfo: (state, action) => {
       state.userInfo = action.payload;
-      console.log(action.payload, 'action.payload');
       localStorage.setItem("userInfo", JSON.stringify(action.payload));
 
     },
@@ -156,7 +154,6 @@ export const userSlice = createSlice({
       state.errors = {};
       message.error("Mật khẩu không chính xác");
       state.isLoading = false;
-      console.log("login failure", action.payload);
     });
 
     builder.addCase(actFetchAllUsers.fulfilled, (state, action) => {
@@ -173,7 +170,6 @@ export const userSlice = createSlice({
     });
 
     builder.addCase(actUpdatePasswordById.fulfilled, (state, action) => {
-      // console.log(action.payload, "payload ne");
       state.userInfo.password = action.payload.password;
       state.userInfo.confirmPassword = action.payload.confirmPassword;
       localStorage.setItem("userInfo", JSON.stringify(state.userInfo));

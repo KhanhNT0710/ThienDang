@@ -26,5 +26,4 @@ app.post('/upload', upload.single('file'), (req, res) => {
 // Khởi động server
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => {
-    console.log(`Server is running on port ${PORT}`);
 });

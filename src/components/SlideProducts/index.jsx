@@ -7,13 +7,21 @@ import { API_URL } from "../../apis/api";
 
 function SlideProduct() {
     const [display, setDisplay] = useState(true);
-    const [width, setWidth] = useState(1200);
 
     const settings = {
         infinite: true,
         speed: 500,
-        slidesToShow: 4,
-        slidesToScroll: 1
+        slidesToShow: 4,  // Mặc định hiển thị 4 ảnh
+        slidesToScroll: 1,
+        responsive: [
+            {
+                breakpoint: 500,  // Kích thước màn hình dưới 500px
+                settings: {
+                    slidesToShow: 1,  // Hiển thị 1 ảnh mỗi slide
+                    slidesToScroll: 1,
+                }
+            }
+        ]
     };
     return (
         <div className="slider-container">
@@ -21,8 +29,9 @@ function SlideProduct() {
                 <Link className='slider-container__title-link' to={ROUTES.PRODUCT_PAGE}><h3>SẢN PHẨM NỔI BẬT</h3></Link>
             </div>
             <div
+                className="slider-container_product"
                 style={{
-                    width: width + "px",
+
                     display: display ? "block" : "none"
                 }}
             >

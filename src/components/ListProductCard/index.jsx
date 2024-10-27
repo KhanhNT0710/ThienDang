@@ -109,7 +109,6 @@ const ListProductCard = () => {
   }
 
   const handleFilterChangeInput = (newFilter) => {
-    console.log(newFilter, 'newFilter');
   }
 
   const { filter } = useSelector((state) => state.product);
