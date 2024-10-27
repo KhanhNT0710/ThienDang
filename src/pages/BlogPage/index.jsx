@@ -22,12 +22,12 @@ const BlogPage = () => {
 
   const productsClone = [...products];
   useEffect(() => {
-    dispatch(actFetchProductById(params.productId));
+    dispatch(actFetchProductById(params.id_product));
     dispatch(actFetchUserById(userInfo.id));
     dispatch(actFetchAllImgsProducts());
 
     // eslint-disable-next-line
-  }, [params.productId]);
+  }, [params.id_product]);
 
   useEffect(
     () => {
@@ -46,7 +46,7 @@ const BlogPage = () => {
   const renderRelatedProductList = (productsClone) => {
     return productsClone.map((product) => {
       const handleRedirectToRelatedDetailProductPage = () => {
-        navigate(generatePath(ROUTES.DETAIL_PRODUCT_PAGE, { productId: product?.id }));
+        navigate(generatePath(ROUTES.DETAIL_PRODUCT_PAGE, { id_product: product?.id }));
       };
 
       return (

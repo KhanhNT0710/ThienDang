@@ -130,7 +130,9 @@ const ListProductCard = () => {
   }
 
   const renderProducts = (products) => {
-    return products.map((product) => {
+    console.log(products, "products");
+
+    return products?.map((product) => {
       return (
         <Col key={product.id} xs={12} sm={8} md={6}>
           <ProductCard product={product} />
@@ -141,7 +143,7 @@ const ListProductCard = () => {
 
   return (
     <div className="list-product">
-      <div className="list-product__filter">
+      {/* <div className="list-product__filter">
         <div className="list-product__filter-category">
           <h4>PHÂN LOẠI</h4>
           <ul className="list-product__filter-radio">
@@ -227,7 +229,7 @@ const ListProductCard = () => {
               price: ''
             })
           }}>Clear</button>
-      </div>
+      </div> */}
       <div className="list-product__content">
         <form className="list-product__search" >
           <PostFilterForm onSubmit={handleFilterChangeInput} />

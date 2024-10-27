@@ -5,7 +5,7 @@ import { ROUTES } from "../../constants/routes";
 
 const ProductCard = (props) => {
   const navigate = useNavigate();
-  const { id, imgURL, name, typeJewelry, price } = props.product;
+  const { id_product, urls, name, category, style } = props.product;
 
   const formatNumber = (num) => {
     let numString = "";
@@ -25,30 +25,39 @@ const ProductCard = (props) => {
     }
     return numString;
   };
+  console.log(id_product, "id_product");
 
   const handleRedirectToDetailProductPage = () => {
-    navigate(generatePath(ROUTES.DETAIL_PRODUCT_PAGE, { productId: id }));
+    navigate(generatePath(ROUTES.DETAIL_PRODUCT_PAGE, { productId: id_product }));
   };
 
   return (
     <div className="product-card-wrapper">
       <div className="product-card">
         <div className="product-card__img">
-          <img src={imgURL} alt={name}
+          <img src={urls[0]} alt={name}
             onClick={handleRedirectToDetailProductPage}
           />
+          <div className="button-shop">
+            <button>Xem ngay</button>
+          </div>
+        </div>
+        <div className="product-card__type-jewelry">
+          <span>{category}</span>
         </div>
         <div
           className="product-card__name"
           onClick={handleRedirectToDetailProductPage}
         >
-          <p>{name}</p>
+          <h4>{name}</h4>
         </div>
-        <div className="product-card__type-jewelry">
-          <p>{typeJewelry}</p>
-        </div>
+        {style && (
+          <div className="product-card__price">
+            <span>{style}</span>
+          </div>
+        )}
         <div className="product-card__price">
-          <p>{formatNumber(price)}</p>
+          <p>Giá: Liên hệ</p>
         </div>
       </div>
     </div>

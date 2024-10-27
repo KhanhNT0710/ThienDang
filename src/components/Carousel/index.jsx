@@ -69,13 +69,7 @@ const CarouselComponent = () => {
             alt=""
           />
         </div>
-        <div className="carousel__item">
-          <img
-            className="carousel__item1"
-            src={`${API_URL}den/slide/10.png`}
-            alt=""
-          />
-        </div>
+
 
 
       </Carousel>

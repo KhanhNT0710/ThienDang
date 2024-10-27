@@ -37,10 +37,14 @@ export const actFetchAllProducts = createAsyncThunk(
       const response = await productApis.getAllProducts({
         ...params,
       });
+      console.log(response.Product, "response");
+
 
       return {
-        data: response, // Dữ liệu sản phẩm
+        data: response.Product, // Dữ liệu sản phẩm
+
       };
+
     } catch (error) {
       console.error("Error fetching all products:", error);
       throw error;
@@ -50,8 +54,8 @@ export const actFetchAllProducts = createAsyncThunk(
 
 export const actFetchProductById = createAsyncThunk(
   "products/fetchProductById",
-  async (productId) => {
-    const product = await productApis.getProductsById(productId);
+  async (id_product) => {
+    const product = await productApis.getProductsById(id_product);
     return product;
   }
 );

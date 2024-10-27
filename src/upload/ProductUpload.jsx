@@ -96,10 +96,13 @@ const ProductUpload = ({ refresh, setRefresh }) => {
     };
 
     const handleCategoryChange = (value) => {
-        const selectedCategory = categories.find(cat => cat.id_category === value);
-        setCategoryId(selectedCategory.id_category);
-        setCategory(selectedCategory.name);
+        const selectedCategory = categories.find(cat => cat.categoryId === value);
+        if (selectedCategory) {
+            setCategoryId(selectedCategory.categoryId);
+            setCategory(selectedCategory.name); // Cập nhật category
+        }
     };
+    console.log(category, "category");
 
     return (
         <div className='product-upload-container'>
@@ -108,11 +111,12 @@ const ProductUpload = ({ refresh, setRefresh }) => {
             <div>
                 <Select
                     placeholder="Chọn danh mục"
+                    value={categoryId}
                     onChange={handleCategoryChange}
                     style={{ width: '100%', marginBottom: '10px' }}
                 >
                     {categories.map(cat => (
-                        <Option key={cat.id_category} value={cat.id_category}>
+                        <Option key={cat.categoryId} value={cat.categoryId}>
                             {cat.name}
                         </Option>
                     ))}

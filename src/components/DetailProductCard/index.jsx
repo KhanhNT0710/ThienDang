@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import {
     Button,
     Col,
+    Image,
     Input,
     InputNumber,
     Pagination,
@@ -12,10 +13,8 @@ import {
 import { CarOutlined, SafetyCertificateOutlined } from "@ant-design/icons";
 import { Link, generatePath, useNavigate, useParams } from "react-router-dom";
 import {
-    actFetchAllImgsProducts,
     actFetchAllProducts,
     actFetchProductById,
-    actUpdateProductById,
 } from "../../redux/features/product/productSlice";
 import * as Yup from "yup";
 import { useDispatch, useSelector } from "react-redux";
@@ -23,16 +22,12 @@ import { Controller, useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import { actAddProductToCarts } from "../../redux/features/cart/cartSlice";
 import { makeRandomId } from "../../utils/makeRandomId";
-import {
-    actAddComment,
-    actFetchAllComments,
-    actFetchAllCommentsCalcuStarAverage,
-    setNewPage,
-} from "../../redux/features/comment/commentSlice";
+
 import { actFetchUserById } from "../../redux/features/user/userSlice";
 import dayjs from "dayjs";
 import "./style.scss";
 import { ROUTES } from "../../constants/routes";
+import Slider from "react-slick";
 
 const schema = Yup.object().shape({
     style: Yup.string().required("Please choose style"),
@@ -99,17 +94,10 @@ const DetailProductCard = () => {
     useEffect(() => {
         dispatch(actFetchProductById(params.productId));
         dispatch(actFetchUserById(userInfo.id));
-        dispatch(actFetchAllImgsProducts());
-        dispatch(
-            actFetchAllComments({
-                _page: 1,
-                _limit: pagination.limitPerPage,
-                ...params,
-            })
-        );
-        dispatch(actFetchAllCommentsCalcuStarAverage(params));
+
         // eslint-disable-next-line
     }, [params.productId]);
+    console.log(productInfo, "productInfo");
 
     useEffect(
         () => {
@@ -168,13 +156,7 @@ const DetailProductCard = () => {
                 return resultStarAverage;
             });
 
-            dispatch(actAddComment(valueCommentBox));
-            dispatch(actUpdateProductById({
-                id: params.productId,
-                productUpdate: {
-                    evaluate: resultStarAverage,
-                }
-            }))
+
         } else {
             alert("Vui lòng đăng nhập để đánh giá!");
             navigate(ROUTES.LOGIN_PAGE);
@@ -185,20 +167,7 @@ const DetailProductCard = () => {
     // để gọi ra comments đúng với sp đc comments
     // chú ý truyền vô params cái id là id của sp => fil ra
     useEffect(() => {
-        dispatch(
-            actFetchAllComments({
-                ...params,
-                _page: 1,
-                _limit: pagination.limitPerPage,
-                idProduct: params.productId,
-            })
-        );
-        dispatch(
-            actFetchAllCommentsCalcuStarAverage({
-                ...params,
-                idProduct: params.productId,
-            })
-        );
+
         // eslint-disable-next-line
     }, [params.productId]);
 
@@ -240,15 +209,7 @@ const DetailProductCard = () => {
     };
 
     const handleChangePage = (newPage) => {
-        dispatch(setNewPage(newPage));
-        dispatch(
-            actFetchAllComments({
-                _page: newPage,
-                _limit: pagination.limitPerPage,
-                idProduct: params.productId,
-                ...params,
-            })
-        );
+
     };
 
     // };
@@ -313,171 +274,183 @@ const DetailProductCard = () => {
             );
         });
     };
+    const images = [];
+    const ImageSlider = ({ images, API_URL }) => {
+        const [currentIndex, setCurrentIndex] = useState(0);
+        const SamplePrevArrow = (props) => {
+            const { className, style, onClick } = props;
+            return (
+                <button
+                    className={className}
+                    style={{ ...style, display: "block", left: "10px", top: "50%" }}
+                    onClick={onClick}
+                >
+                    &lt;
+                </button>
+            );
+        };
+        const SampleNextArrow = (props) => {
+            const { className, style, onClick } = props;
+            return (
+                <button
+                    className={className}
+                    style={{ ...style, display: "block", right: "10px", top: "50%" }}
+                    onClick={onClick}
+                >
+                    &gt;
+                </button>
+            );
+        };
+        const settings = {
+            infinite: images.length > 1,
+            speed: 500,
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            beforeChange: (oldIndex, newIndex) => setCurrentIndex(newIndex),
+            nextArrow: images.length > 1 ? <SampleNextArrow /> : null,
+            prevArrow: images.length > 1 ? <SamplePrevArrow /> : null,
+        };
 
+        if (images.length === 0) {
+            return <p>No images available</p>;
+        }
+
+        return (
+            <div className="image-slider">
+                <Slider {...settings}>
+                    {images.map((image, index) => (
+                        <div key={index} className="slider-image">
+                            <Image
+                                loading="lazy"
+                                // preview
+                                src={`${API_URL}${image}`}
+                                alt={`${API_URL} ${index}`}
+                                style={{ width: "100%" }}
+                            />
+                        </div>
+                    ))}
+                </Slider>
+                <div className="slide-number">
+                    {currentIndex + 1} / {images.length}
+                </div>
+            </div>
+        );
+    };
     return (
         <div className="detail-product-card-wrapper">
             <div className="detail-product-card-container">
                 <div className="detail-product-card-top-wrapper">
-                    <Row className="detail-product-card-top">
-                        <Col
-                            xs={24}
-                            sm={24}
-                            md={24}
-                            lg={12}
-                            xl={12}
-                            className="detail-product-card-top__img-grp"
+                    <div className="detail-product-card-top">
+                        <div className="product-images">
+                            <ImageSlider images={images} />
+                        </div>
+                        <form
+                            onSubmit={handleSubmit(onValid)}
+                            style={{
+                                width: "70%",
+                                display: "flex",
+                                flexDirection: "column",
+                                textAlign: "center",
+                                alignItems: "center",
+                                justifyContent: "center",
+                            }}
                         >
-                            <div className="detail-product-card-top__large-img">
-                                <img src={largeImg ? largeImg : imgURL} alt="" />
+                            <div className="detail-product-card-top__product-name">
+                                <h3>{productInfo.name}</h3>
                             </div>
-                            <div className="detail-product-card-top__img-small-grp">
-                                {!!imgsProduct?.imgProduct1 && (
-                                    <img
-                                        src={imgsProduct?.imgProduct1}
-                                        alt=""
-                                        onClick={() => {
-                                            handleChangeImg(imgsProduct?.imgProduct1);
-                                        }}
-                                    />
-                                )}
-
-                                {!!imgsProduct?.imgProduct2 && (
-                                    <img
-                                        src={imgsProduct?.imgProduct2}
-                                        alt=""
-                                        onClick={() => {
-                                            handleChangeImg(imgsProduct?.imgProduct2);
-                                        }}
-                                    />
-                                )}
-
-                                {!!imgsProduct?.imgProduct3 && (
-                                    <img
-                                        src={imgsProduct?.imgProduct3}
-                                        alt=""
-                                        onClick={() => {
-                                            handleChangeImg(imgsProduct?.imgProduct3);
-                                        }}
-                                    />
-                                )}
+                            <div className="detail-product-card-top__product-price">
+                                <h3 className="detail-product-card-top__product-price-h3" >{formatNumber(productInfo.price)}đ</h3>
                             </div>
-                        </Col>
+                            <div className="detail-product-card-top__product-color">
+                                <div className="detail-product-card-top__product-color-title">
+                                    <h4>Style:</h4>
+                                </div>
+                                <div className="detail-product-card-top__product-style-selected">
+                                    <Controller
+                                        control={control}
+                                        name="style"
+                                        render={({ field }) => {
+                                            return (
+                                                <Select
+                                                    {...field}
+                                                    style={{ width: "100%" }}
+                                                    defaultValue={`${style?.style1}`}
+                                                    placeholder="Chọn mẫu thiết kế"
+                                                    options={[
+                                                        {
+                                                            value: `${style?.style1}`,
+                                                            label: `${style?.style1}`,
+                                                        },
+                                                        {
+                                                            value: `${style?.style2}`,
+                                                            label: `${style?.style2}`,
+                                                        }
+                                                    ]}
+                                                />
+                                            );
+                                        }}
+                                    />
+                                    {!!errors.color?.message && (
+                                        <i style={{ color: "red", padding: "0px 10px" }}>
+                                            {errors.color?.message}
+                                        </i>
+                                    )}
+                                </div>
+                            </div>
 
-                        <Col
-                            xs={24}
-                            sm={24}
-                            md={24}
-                            lg={12}
-                            xl={12}
-                            className="detail-product-card-top__information-product-grp"
-                        >
-                            <form
-                                onSubmit={handleSubmit(onValid)}
-                                style={{
-                                    width: "70%",
-                                    display: "flex",
-                                    flexDirection: "column",
-                                    textAlign: "center",
-                                    alignItems: "center",
-                                    justifyContent: "center",
-                                }}
-                            >
-                                <div className="detail-product-card-top__product-name">
-                                    <h3>{productInfo.name}</h3>
+                            <div className="detail-product-card-top__product-quantity-grp">
+                                <div className="detail-product-card-top__quantity-title">
+                                    <p>Pre-Order</p>
                                 </div>
-                                <div className="detail-product-card-top__product-price">
-                                    <h3 className="detail-product-card-top__product-price-h3" >{formatNumber(productInfo.price)}đ</h3>
-                                </div>
-                                <div className="detail-product-card-top__product-color">
-                                    <div className="detail-product-card-top__product-color-title">
-                                        <h4>Style:</h4>
-                                    </div>
-                                    <div className="detail-product-card-top__product-style-selected">
+                                <div className="detail-product-card-top__product-quantity-grp-bottom">
+                                    <div className="detail-product-card-top__product-quantity">
                                         <Controller
                                             control={control}
-                                            name="style"
+                                            name="quantity"
                                             render={({ field }) => {
                                                 return (
-                                                    <Select
+                                                    <InputNumber
                                                         {...field}
-                                                        style={{ width: "100%" }}
-                                                        defaultValue={`${style?.style1}`}
-                                                        placeholder="Chọn mẫu thiết kế"
-                                                        options={[
-                                                            {
-                                                                value: `${style?.style1}`,
-                                                                label: `${style?.style1}`,
-                                                            },
-                                                            {
-                                                                value: `${style?.style2}`,
-                                                                label: `${style?.style2}`,
-                                                            }
-                                                        ]}
+                                                        className="detail-product-card-top__product-quantity--number"
+                                                        style={{ width: 62, borderRadius: 0 }}
+                                                        min={1}
+                                                        max={99}
+                                                        defaultValue={1}
+                                                        value={quantityProduct}
+                                                        onChange={onChangeQuantityProduct}
                                                     />
                                                 );
                                             }}
                                         />
-                                        {!!errors.color?.message && (
-                                            <i style={{ color: "red", padding: "0px 10px" }}>
-                                                {errors.color?.message}
-                                            </i>
-                                        )}
                                     </div>
-                                </div>
+                                    {!!errors.quantity?.message && (
+                                        <p style={{ color: "red" }}>{errors.quantity?.message}</p>
+                                    )}
 
-                                <div className="detail-product-card-top__product-quantity-grp">
-                                    <div className="detail-product-card-top__quantity-title">
-                                        <p>Pre-Order</p>
+                                    <div className="detail-product-card-top__btn-add-cart">
+                                        <Button htmlType="submit">Thêm vào giỏ hàng</Button>
                                     </div>
-                                    <div className="detail-product-card-top__product-quantity-grp-bottom">
-                                        <div className="detail-product-card-top__product-quantity">
-                                            <Controller
-                                                control={control}
-                                                name="quantity"
-                                                render={({ field }) => {
-                                                    return (
-                                                        <InputNumber
-                                                            {...field}
-                                                            className="detail-product-card-top__product-quantity--number"
-                                                            style={{ width: 62, borderRadius: 0 }}
-                                                            min={1}
-                                                            max={99}
-                                                            defaultValue={1}
-                                                            value={quantityProduct}
-                                                            onChange={onChangeQuantityProduct}
-                                                        />
-                                                    );
-                                                }}
-                                            />
-                                        </div>
-                                        {!!errors.quantity?.message && (
-                                            <p style={{ color: "red" }}>{errors.quantity?.message}</p>
-                                        )}
-
-                                        <div className="detail-product-card-top__btn-add-cart">
-                                            <Button htmlType="submit">Thêm vào giỏ hàng</Button>
-                                        </div>
-                                    </div>
-                                </div>
-                            </form>
-
-                            <div className="detail-product-card-top__shipping-warranty-grp">
-                                <div className="detail-product-card-top__shipping">
-                                    <span>
-                                        <CarOutlined />
-                                    </span>
-                                    <p>Free Shipping</p>
-                                </div>
-
-                                <div className="detail-product-card-top__warranty-return">
-                                    <span>
-                                        <SafetyCertificateOutlined />
-                                    </span>
-                                    <p>Warranty & Return</p>
                                 </div>
                             </div>
-                        </Col>
-                    </Row>
+                        </form>
+
+                        <div className="detail-product-card-top__shipping-warranty-grp">
+                            <div className="detail-product-card-top__shipping">
+                                <span>
+                                    <CarOutlined />
+                                </span>
+                                <p>Free Shipping</p>
+                            </div>
+
+                            <div className="detail-product-card-top__warranty-return">
+                                <span>
+                                    <SafetyCertificateOutlined />
+                                </span>
+                                <p>Warranty & Return</p>
+                            </div>
+                        </div>
+
+                    </div>
                 </div>
 
                 <div className="detail-product-card-bottom-wrapper">

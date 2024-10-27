@@ -38,11 +38,11 @@ const CardTable = () => {
     dispatch(actUpdateQuantityOfProduct({ id: id, quantity: quantity }));
   };
 
-  const handleDeleteProductInCarts = (productId) => {
-    dispatch(actDeleteProductInCarts(productId));
+  const handleDeleteProductInCarts = (id_product) => {
+    dispatch(actDeleteProductInCarts(id_product));
   };
   const handleRedirectToDetailProduct = (id) => {
-    navigate(generatePath(ROUTES.DETAIL_PRODUCT_PAGE, { productId: id }));
+    navigate(generatePath(ROUTES.DETAIL_PRODUCT_PAGE, { id_product: id }));
   }
 
   const handleClearCarts = () => {

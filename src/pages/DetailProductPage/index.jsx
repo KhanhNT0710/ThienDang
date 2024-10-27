@@ -8,7 +8,7 @@ const DetailProductPage = () => {
 
   useEffect(() => {
     window.scrollTo(0, 0)
-  }, [params.productId])
+  }, [params.id_product])
 
   return (
     <div>

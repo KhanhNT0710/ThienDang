@@ -27,7 +27,7 @@ const ProductCard = (props) => {
   };
 
   const handleRedirectToDetailProductPage = () => {
-    navigate(generatePath(ROUTES.DETAIL_PRODUCT_PAGE, { productId: id }));
+    navigate(generatePath(ROUTES.DETAIL_PRODUCT_PAGE, { id_product: id }));
   };
 
 
