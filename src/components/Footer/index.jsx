@@ -79,7 +79,7 @@ const FooterComponent = () => {
                     </div>
                 </Col>
 
-                <Col className="footer-item" xs={24} sm={12} md={8}>
+                <Col className="footer-item_social" xs={24} sm={12} md={8}>
                     <iframe width="380" height="200" src="https://www.youtube.com/embed/5kcWllSaGWY?si=tGIMIFXpXJNAL67c"
                         title="YouTube video player"
                         frameborder="0"

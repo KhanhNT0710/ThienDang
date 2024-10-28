@@ -42,7 +42,7 @@ const DetailProductCard = () => {
     const navigate = useNavigate();
     const params = useParams();
     const { productInfo } = useSelector((state) => state.product);
-    const { imgURL, style, name, category, id, evaluate } = productInfo;
+
     const { imgsProducts } = useSelector((state) => state.product);
     const { userInfo } = useSelector((state) => state.user);
     const { fullName, user, phoneNumber, email, avatarURL } = userInfo;
@@ -51,7 +51,7 @@ const DetailProductCard = () => {
     const { pagination } = useSelector((state) => state.comment);
     const isLogin = JSON.parse(localStorage.getItem("isLogin"));
     const { products } = useSelector((state) => state.product);
-
+    const product_id = window.location.pathname.split('/')[2];
     const [quantityProduct, setQuantityProduct] = useState(1);
     const [isShowBoxReview, setIsShowBoxReview] = useState(false);
     const methods = useForm({
@@ -90,13 +90,19 @@ const DetailProductCard = () => {
     useEffect(() => {
         setLargeImg(imgsProduct?.imgProduct1);
     }, [imgsProduct]);
+    useEffect(() => {
+        dispatch(actFetchProductById(product_id));
+
+    }, [product_id]);
+
+    console.log(productInfo, "productInfo");
 
     useEffect(() => {
-        dispatch(actFetchProductById(params.productId));
+        dispatch(actFetchAllProducts(params.productId));
         dispatch(actFetchUserById(userInfo.id));
 
         // eslint-disable-next-line
-    }, [params.productId]);
+    }, []);
     console.log(productInfo, "productInfo");
 
     useEffect(
@@ -136,9 +142,6 @@ const DetailProductCard = () => {
     const onValidBoxReview = (formValueBoxReview) => {
         const valueCommentBox = {
             ...formValueBoxReview,
-            nameProduct: name,
-            idProduct: id,
-            category,
             fullName,
             userName: user,
             phoneNumber,
@@ -274,9 +277,9 @@ const DetailProductCard = () => {
             );
         });
     };
-    const images = [];
-    const ImageSlider = ({ images, API_URL }) => {
+    const ImageSlider = ({ urls, API_URL }) => {
         const [currentIndex, setCurrentIndex] = useState(0);
+
         const SamplePrevArrow = (props) => {
             const { className, style, onClick } = props;
             return (
@@ -289,6 +292,7 @@ const DetailProductCard = () => {
                 </button>
             );
         };
+
         const SampleNextArrow = (props) => {
             const { className, style, onClick } = props;
             return (
@@ -301,48 +305,52 @@ const DetailProductCard = () => {
                 </button>
             );
         };
+
         const settings = {
-            infinite: images.length > 1,
+            infinite: urls && urls.length > 1,
             speed: 500,
             slidesToShow: 1,
             slidesToScroll: 1,
             beforeChange: (oldIndex, newIndex) => setCurrentIndex(newIndex),
-            nextArrow: images.length > 1 ? <SampleNextArrow /> : null,
-            prevArrow: images.length > 1 ? <SamplePrevArrow /> : null,
+            nextArrow: urls && urls.length > 1 ? <SampleNextArrow /> : null,
+            prevArrow: urls && urls.length > 1 ? <SamplePrevArrow /> : null,
         };
 
-        if (images.length === 0) {
+        // Kiểm tra nếu urls tồn tại và có chiều dài
+        if (!urls || urls.length === 0) {
             return <p>No images available</p>;
         }
 
         return (
             <div className="image-slider">
                 <Slider {...settings}>
-                    {images.map((image, index) => (
+                    {urls.map((image, index) => (
                         <div key={index} className="slider-image">
                             <Image
                                 loading="lazy"
-                                // preview
-                                src={`${API_URL}${image}`}
-                                alt={`${API_URL} ${index}`}
+                                src={image}
+                                alt={`Image ${index + 1}`}
                                 style={{ width: "100%" }}
                             />
                         </div>
                     ))}
                 </Slider>
                 <div className="slide-number">
-                    {currentIndex + 1} / {images.length}
+                    {currentIndex + 1} / {urls.length}
                 </div>
             </div>
         );
     };
+
+
+
     return (
         <div className="detail-product-card-wrapper">
             <div className="detail-product-card-container">
                 <div className="detail-product-card-top-wrapper">
                     <div className="detail-product-card-top">
                         <div className="product-images">
-                            <ImageSlider images={images} />
+                            <ImageSlider urls={productInfo?.urls} />
                         </div>
                         <form
                             onSubmit={handleSubmit(onValid)}
@@ -353,84 +361,22 @@ const DetailProductCard = () => {
                                 textAlign: "center",
                                 alignItems: "center",
                                 justifyContent: "center",
+                                justifySelf: "center"
                             }}
                         >
                             <div className="detail-product-card-top__product-name">
                                 <h3>{productInfo.name}</h3>
                             </div>
-                            <div className="detail-product-card-top__product-price">
-                                <h3 className="detail-product-card-top__product-price-h3" >{formatNumber(productInfo.price)}đ</h3>
-                            </div>
+
                             <div className="detail-product-card-top__product-color">
                                 <div className="detail-product-card-top__product-color-title">
-                                    <h4>Style:</h4>
+                                    <h4>Thể loại: {productInfo?.style} </h4>
                                 </div>
-                                <div className="detail-product-card-top__product-style-selected">
-                                    <Controller
-                                        control={control}
-                                        name="style"
-                                        render={({ field }) => {
-                                            return (
-                                                <Select
-                                                    {...field}
-                                                    style={{ width: "100%" }}
-                                                    defaultValue={`${style?.style1}`}
-                                                    placeholder="Chọn mẫu thiết kế"
-                                                    options={[
-                                                        {
-                                                            value: `${style?.style1}`,
-                                                            label: `${style?.style1}`,
-                                                        },
-                                                        {
-                                                            value: `${style?.style2}`,
-                                                            label: `${style?.style2}`,
-                                                        }
-                                                    ]}
-                                                />
-                                            );
-                                        }}
-                                    />
-                                    {!!errors.color?.message && (
-                                        <i style={{ color: "red", padding: "0px 10px" }}>
-                                            {errors.color?.message}
-                                        </i>
-                                    )}
-                                </div>
+
                             </div>
 
-                            <div className="detail-product-card-top__product-quantity-grp">
-                                <div className="detail-product-card-top__quantity-title">
-                                    <p>Pre-Order</p>
-                                </div>
-                                <div className="detail-product-card-top__product-quantity-grp-bottom">
-                                    <div className="detail-product-card-top__product-quantity">
-                                        <Controller
-                                            control={control}
-                                            name="quantity"
-                                            render={({ field }) => {
-                                                return (
-                                                    <InputNumber
-                                                        {...field}
-                                                        className="detail-product-card-top__product-quantity--number"
-                                                        style={{ width: 62, borderRadius: 0 }}
-                                                        min={1}
-                                                        max={99}
-                                                        defaultValue={1}
-                                                        value={quantityProduct}
-                                                        onChange={onChangeQuantityProduct}
-                                                    />
-                                                );
-                                            }}
-                                        />
-                                    </div>
-                                    {!!errors.quantity?.message && (
-                                        <p style={{ color: "red" }}>{errors.quantity?.message}</p>
-                                    )}
-
-                                    <div className="detail-product-card-top__btn-add-cart">
-                                        <Button htmlType="submit">Thêm vào giỏ hàng</Button>
-                                    </div>
-                                </div>
+                            <div className="detail-product-card-top__btn-add-cart">
+                                <a target="_blank" href="https://zalo.me/0988015093"><Button >Liên hệ mua hàng</Button></a>
                             </div>
                         </form>
 
@@ -446,35 +392,17 @@ const DetailProductCard = () => {
                                 <span>
                                     <SafetyCertificateOutlined />
                                 </span>
-                                <p>Warranty & Return</p>
+                                <p>Chứng nhận sản phẩm OCOP</p>
+                                <img src="https://image.nhandan.vn/w800/Uploaded/2024/rktmgt/2023_11_02/logo-ocop-5-4441.jpg.webp" alt="" style={{ width: "100px" }} />
                             </div>
                         </div>
-
+                        <div className="detail-product-card-comment__name-product">
+                            <p>Chi tiết sản phẩm: {productInfo.productDetail}</p>
+                        </div>
                     </div>
                 </div>
 
-                <div className="detail-product-card-bottom-wrapper">
-                    <Row className="detail-product-card-bottom">
-                        <div
-                            style={{ paddingLeft: 20, paddingRight: 20 }}
-                            className="detail-product-card-bottom__related-products-grp"
-                        >
-                            <Col
-                                xs={24}
-                                sm={24}
-                                md={24}
-                                lg={24}
-                                className="detail-product-card-bottom__related-products-grp--title"
-                            >
-                                <h3>Sản Phẩm Liên Quan</h3>
-                            </Col>
 
-                            <Row className="detail-product-card-bottom__related-products-grp-item-grp">
-                                {renderRelatedProductList(relatedProductList)}
-                            </Row>
-                        </div>
-                    </Row>
-                </div>
 
                 <div className="detail-product-card-comment-wrapper">
                     <div className="detail-product-card-comment">
@@ -488,11 +416,9 @@ const DetailProductCard = () => {
                                     <p>Star average:</p>
                                 </div>
                                 <div className="detail-product-card-comment__star-average--star-avg">
-                                    <Rate value={evaluate || 0} />
+                                    <Rate value={5} />
                                 </div>
-                                <div className="detail-product-card-comment__star-average--number-of-reviews">
-                                    <p>{commentsCalcuStarAverage?.length} reviews</p>
-                                </div>
+
                             </div>
                             <div className="detail-product-card-comment__star-average--grp-btn-open-review-box">
                                 <div className="detail-product-card-comment__star-average--question">
@@ -515,9 +441,12 @@ const DetailProductCard = () => {
                                 onSubmit={handleSubmitBoxReview(onValidBoxReview)}
                             >
                                 <div className="detail-product-card-comment__box-review--img-product">
-                                    <img src={largeImg ? largeImg : imgURL} alt="" />
-                                </div>
-                                <div className="detail-product-card-comment__box-review--name-product">
+                                    {productInfo && productInfo.urls && productInfo.urls.length > 0 ? (
+                                        <img src={productInfo.urls[0]} alt="Product Image" />
+                                    ) : (
+                                        <p>No image available</p> // Hoặc một hình ảnh thay thế
+                                    )}                                </div>
+                                <div className="detail-product-card-comment__box-review--name-product" style={{ textAlign: "center" }}>
                                     <p>{productInfo.name}</p>
                                 </div>
                                 <div
@@ -576,26 +505,31 @@ const DetailProductCard = () => {
                                 onChange={handleChangePage}
                             />
                         </div>
+                        <div className="detail-product-card-bottom-wrapper">
+                            <Row className="detail-product-card-bottom">
+                                <div
+                                    style={{ paddingLeft: 20, paddingRight: 20 }}
+                                    className="detail-product-card-bottom__related-products-grp"
+                                >
+                                    <Col
+                                        xs={24}
+                                        sm={24}
+                                        md={24}
+                                        lg={24}
+                                        className="detail-product-card-bottom__related-products-grp--title"
+                                    >
+                                        <h3>Sản Phẩm Liên Quan</h3>
+                                    </Col>
+
+                                    {/* <Row className="detail-product-card-bottom__related-products-grp-item-grp">
+                                        {renderRelatedProductList(relatedProductList)}
+                                    </Row> */}
+                                </div>
+                            </Row>
+                        </div>
                     </div>
                 </div>
-                <div className="detail-product-card-describe-wrapper">
-                    <h3>Chi tiết sản phẩm</h3>
-                    <p>Chữ HOME gỗ Vintage Bắc Âu 15cm trang trí đẹp mắt. Chữ cái trang trí để bàn giúp bạn thể hiện thông điệp muốn truyền tải như chỉ dẫn, tên riêng, tên sự kiện…</p>
-                    <p> Sản phẩm đa dạng về mẫu mã chất liệu: chữ gỗ, chữ phủ kim tuyến, chữ đèn Led…</p>
-                    <p>Chúng giúp bạn hoàn thiện không gian thật chỉnh chu, đẹp mắt và ý nghĩa.</p>
-                    <img src="https://admin.tamshoppe.vn/Web/Resources/Uploaded/2/images/san-pham/do-go/chu-HOME-go-vintage-bac-au-15cm-11.jpg" alt="" />
-                    <p>- Chữ làm bằng gỗ, phủ màu chà tróc giả cổ Vintage phong cách Bắc Âu đẹp mắt.</p>
-                    <p>- Chữ cao 15cm, độ dày gỗ khoảng 2cm</p>
-                    <p>- Có 02 kiểu chọn: Chữ dính liền hoặc chữ rời.</p>
-                    <p>- Gỗ tùy miếng sẽ cho lên màu đậm nhạt chênh lệch khác nhau một ít.</p>
-                    <p>- Mối ghép gỗ, vân gỗ, sớ gỗ, mắc gỗ tự nhiên khác nhau tùy thuộc vào từng đợt gỗ.</p>
-                    <img src="https://admin.tamshoppe.vn/Web/Resources/Uploaded/2/images/san-pham/do-go/chu-HOME-go-vintage-bac-au-15cm-1.jpg" alt="" />
-                    <h5>Công dụng & cách sử dụng:</h5>
-                    <p>- Trưng bày tủ kệ, trang trí nhà cửa đẹp mắt</p>
-                    <p>- Có thể dán lên tường bằng silicon Apolo hoặc các loại băng keo 2 mặt siêu dính.</p>
-                    <p>- SP sử dụng được ở ngoài trời, lưu ý treo vị trí hạn chế nắng mưa sẽ được bền hơn</p>
-                    <img src="https://admin.tamshoppe.vn/Web/Resources/Uploaded/2/images/san-pham/do-go/chu-HOME-go-vintage-bac-au-15cm-2.jpg" alt="" />
-                </div>
+
             </div>
 
         </div>

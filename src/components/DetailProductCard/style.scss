@@ -255,7 +255,6 @@ width: 80%;
 
 @media screen and (max-width: 1224px) {
   .detail-product-card-wrapper {
-    padding-top: 80px;
   }
 }
 
@@ -500,4 +499,85 @@ width: 80%;
 .detail-product-card-comment-wrapper {
   display: flex;
   justify-content: center;
+}
+.product-images {
+  position: relative; /* Để định vị các nút trong slider-image */
+    width: 100%;
+}
+.image-slider {
+    position: relative; /* Để định vị các nút điều hướng */
+    width: 100%; /* Đặt chiều rộng của slider */
+    max-width: 800px; /* Tối đa chiều rộng */
+    margin: auto; /* Căn giữa slider */
+    overflow: hidden; /* Ẩn các phần hình ảnh vượt ra ngoài slider */
+    // border: 1px solid #ccc; /* Đường viền cho slider */
+    // border-radius: 8px; /* Góc bo tròn */
+    // box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Đổ bóng */
+    text-align: center;
+}
+
+.slider-image .button-prev,
+.slider-image .button-next {
+   position: absolute;
+    top: 50%; /* Đặt nút ở giữa theo chiều dọc */
+    transform: translateY(-50%); /* Căn giữa theo chiều dọc */
+    background: rgba(0, 0, 0, 0.5); /* Nền trong suốt cho nút */
+    color: white; /* Màu chữ */
+    border: none; /* Không có đường viền */
+    border-radius: 5px; /* Bo tròn góc */
+    padding: 10px; /* Khoảng đệm cho nút */
+    cursor: pointer; /* Con trỏ tay khi hover */
+    transition: background-color 0.3s; /* Hiệu ứng chuyển tiếp cho màu nền */
+}
+
+.slider-image .button-prev {
+  left: 150px;
+  z-index: 100000;
+}
+
+.slider-image .button-next {
+  right: 10px;
+}
+.slider-image {
+    width: 100%; /* Đặt chiều rộng của mỗi hình ảnh */
+}
+
+.slide-number {
+    position: absolute; /* Định vị số thứ tự hình ảnh */
+    bottom: 10px; /* Cách đáy 10px */
+    left: 50%; /* Căn giữa */
+    transform: translateX(-50%); /* Căn giữa theo trục x */
+    color: white; /* Màu chữ */
+    background-color: rgba(0, 0, 0, 0.5); /* Nền bán trong suốt */
+    padding: 5px 10px; /* Khoảng đệm */
+    border-radius: 5px; /* Bo tròn góc */
+    font-weight: bold; /* Chữ đậm */
+}
+
+button {
+    background-color: rgba(255, 255, 255, 0.8); /* Nền bán trong suốt cho nút */
+    border: none; /* Không có đường viền */
+    border-radius: 50%; /* Bo tròn nút */
+    cursor: pointer; /* Con trỏ tay khi hover */
+    padding: 10px; /* Khoảng đệm cho nút */
+    transition: background-color 0.3s; /* Hiệu ứng chuyển tiếp cho màu nền */
+}
+
+button:hover {
+    background-color: rgba(255, 255, 255, 1); /* Đổi màu nền khi hover */
+}
+.slider-image {
+    width: 100%; /* Đảm bảo hình ảnh chiếm toàn bộ chiều rộng của slider */
+    display: flex; /* Sử dụng flexbox để căn giữa hình ảnh */
+    justify-content: center; /* Căn giữa theo chiều ngang */
+    align-items: center; /* Căn giữa theo chiều dọc */
+    overflow: hidden; /* Ẩn bất kỳ phần nào của hình ảnh vượt ra ngoài */
+}
+
+.slider-image img {
+    max-width: 100%; /* Đảm bảo hình ảnh không vượt quá chiều rộng của slider */
+    height: auto; /* Giữ tỉ lệ khung hình của hình ảnh */
+    border-radius: 8px; /* Bo tròn góc hình ảnh */
+    object-fit: cover;
+  object-position: center;
 }

@@ -9,7 +9,7 @@
     max-width: 500px;
 }
 .image-slider {
-    justify-items: center;
+    // justify-items: center;
 }
 #custom_name_product {
     color: #000;
@@ -56,11 +56,7 @@
   right: 10px;
 }
 /* Ví dụ áp dụng cho class .image-slider */
-.image-slider {
-    -webkit-touch-callout: none; /* Vô hiệu hóa touch callout */
-    -webkit-user-select: none; /* Vô hiệu hóa lựa chọn văn bản */
-    user-select: none; /* Vô hiệu hóa lựa chọn văn bản cho tất cả các trình duyệt hỗ trợ */
-}
+
 
 /* Ví dụ thêm cho các phần tử khác nếu cần */
 .slider-image {

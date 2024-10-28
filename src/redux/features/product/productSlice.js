@@ -37,7 +37,6 @@ export const actFetchAllProducts = createAsyncThunk(
       const response = await productApis.getAllProducts({
         ...params,
       });
-      console.log(response.Product, "response");
 
 
       return {
@@ -51,14 +50,38 @@ export const actFetchAllProducts = createAsyncThunk(
     }
   }
 );
-
 export const actFetchProductById = createAsyncThunk(
   "products/fetchProductById",
   async (id_product) => {
-    const product = await productApis.getProductsById(id_product);
-    return product;
+    try {
+      // Lấy tất cả sản phẩm
+      const response = await productApis.getAllProducts();
+
+      // Kiểm tra xem response có chứa Product không
+      if (!response || !response.Product) {
+        throw new Error('No products found in response');
+      }
+
+      // Tìm sản phẩm theo id_product
+      const product = response.Product.find((item) => item.id_product === parseInt(id_product));
+
+      // Kiểm tra xem sản phẩm có tồn tại hay không
+      if (!product) {
+        throw new Error(`Product with id ${id_product} not found`);
+      }
+
+      return product; // Trả về sản phẩm tìm được
+    } catch (error) {
+      console.error("Error fetching product by ID:", error);
+      throw error;
+    }
   }
 );
+
+
+
+
+
 
 export const actFetchAllImgsProducts = createAsyncThunk(
   "products/fetchAllImgsProducts",

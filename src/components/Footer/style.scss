@@ -95,4 +95,9 @@
   .footer-item {
     flex-direction: column;
   }
+  .footer-item_social {
+    iframe {
+      max-width: 100%;
+    }
+  }
 }
