@@ -18,8 +18,8 @@ const ImageList = ({
     useEffect(() => {
         const fetchImages = async () => {
             try {
-                const response = await axios.get('https://media.denlongthiendang.com/data.json');
-                setImages(response.data.Product);
+                const response = await axios.get('https://media.denlongthiendang.com/products');
+                setImages(response.data);
             } catch (err) {
                 setError(err);
             } finally {
