@@ -7,9 +7,14 @@ const ManaProduct = () => {
     const [refresh, setRefresh] = useState(false)
     return (
         <div className="manaproduct-container">
-            <CategoryUpload refresh={refresh} setRefresh={setRefresh} />
-            <ProductUpload refresh={refresh} setRefresh={setRefresh} />
-            <ImageList refresh={refresh} setRefresh={setRefresh} />
+            <div className="d-flex gap-3">
+                <div>
+                    <CategoryUpload refresh={refresh} setRefresh={setRefresh} />
+                    <ProductUpload refresh={refresh} setRefresh={setRefresh} />
+                </div>
+                <ImageList refresh={refresh} setRefresh={setRefresh} />
+            </div>
+
 
         </div>
     )
