@@ -1,0 +1,23 @@
+/* Đối với màn hình nhỏ (điện thoại) */
+@media (max-width: 768px) {
+    .openLanterns-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .video-wrapper {
+      display: none; /* Ẩn các video trừ video đầu tiên */
+    }
+    .video-wrapper:first-child {
+      display: block; /* Hiển thị video đầu tiên */
+    }
+  }
+  
+  /* Đối với màn hình lớn (máy tính) */
+  @media (min-width: 769px) {
+    .openLanterns-container {
+      flex-direction: row;
+      justify-content: center;
+    }
+  }
+  
