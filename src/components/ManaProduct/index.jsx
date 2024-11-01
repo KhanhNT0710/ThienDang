@@ -11,7 +11,11 @@ const ManaProduct = () => {
                 <CategoryUpload refresh={refresh} setRefresh={setRefresh} />
                 <ProductUpload refresh={refresh} setRefresh={setRefresh} />
             </div>
-            <ImageList refresh={refresh} setRefresh={setRefresh} />
+            <div>
+                <h1>Danh sách sản phẩm</h1>
+
+                <ImageList refresh={refresh} setRefresh={setRefresh} />
+            </div>
         </div>
     )
 }
