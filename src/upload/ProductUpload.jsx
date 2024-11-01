@@ -109,6 +109,7 @@ const ProductUpload = ({ refresh, setRefresh }) => {
             <h2>Tạo mới sản phẩm</h2>
 
             <div>
+                <nav>Chọn danh mục</nav>
                 <Select
                     placeholder="Chọn danh mục"
                     value={categoryId}

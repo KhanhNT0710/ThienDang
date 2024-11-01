@@ -99,7 +99,7 @@ const ImageList = ({
         );
     };
     return (
-        <div>
+        <div className='list-product-mana'>
             <h1>Danh sách sản phẩm</h1>
             <div>
 
