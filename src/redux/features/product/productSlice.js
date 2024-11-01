@@ -36,11 +36,13 @@ export const actFetchAllProducts = createAsyncThunk(
     try {
       const response = await productApis.getAllProducts({
         ...params,
+
       });
+      console.log(response);
 
 
       return {
-        data: response.Product, // Dữ liệu sản phẩm
+        data: response, // Dữ liệu sản phẩm
 
       };
 
@@ -58,12 +60,12 @@ export const actFetchProductById = createAsyncThunk(
       const response = await productApis.getAllProducts();
 
       // Kiểm tra xem response có chứa Product không
-      if (!response || !response.Product) {
+      if (!response || !response) {
         throw new Error('No products found in response');
       }
 
       // Tìm sản phẩm theo id_product
-      const product = response.Product.find((item) => item.id_product === parseInt(id_product));
+      const product = response.find((item) => item.id_product === parseInt(id_product));
 
       // Kiểm tra xem sản phẩm có tồn tại hay không
       if (!product) {

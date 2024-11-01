@@ -6,6 +6,7 @@ import { ROUTES } from "../../constants/routes";
 const ProductCard = (props) => {
   const navigate = useNavigate();
   const { id_product, urls, name, category, style } = props.product;
+  console.log(props, "props");
 
   const formatNumber = (num) => {
     let numString = "";

@@ -3,7 +3,7 @@ import axios from "axios";
 export const productApis = {
   getAllProducts: async (params) => {
     try {
-      const response = await axios.get(`${process.env.REACT_APP_BE_URL}data.json`, {
+      const response = await axios.get(`${process.env.REACT_APP_BE_URL}products`, {
         params: {
           ...params,
         },
@@ -17,15 +17,15 @@ export const productApis = {
 
   getProductsById: async (id_product) => {
     try {
-      const { data } = await axios.get('https://media.denlongthiendang.com/data.json');
+      const { data } = await axios.get('https://media.denlongthiendang.com/products');
 
       // Kiểm tra xem dữ liệu có tồn tại không
-      if (!data || !data.Product || !Array.isArray(data.Product)) {
+      if (!data || !data.products || !Array.isArray(data.products)) {
         throw new Error("Invalid data format from server.");
       }
 
       // Tìm sản phẩm theo id_product trong danh sách
-      const product = data.Product.find((item) => item.id_product === id_product);
+      const product = data.products.find((item) => item.id_product === id_product);
 
       if (!product) {
         throw new Error(`Product with id ${id_product} not found.`);
