@@ -26,7 +26,6 @@ const ProductCard = (props) => {
     }
     return numString;
   };
-  console.log(id_product, "id_product");
 
   const handleRedirectToDetailProductPage = () => {
     navigate(generatePath(ROUTES.DETAIL_PRODUCT_PAGE, { productId: id_product }));
@@ -43,23 +42,26 @@ const ProductCard = (props) => {
             <button>Xem ngay</button>
           </div>
         </div>
-        <div className="product-card__type-jewelry">
-          <span>{category}</span>
-        </div>
-        <div
-          className="product-card__name"
-          onClick={handleRedirectToDetailProductPage}
-        >
-          <h4>{name}</h4>
-        </div>
-        {style && (
-          <div className="product-card__price">
-            <span>{style}</span>
+        <div className="product-card__infor">
+          <div className="product-card__category">
+            <span>{category}</span>
           </div>
-        )}
-        <div className="product-card__price">
-          <p>Giá: Liên hệ</p>
+          <div
+            className="product-card__name"
+            onClick={handleRedirectToDetailProductPage}
+          >
+            <h4>{name}</h4>
+          </div>
+          {style && (
+            <div className="product-card__price">
+              <span>{style}</span>
+            </div>
+          )}
+          <div className="product-card__price">
+            <p>Giá: Liên hệ</p>
+          </div>
         </div>
+
       </div>
     </div>
   );

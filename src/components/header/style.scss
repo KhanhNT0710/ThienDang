@@ -15,7 +15,9 @@
     flex-direction: column;
     gap: 5px;
     align-self: center;
-
+  &__toggle-icon {
+      display: none; 
+    }
     &__logo {
       &__link {
         img {
@@ -93,6 +95,27 @@
     font-family: "Muli", "Roboto Condensed", "sans-serif";
     font-weight: 600;
     font-size: 12px;
+  }
+  ////
+  .header-container-nav-mobile {
+    display: none;
+  }
+   @media (max-width: 600px) {
+    .toogle-hiden {
+    position: fixed;
+    z-index: 1001;
+    top: 0;
+    left: 0;
+    color: brown;
+    /* padding: */
+  }
+    .header-container-menu-bar__toggle-icon {
+      display: block; // Show the toggle icon on mobile
+    }
+
+    .header-container-nav-mobile {
+      display: flex; // Show the mobile nav menu as a column layout
+    }
   }
 }
 
@@ -325,15 +348,12 @@
       display: none;
     }
 
-    li {
-      display: none;
-    }
+    
 
     .header-container-menu-bar {
       flex-direction: column;
       align-items: center;
       justify-content: center;
-      text-align: center;
 
       &__logo {
         height: 70px;
@@ -371,6 +391,46 @@
       display: block;
     }
   }
+  .header-container-nav-mobile {
+    display: flex !important;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 75%;
+    height: 100%;
+    background-color: #2c343f;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 20px;
+        padding-left: 20px;
+    z-index: 1000;
+    overflow-y: auto;
+
+    &__list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      width: 100%;
+    }
+
+    &__item {
+      margin: 20px 0;
+      font-size: 18px;
+      &__sub {
+        padding-left: 10px;
+              margin: 16px 0;
+
+      }
+
+      a {
+        color: #fff;
+        text-decoration: none;
+      }
+    }
+  }
+
+ 
 }
 
 @media screen and (max-width: 600px) {
@@ -384,3 +444,6 @@
     width: 100%;
   }
 }
+.ant-dropdown {
+    z-index: 10000;
+  }

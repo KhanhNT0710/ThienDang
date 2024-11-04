@@ -45,10 +45,18 @@ const ProductUpload = ({ refresh, setRefresh }) => {
 
     const handleUpload = async () => {
         if (selectedFiles.length === 0) {
-            antdMessage.warning('Please select files before uploading.');
+            antdMessage.warning('Vui lòng chọn ảnh');
+            return;
+        }
+        if (!categoryId || !name) {
+            antdMessage.warning('Vui lòng điền tên sản phẩm và chọn danh mục sản phẩm');
             return;
         }
 
+        if (selectedFiles.length === 0) {
+            antdMessage.warning('Please select files before uploading.');
+            return;
+        }
         const formData = new FormData();
         selectedFiles.forEach(file => {
             formData.append('images', file);
@@ -56,7 +64,6 @@ const ProductUpload = ({ refresh, setRefresh }) => {
         formData.append('categoryId', categoryId);
         formData.append('category', category);
         formData.append('name', name);
-        formData.append('price', "");
         formData.append('style', style);
         formData.append('productDetail', productDetail);
 
@@ -79,9 +86,8 @@ const ProductUpload = ({ refresh, setRefresh }) => {
         setFileList([]);
         setLinkImgs([]);
         setCategoryId('');
-        setCategory(''); // Đặt lại category
+        setCategory('');
         setName('');
-        setPrice('');
         setStyle('');
         setProductDetail('');
         setImagePreviews([]);
@@ -99,16 +105,15 @@ const ProductUpload = ({ refresh, setRefresh }) => {
         const selectedCategory = categories.find(cat => cat.categoryId === value);
         if (selectedCategory) {
             setCategoryId(selectedCategory.categoryId);
-            setCategory(selectedCategory.name); // Cập nhật category
+            setCategory(selectedCategory.name);
         }
     };
-    console.log(category, "category");
 
     return (
         <div className='product-upload-container'>
             <h2>Tạo mới sản phẩm</h2>
 
-            <div>
+            <div className='product-upload-infor'>
                 <nav>Chọn danh mục</nav>
                 <Select
                     placeholder="Chọn danh mục"
@@ -123,22 +128,22 @@ const ProductUpload = ({ refresh, setRefresh }) => {
                     ))}
                 </Select>
                 <nav className='product_creat d-flex'>
-                    <nav>Tên sản phẩm</nav>
-                    <Input placeholder="Product Name" value={name} onChange={(e) => setName(e.target.value)} />
+                    <nav>Tên sản phẩm:</nav>
+                    <Input placeholder="Tên sản phẩm" value={name} onChange={(e) => setName(e.target.value)} />
 
                 </nav>
 
 
                 <nav className='product_creat d-flex'>
-                    <nav>Thể loại</nav>
+                    <nav>Thể loại:</nav>
 
-                    <Input placeholder="Style" value={style} onChange={(e) => setStyle(e.target.value)} />
+                    <Input placeholder="Thể loại: Khung sắt, vải in...." value={style} onChange={(e) => setStyle(e.target.value)} />
 
                 </nav>
                 <nav className='product_creat d-flex'>
-                    <nav>Chi tiết</nav>
+                    <nav>Chi tiết:</nav>
 
-                    <Input placeholder="Product Detail" value={productDetail} onChange={(e) => setProductDetail(e.target.value)} />
+                    <Input placeholder="Chi tiết sản phẩm" value={productDetail} onChange={(e) => setProductDetail(e.target.value)} />
                 </nav>
 
             </div>

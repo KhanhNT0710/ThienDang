@@ -79,7 +79,7 @@ const DetailProductCard = () => {
         resolver: yupResolver(schemaBoxReview),
     });
 
-    const imgsProduct = imgsProducts.find(
+    const imgsProduct = imgsProducts?.find(
         (item) => item.id === productInfo.imgProductId
     );
     const [largeImg, setLargeImg] = useState(imgsProduct?.imgProduct1);

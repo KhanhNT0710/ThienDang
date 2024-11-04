@@ -1,11 +1,13 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import logo from "./logo.png";
 import { Button, Dropdown, Form, Input, Menu } from "antd";
 import "./style.scss";
 import {
   BarsOutlined,
+  CaretDownOutlined,
   FacebookOutlined,
   MailOutlined,
+  MenuOutlined,
   PhoneOutlined,
   SearchOutlined,
   ShoppingCartOutlined,
@@ -23,6 +25,7 @@ import {
   setSearchKey,
 } from "../../redux/features/product/productSlice";
 import { useTranslation } from "react-i18next";
+import axios from "axios";
 
 const HeaderComponent = () => {
   const navigate = useNavigate();
@@ -32,9 +35,16 @@ const HeaderComponent = () => {
   const handleFilterChangeInput = (newFilter) => {
   };
   const [isShowMenuMobile, setIsShowMenuMobile] = useState(false);
-  const handleRedirectToCartPage = () => {
-    navigate(ROUTES.CART_PAGE);
+  const [isMobileNavOpen, setIsMobileNavOpen] = useState(false); // State to toggle mobile menu
+  const [isSubMenuOpen, setIsSubMenuOpen] = useState(false);
+
+  const handleToggleMobileNav = () => {
+    setIsMobileNavOpen(!isMobileNavOpen);
   };
+  const toggleSubMenu = () => {
+    setIsSubMenuOpen(!isSubMenuOpen);
+  };
+
   const handleRedirectToProductPage = () => {
     navigate(ROUTES.PRODUCT_PAGE);
   };
@@ -55,7 +65,11 @@ const HeaderComponent = () => {
   const itemsLoginSuccess = [
     {
       key: "1",
-      label: <Link to={ROUTES.USER_PROFILE_PAGE}>My Profile</Link>,
+      label: <Link to={ROUTES.MANA_PRODUCT_PAGE}>Thêm sản phẩm</Link>,
+    },
+
+    {
+      type: "divider",
     },
 
     {
@@ -63,15 +77,6 @@ const HeaderComponent = () => {
     },
     {
       key: "2",
-      label: (
-        <Link to={ROUTES.USER_PURCHASE_HISTORY_PAGE}>Purchase History</Link>
-      ),
-    },
-    {
-      type: "divider",
-    },
-    {
-      key: "3",
       label: (
         <Button
           onClick={() => {
@@ -84,7 +89,21 @@ const HeaderComponent = () => {
       ),
     },
   ];
+  const [categories, setCategories] = useState([]);
+  const [refresh, setRefresh] = useState(false);
+  useEffect(() => {
+    // Hàm lấy danh sách danh mục
+    const fetchCategories = async () => {
+      try {
+        const response = await axios.get('https://media.denlongthiendang.com/categories');
+        setCategories(response.data);
+      } catch (error) {
+        console.error("Error fetching categories:", error);
+      }
+    };
 
+    fetchCategories();
+  }, [refresh]);
   return (
     <div className="header-container">
       {/* <div className="header-container-top-header">
@@ -106,8 +125,72 @@ const HeaderComponent = () => {
               alt="logo"
             />
           </Link>
-        </div>
 
+        </div>
+        {/* Mobile menu toggle icon */}
+        <div className="header-container-menu-bar__toggle-icon mobile-show toogle-hiden">
+          <MenuOutlined style={{ fontSize: "30px" }} onClick={handleToggleMobileNav} />
+        </div>
+        {/* Mobile-only navigation menu */}
+        {isMobileNavOpen && (
+          <div className="header-container-nav-mobile">
+            <ul className="header-container-nav-mobile__list">
+              <li className="header-container-nav-mobile__item">
+                <Link to={ROUTES.HOME_PAGE} onClick={handleToggleMobileNav}>Trang chủ</Link>
+              </li>
+              <li className="header-container-nav-mobile__item">
+                <div >
+                  <Link onClick={toggleSubMenu} >Danh Mục
+                    <CaretDownOutlined />
+                  </Link>
+                </div>
+                {isSubMenuOpen && (
+                  <ul className="header-container-nav-mobile__list">
+                    {categories.map((category) => (
+                      <li
+                        key={category.id}
+                        className="header-container-nav-mobile__item__sub"
+                        onClick={() => handleRedirectToProductPage(category.id)}
+                      >
+                        <Link onClick={handleToggleMobileNav} >{category.name}</Link>
+
+                      </li>
+                    ))}
+                  </ul>
+                )}
+              </li>
+              <li className="header-container-nav-mobile__item">
+                <Link to={ROUTES.ABOUT_US_PAGE} onClick={handleToggleMobileNav}>Giới Thiệu</Link>
+              </li>
+              <li className="header-container-nav-mobile__item">
+                <Link to={ROUTES.BLOG_PAGE} onClick={handleToggleMobileNav}>Không gian trang trí</Link>
+              </li>
+              <li className="header-container-nav-mobile__item">
+                <a href="tel:0988015093" onClick={handleToggleMobileNav}>Liên Hệ</a>
+              </li>
+              <li className="header-container-nav-mobile__item">
+                <div className="header-left" style={{ color: "white" }}>
+                  {!isLogin && (
+                    <Link to={ROUTES.LOGIN_PAGE} onClick={handleToggleMobileNav}>
+                      <UserOutlined />
+                    </Link>
+                  )}
+                  {isLogin && (
+                    <Link
+                      to={ROUTES.HOME_PAGE}
+                      onClick={() => {
+                        dispatch(logout());
+                        handleToggleMobileNav();
+                      }}
+                    >
+                      Đăng xuất
+                    </Link>
+                  )}
+                </div>
+              </li>
+            </ul>
+          </div>
+        )}
         <div className="header-container-menu-bar__search mobile_none">
           <form className="list-product__search">
             <PostFilterForm onSubmit={handleFilterChangeInput} />
@@ -141,50 +224,15 @@ const HeaderComponent = () => {
                     </Link>
                   </div>
                   <ul className="header-navBar__subNavProduct">
-                    <li
-                      className="header-navBar__subNavProduct-item"
-                      onClick={handleRedirectToProductPage}
-                    >
-                      <span>Đèn lồng Hội An</span>
-                    </li>
-                    <li
-                      className="header-navBar__subNavProduct-item"
-                      onClick={handleRedirectToProductPage}
-                    >
-                      <span>Đèn lồng ngoài trời</span>
-                    </li>
-                    <li
-                      className="header-navBar__subNavProduct-item"
-                      onClick={handleRedirectToProductPage}
-                    >
-                      <span>Đèn lồng trong nhà</span>
-                    </li>
-                    <li
-                      className="header-navBar__subNavProduct-item"
-                      onClick={handleRedirectToProductPage}
-                    >
-                      <span>Đèn vải in, vẽ hoạ tiết</span>
-                    </li>
-                    <li
-                      className="header-navBar__subNavProduct-item"
-                      onClick={handleRedirectToProductPage}
-                    >
-                      <span>Đèn truyền thống khung tre</span>
-                    </li>
-                    <li
-                      className="header-navBar__subNavProduct-item"
-                      onClick={handleRedirectToProductPage}
-                    >
-                      <span>Mẹt trang trí</span>
-                    </li>
-                    <li
-                      className="header-navBar__subNavProduct-item"
-                      onClick={handleRedirectToProductPage}
-                    >
-                      <span>Combo yêu thích</span>
-                    </li>
-
-
+                    {categories.map((category) => (
+                      <li
+                        key={category.id}
+                        className="header-navBar__subNavProduct-item"
+                        onClick={handleRedirectToProductPage}
+                      >
+                        <span>{category.name}</span>
+                      </li>
+                    ))}
                   </ul>
                 </li>
                 <li className="header-navBar__listItem">
@@ -194,7 +242,7 @@ const HeaderComponent = () => {
                 </li>
                 <li className="header-navBar__listItem">
                   <Link to={ROUTES.BLOG_PAGE}>
-                    <span>BLOG</span>
+                    <span>Không gian trang trí</span>
                   </Link>
                 </li>
                 <li className="header-navBar__listItem">
@@ -218,6 +266,7 @@ const HeaderComponent = () => {
                 <div className="header-left__user-grp">
                   <div className="header-left__user-avatar">
                     <Dropdown
+                      className="drop-login"
                       menu={{ items: itemsLoginSuccess }}
                       trigger={"click"}
                       placement="bottomLeft"
@@ -227,7 +276,7 @@ const HeaderComponent = () => {
                           <img src={userInfo?.avatarURL} alt="" />
                         </div>
                       ) : (
-                        <UserOutlined color="white" />
+                        <UserOutlined style={{ fontSize: "18px" }} color="white" />
                       )}
                     </Dropdown>
                   </div>

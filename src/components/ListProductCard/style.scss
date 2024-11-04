@@ -1,33 +1,18 @@
 .list-product {
   display: flex;
-  gap: 100px;
+  gap: 10px;
 
   &__filter {
     line-height: 2;
-    min-height: 1px;
-    padding-top: 40px;
-    padding-right: 15px;
-    padding-left: 15px;
+    padding: 40px 15px;
     max-width: 350px;
     height: 100%;
     text-align: left;
 
-    .list-product__filter-radio {
-      align-self: flex-start;
-    }
-
-    &-price {
-      ul {
-        list-style: none;
+    &-category, &-price, &-star {
+      h4 {
+        margin-bottom: 8px;
       }
-
-    }
-
-    &-grp {
-      display: flex;
-      justify-content: right;
-      gap: 20px;
-
     }
 
     &-btn {
@@ -37,29 +22,36 @@
       border: 1px solid black;
       border-radius: 6px;
       cursor: pointer;
+
+      &:hover {
+        background-color: gainsboro;
+      }
     }
-    &-btn:hover {
-      background-color: gainsboro;
+
+    &-grp {
+      display: flex;
+      justify-content: flex-end;
+      gap: 20px;
     }
   }
 
   &__content {
-    // display: flex;
     position: relative;
     min-height: 1px;
-    padding-right: 15px;
-    padding-left: 15px;
+    padding: 0 15px;
     flex: 1;
     display: flex;
     flex-direction: column;
     gap: 20px;
 
-    .list-product__search {
+    &-search {
+      align-self: center;
       width: 500px;
       display: flex;
       height: 50px;
       align-items: center;
       gap: 5px;
+
       &-btn {
         background-color: #15a69d;
       }
@@ -73,7 +65,6 @@
       &__row {
         gap: 10px;
       }
-
     }
 
     &-pagination {
@@ -81,20 +72,22 @@
       justify-content: center;
     }
   }
-
 }
+
+// Media Queries for Responsive Design
 @media screen and (max-width: 900px) {
   .list-product {
+    flex-direction: column;
+
     &__filter {
-      &-category, &-price, &-star {
-        padding: 8px;
-        h4 {
-          margin-bottom: 8px;
-        }
-      }
+      padding: 8px;
 
       .list-product__filter-btn {
         margin-top: 16px;
+        padding: 8px;
+      }
+
+      &-category, &-price, &-star {
         padding: 8px;
       }
     }
@@ -118,32 +111,77 @@
     }
   }
 
-  .list-product__search {
+ 
+}
+
+@media screen and (max-width: 600px) {
+  .list-product {
     flex-direction: column;
-    align-items: stretch;
-    gap: 10px;
+    gap: 20px;
+    align-items: center;
 
-    &-btn {
+    &__filter {
       width: 100%;
-      justify-content: center;
+      padding: 15px;
+      justify-items: center;
     }
-  }
-.list-product {
-  width: 100%;
-  gap: 5px;
-  .list-product__filter {
-    width: 30%;
-  }
-  .list-product__content {
-    width: 70%;
-  }
-  .list-product__search {
-    width: 100%;
-    .input-search {
-          width: 100%;
 
+    &__content {
+      width: 100%;
+    }
+
+    &__search {
+      flex-direction: column;
+      gap: 10px;
+
+      .input-search,
+      .list-product__search-btn {
+        width: 100%;
+      }
+    }
+.respon-h32 {
+    height: 32px;
+  }
+    &__content-filter {
+      flex-direction: column;
+      gap: 10px;
+      align-items: flex-start;
+    }
+
+    &__content-items {
+      gap: 15px;
+
+      .ant-col {
+        width: 100%;
+      }
     }
   }
 }
 
+// Filter Toggle Button Styles
+.list-product__filter-toggle {
+  display: none; // Hide on desktop
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  font-size: 16px;
+  background-color: #15a69d;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center; // Center icon
+  align-items: center; // Center icon
+
+  &:hover {
+    background-color: #13a68b;
+  }
+}
+
+// Show toggle button on mobile
+@media screen and (max-width: 900px) {
+  .list-product__filter-toggle {
+    display: flex;
+  }
 }

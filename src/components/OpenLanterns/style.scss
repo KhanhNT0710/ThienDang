@@ -6,7 +6,6 @@
       align-items: center;
     }
     .video-wrapper {
-      display: none; /* Ẩn các video trừ video đầu tiên */
     }
     .video-wrapper:first-child {
       display: block; /* Hiển thị video đầu tiên */
@@ -20,4 +19,25 @@
       justify-content: center;
     }
   }
+  .view-more {
+    padding: 5px 10px; /* Khoảng cách bên trong nút */
+  background-color: #e2e2e2; /* Màu nền */
+  border: 1px solid #bfbfbf; /* Không viền */
+  border-radius: 5px; /* Bo góc */
+  cursor: pointer; /* Con trỏ chuột khi di chuột vào nút */
+  font-size: 16px; /* Kích thước chữ */
+  transition: background-color 0.3s, transform 0.3s;
+  }
+  .view-more:hover {
+  background-color: #e2e2e2; /* Màu nền khi di chuột */
+  transform: scale(1.05); /* Tăng kích thước khi di chuột */
+}
+
+.view-more:focus {
+  outline: none; /* Bỏ viền khi nút được chọn */
+}
+
+.view-more:active {
+  transform: scale(0.95); /* Nhỏ lại khi nhấn nút */
+}
   

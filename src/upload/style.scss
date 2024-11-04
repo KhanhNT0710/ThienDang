@@ -66,5 +66,9 @@ overflow-y: auto;
 .slider-image {
     -webkit-touch-callout: none;
 }
-
+.product-upload-infor {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
 

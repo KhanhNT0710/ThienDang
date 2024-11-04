@@ -36,17 +36,17 @@ const BlogPage = () => {
           ...params,
           _sort: "star",
           _order: "asc",
-          category: productInfo.category,
+          category: 3,
         })
       );
     },
     // eslint-disable-next-line
-    [productInfo.category]
+    []
   );
   const renderRelatedProductList = (productsClone) => {
     return productsClone.map((product) => {
       const handleRedirectToRelatedDetailProductPage = () => {
-        navigate(generatePath(ROUTES.DETAIL_PRODUCT_PAGE, { id_product: product?.id }));
+        navigate(generatePath(ROUTES.DETAIL_PRODUCT_PAGE, { productId: product?.id_product }));
       };
 
       return (
@@ -54,28 +54,28 @@ const BlogPage = () => {
           xs={12}
           sm={12}
           md={12}
-          lg={6}
-          xl={6}
+          lg={8}
+          xl={8}
           className="detail-product-card-bottom__related-products-grp-item"
         >
           <img
             className="detail-product-card-bottom__related-products-grp-item--img"
-            src={product.imgURL}
+            src={product.urls[0]}
             alt=""
             onClick={handleRedirectToRelatedDetailProductPage}
           />
           <div className="detail-product-card-bottom__related-products-grp-item--name" onClick={handleRedirectToRelatedDetailProductPage}>
-            <p>{product?.name}</p>
+            <h4>{product?.name}</h4>
           </div>
           <div className="detail-product-card-bottom__related-products-grp-item--price">
-            <p>{formatNumber(product?.price)}</p>
+            <p>{formatNumber(product?.style)}</p>
           </div>
         </Col>
       );
     });
   };
   return (
-    <div>
+    <div className="decor-space-wrapper">
       <div>
         <h3>      Hướng Dẫn Sử Dụng Lồng Đèn Cho Ngày Hội Trăng Rằm</h3>
         <p>Lồng đèn là một phần không thể thiếu trong các dịp lễ hội truyền thống ở nhiều quốc gia châu Á, đặc biệt là trong ngày Trung Thu. Đây không chỉ là một biểu tượng của sự may mắn và hạnh phúc, mà còn mang lại vẻ đẹp lung linh, huyền ảo cho những đêm trăng rằm. Hãy cùng tìm hiểu cách sử dụng lồng đèn một cách an toàn và thú vị qua bài viết dưới đây!</p>
@@ -120,7 +120,7 @@ const BlogPage = () => {
       </div>
 
       <div
-        style={{ paddingLeft: 20, paddingRight: 20 }}
+        style={{ padding: "20px" }}
         className="detail-product-card-bottom__related-products-grp"
       >
         <Col
@@ -130,7 +130,6 @@ const BlogPage = () => {
           lg={24}
           className="detail-product-card-bottom__related-products-grp--title"
         >
-          <h3>Sản Phẩm Liên Quan</h3>
         </Col>
 
         <Row className="detail-product-card-bottom__related-products-grp-item-grp">

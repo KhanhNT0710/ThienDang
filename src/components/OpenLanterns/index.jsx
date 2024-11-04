@@ -19,7 +19,7 @@ const OpenLanterns = () => {
         <iframe
           width="380"
           height="200"
-          src="https://www.youtube.com/embed/NE-wIZ7KHek?si=o9vfb4Pex_zqtwlN"
+          src="https://www.youtube.com/embed/UsKFx2xUnf0?si=HkMtC2FmRk0eTsGh"
           title="YouTube video player"
           frameBorder="0"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
@@ -28,15 +28,7 @@ const OpenLanterns = () => {
         ></iframe>
       </nav>
 
-      {/* Nút "Xem thêm" chỉ hiển thị trên màn hình nhỏ */}
-      {isMobile && (
-        <button
-          onClick={() => setShowMore(!showMore)}
-          style={{ marginBottom: "1rem" }}
-        >
-          {showMore ? "Thu gọn" : "Xem thêm"}
-        </button>
-      )}
+
 
       {/* Hiển thị các video còn lại khi showMore = true hoặc trên màn hình lớn */}
       {(showMore || !isMobile) && (
@@ -66,6 +58,16 @@ const OpenLanterns = () => {
             ></iframe>
           </nav>
         </>
+      )}
+      {/* Nút "Xem thêm" chỉ hiển thị trên màn hình nhỏ */}
+      {isMobile && (
+        <button
+          className="view-more"
+          onClick={() => setShowMore(!showMore)}
+          style={{ marginBottom: "1rem" }}
+        >
+          {showMore ? "Thu gọn" : "Xem thêm"}
+        </button>
       )}
     </div>
   );
