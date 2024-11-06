@@ -1,142 +1,81 @@
+// Container chính của section
 .section1-container {
+  padding: 30px; // Thêm padding xung quanh container chính
+  background-color: #f7f7f7; 
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-top: 30px;
+}
+
+// Tiêu đề của section
+.section1-container-title {
+  text-align: center;
+  margin-bottom: 20px;
+  padding-bottom: 10px; // Padding dưới của tiêu đề để tạo khoảng cách
+}
+
+.section1-container-title-link {
+  text-decoration: none;
+  color: brown;
+  font-weight: bold;
+}
+
+.section1-container-title-link h3 {
+  font-size: 24px;
+  margin: 0;
+  padding: 0;
+  color: brown;
+  text-transform: uppercase;
+}
+
+// Danh sách sản phẩm
+.section1-container__list-product {
+  justify-content: space-between;
+  padding: 10px 0; // Thêm padding trên và dưới cho danh sách sản phẩm
+}
+
+// Mỗi sản phẩm
+.section1-container__product {
+  cursor: pointer;
+  align-items: center;
+  justify-content: center;
+  width: calc(33.33% - 20px); // Mỗi sản phẩm chiếm 1/3 chiều rộng của container
+  padding: 15px; // Padding xung quanh mỗi sản phẩm
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+  &:hover {
+    transform: scale(1.05); // Phóng to sản phẩm khi hover
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15); // Thêm bóng khi hover
+  }
+
+  img {
     width: 100%;
-    padding: 0 30px;
-    justify-self: center;
-    &__list-product {
-        padding: 0 40px;
-    }
-h3 {
-    font-weight: 200;
+    border-radius: 10px;
+    object-fit: cover;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding-bottom: 15px; // Thêm padding dưới ảnh để tạo khoảng cách với tiêu đề
+  }
+
+  h4 {
+    text-align: center;
+    font-size: 16px;
+    font-weight: 600;
+    color: brown;
+    margin-top: 10px;
+    padding: 0 10px; // Thêm padding ngang cho tiêu đề để không sát vào ảnh
+    transition: all 0.45s ease;
+  }
 }
-    .section1-container-title {
-        .section1-container-title-link {
-            width: 100%;
-            line-height: 24px;
-            text-align: center;
-            overflow: hidden;
-            margin-bottom: 15px;
-            text-shadow: 1px 1px 1px rgba(0, 0, 0, .5);
-            display: inline-block;
-            position: relative;
-            font-size: 18px;
-            font-weight: 200 !important;
-            line-height: 36px;
-            text-transform: uppercase;
-            color: #15a69d;
-            vertical-align: middle;
-            text-decoration: none;
-            box-sizing: border-box;
-            background-color: rgb(235 231 231);
-            height: 30px;
 
-            h3:before {
-                right: 100%;
-                margin-right: 15px;
-                content: "";
-                position: absolute;
-                height: 1px;
-                width: 1000px;
-                border-top: 1px dashed #15a69d;
-                top: 18px;
-            }
-
-            h3:after {
-                left: 100%;
-                margin-left: 15px;
-                content: "";
-                position: absolute;
-                height: 1px;
-                width: 1000px;
-                border-top: 1px dashed #15a69d;
-                top: 18px;
-            }
-        }
-
-    }
-
-    .section1-list-hot-container {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        gap: 20px;
-
-
-        &__product-hot-grp {}
-
-        
-
-        &__product:hover {
-            transition: all 0.3s ease;
-            transform: scale(1.12);
-        }
-
-        &__product {
-            padding: 10px 5px;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            gap: 8px;
-            cursor: pointer;
-
-            img {
-                height: 240px;
-                max-width: 290px;
-                width: 100%;
-                object-fit: cover;
-            }
-        }
-
-        &__product-name {
-        }
-
-        &__product-price {
-            font-size: 16px;
-            font-weight: 600;
-        }
-
-        &__btn-shopping {
-            button {
-                width: 160px;
-                height: 42px;
-                border: 1px solid black;
-                border-radius: 30;
-                background-color: #f7eee8;
-            }
-
-            button:hover {
-                border: 1px solid black !important;
-                color: black !important;
-                background-color: #fcefe7;
-                transition: all 0.3s ease-in;
-            }
-
-            span {
-                font-size: 20px;
-                text-transform: uppercase;
-                font-weight: 500;
-            }
-        }
-    }
-
-    h4 {
-        text-transform: uppercase;
-        font-size: 18px;
-        font-weight: 500;
-        text-shadow: 1px 1px 1px rgba(0, 0, 0, .5);
-        text-align: center;
-        padding: 0 15px;
-        text-transform: uppercase;
-        line-height: 24px;
-        transition: all .45s ease;
-        color: brown;
-        line-height: 24px;
-
-    }
+// Responsive cho các kích thước màn hình nhỏ hơn
+@media (max-width: 1024px) {
+  .section1-container__product {
+    width: calc(50% - 20px); // Mỗi sản phẩm chiếm 1/2 chiều rộng của container
+  }
 }
-@media (max-width: 500px) {
-  .section1-container__list-product {
-    padding: 0;
-}    
+
+@media (max-width: 768px) {
+  .section1-container__product {
+    width: 100%; // Mỗi sản phẩm chiếm toàn bộ chiều rộng
+  }
 }

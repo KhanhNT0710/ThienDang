@@ -19,196 +19,42 @@ const Section1 = () => {
     };
 
     return (
-        <div className="section1-container" >
-            <div className="section1-container-title" > <Link className="section1-container-title-link" to={ROUTES.PRODUCT_PAGE}><h3>ĐÈN LỒNG TRUYỀN THỐNG</h3></Link> </div>
+        <div className="section1-container">
+            <div className="section1-container-title">
+                <Link className="section1-container-title-link" to={ROUTES.PRODUCT_PAGE}>
+                    <h3>ĐÈN LỒNG TRUYỀN THỐNG</h3>
+                </Link>
+            </div>
             <Row className='section1-container__list-product'>
-                <Col onClick={() => navigate(ROUTES.PRODUCT_PAGE)} className='section1-container__product'
-                    xs={12}
-                    sm={12}
-                    md={8}
-                    lg={6}
-                    xl={6}
-                >
-                    <div>
-                        <img
-                            src={`${API_URL}/den/truyen-thong/den-du.jpg`}
-                            alt=""
-                        />
-                        <h4>ĐÈN LỒNG DÙ</h4>
-                    </div>
-                </Col>
-                <Col onClick={() => navigate(ROUTES.PRODUCT_PAGE)} className='section1-container__product'
-                    xs={12}
-                    sm={12}
-                    md={8}
-                    lg={6}
-                    xl={6}
-                >
-                    <div>
-                        <img
-                            src={`${API_URL}/den/truyen-thong/den-toi.jpg`}
-                            alt=""
-                        />
-                        <h4>ĐÈN LỒNG TỎI</h4>
-                    </div>
-                </Col>
-                <Col onClick={() => navigate(ROUTES.PRODUCT_PAGE)} className='section1-container__product'
-                    xs={12}
-                    sm={12}
-                    md={8}
-                    lg={6}
-                    xl={6}
-                >
-                    <div>
-                        <img
-                            src={`${API_URL}/den/truyen-thong/dia-bay.jpg`}
-                            alt=""
-                        />
-                        <h4>ĐÈN ĐĨA BAY</h4>
-                    </div>
-                </Col>
-                <Col onClick={() => navigate(ROUTES.PRODUCT_PAGE)} className='section1-container__product'
-                    xs={12}
-                    sm={12}
-                    md={8}
-                    lg={6}
-                    xl={6}
-                >
-                    <div>
-                        <img
-                            src={`${API_URL}/den/truyen-thong/kim-cuong.jpg`}
-                            alt=""
-                        />
-                        <h4>ĐÈN KIM CƯƠNG</h4>
-                    </div>
-                </Col>
-                <Col onClick={() => navigate(ROUTES.PRODUCT_PAGE)} className='section1-container__product'
-                    xs={12}
-                    sm={12}
-                    md={8}
-                    lg={6}
-                    xl={6}
-                >
-                    <div>
-                        <img
-                            src={`${API_URL}/den/truyen-thong/kim-cuong-nguoc.jpg`}
-                            alt=""
-                        />
-                        <h4>ĐÈN KIM CƯƠNG NGƯỢC</h4>
-                    </div>
-
-                </Col>
-                <Col onClick={() => navigate(ROUTES.PRODUCT_PAGE)} className='section1-container__product'
-                    xs={12}
-                    sm={12}
-                    md={8}
-                    lg={6}
-                    xl={6}
-                >
-                    <div>
-                        <img
-                            src={`${API_URL}/den/truyen-thong/na.jpg`}
-                            alt=""
-                        />
-                        <h4>ĐÈN QUẢ NA</h4>
-                    </div>
-
-                </Col>
-                <Col onClick={() => navigate(ROUTES.PRODUCT_PAGE)} className='section1-container__product'
-                    xs={12}
-                    sm={12}
-                    md={8}
-                    lg={6}
-                    xl={6}
-                >
-                    <div>
-                        <img
-                            src={`${API_URL}/den/truyen-thong/toi-nguoc.jpg`}
-                            alt=""
-                        />
-                        <h4>ĐÈN TỎI NGƯỢC</h4>
-                    </div>
-                </Col>
-                <Col onClick={() => navigate(ROUTES.PRODUCT_PAGE)} className='section1-container__product'
-                    xs={12}
-                    sm={12}
-                    md={8}
-                    lg={6}
-                    xl={6}
-                >
-                    <div>
-                        <img
-                            src={`${API_URL}/den/truyen-thong/tron.jpg`}
-                            alt=""
-                        />
-                        <h4>ĐÈN TRÒN</h4>
-                    </div>
-                </Col>
-                <Col onClick={() => navigate(ROUTES.PRODUCT_PAGE)} className='section1-container__product'
-                    xs={12}
-                    sm={12}
-                    md={8}
-                    lg={6}
-                    xl={6}
-                >
-                    <div>
-                        <img
-                            src={`${API_URL}/den/truyen-thong/u.jpg`}
-                            alt=""
-                        />
-                        <h4>ĐÈN BÁNH Ú</h4>
-                    </div>
-                </Col>
-                <Col onClick={() => navigate(ROUTES.PRODUCT_PAGE)} className='section1-container__product'
-                    xs={12}
-                    sm={12}
-                    md={8}
-                    lg={6}
-                    xl={6}
-                >
-                    <div>
-                        <img
-                            src={`${API_URL}/den/truyen-thong/vai-phi-3d.jpg`}
-                            alt=""
-                        />
-                        <h4>ĐÈN VẢI PHI IN 3D</h4>
-                    </div>
-                </Col>
-                <Col onClick={() => navigate(ROUTES.PRODUCT_PAGE)} className='section1-container__product'
-                    xs={12}
-                    sm={12}
-                    md={8}
-                    lg={6}
-                    xl={6}
-                >
-                    <div>
-                        <img
-                            src={`${API_URL}/den/truyen-thong/vai-phi-tron.jpg`}
-                            alt=""
-                        />
-                        <h4>ĐÈN VẢI PHI TRƠN</h4>
-                    </div>
-                </Col>
-                <Col onClick={() => navigate(ROUTES.PRODUCT_PAGE)} className='section1-container__product'
-                    xs={12}
-                    sm={12}
-                    md={8}
-                    lg={6}
-                    xl={6}
-                >
-                    <div>
-                        <img
-                            src={`${API_URL}/den/truyen-thong/vai-to-tam-2.jpg`}
-                            alt=""
-                        />
-                        <h4>ĐÈN VẢI TƠ TẰM</h4>
-                    </div>
-                </Col>
-
-
+                {[ // Mảng các sản phẩm
+                    { src: 'den-du.jpg', title: 'ĐÈN LỒNG DÙ' },
+                    { src: 'den-toi.jpg', title: 'ĐÈN LỒNG TỎI' },
+                    { src: 'dia-bay.jpg', title: 'ĐÈN ĐĨA BAY' },
+                    { src: 'kim-cuong.jpg', title: 'ĐÈN KIM CƯƠNG' },
+                    { src: 'kim-cuong-nguoc.jpg', title: 'ĐÈN KIM CƯƠNG NGƯỢC' },
+                    { src: 'na.jpg', title: 'ĐÈN QUẢ NA' },
+                    { src: 'toi-nguoc.jpg', title: 'ĐÈN TỎI NGƯỢC' },
+                    { src: 'tron.jpg', title: 'ĐÈN TRÒN' },
+                    { src: 'u.jpg', title: 'ĐÈN BÁNH Ú' },
+                    { src: 'vai-phi-3d.jpg', title: 'ĐÈN VẢI PHI IN 3D' },
+                    { src: 'vai-phi-tron.jpg', title: 'ĐÈN VẢI PHI TRƠN' },
+                    { src: 'vai-to-tam-2.jpg', title: 'ĐÈN VẢI TƠ TẰM' }
+                ].map((product, index) => (
+                    <Col
+                        key={index}
+                        onClick={() => navigate(ROUTES.PRODUCT_PAGE)}
+                        className='section1-container__product'
+                        xs={12} sm={12} md={8} lg={6} xl={6}
+                    >
+                        <div>
+                            <img src={`${API_URL}/den/truyen-thong/${product.src}`} alt={product.title} />
+                            <h4>{product.title}</h4>
+                        </div>
+                    </Col>
+                ))}
             </Row>
-
         </div>
+
     );
 }
 export default Section1

@@ -1,20 +1,60 @@
-h4 {
-        font-family: system-ui;
-            color: brown;
-            font-size: 16px;
-
+// Container cho slider
+.slider-container {
+  padding: 20px;
+  background-color: #f9f9f9; // Màu nền nhẹ cho slider
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-top: 30px;
 }
 
-.slider-container {
-    justify-items: center;
-     margin: 0 10px;
-        padding: 0 15px;
-&__title {
-          box-sizing: border-box;
-            background-color: rgb(235 231 231);
-            height: 30px;
-            margin-bottom: 15px;
-        &-link {
+// Tiêu đề của slider
+.slider-container__title {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.slider-container__title-link {
+  text-decoration: none;
+  color: #333;
+  font-weight: 600;
+}
+
+.slider-container__title-link h3 {
+  font-size: 24px;
+  margin: 0;
+  padding: 0;
+}
+
+// Phần sản phẩm trong slider
+.slider-container_product {
+  display: block;
+}
+
+// Cài đặt cho mỗi item trong slider
+.slick-slide {
+  padding: 10px; // Khoảng cách giữa các ảnh
+  display: flex;
+  justify-content: center;
+}
+
+.slick-slide img {
+  width: 100%;
+  border-radius: 10px;
+  object-fit: cover;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.slick-slide h4 {
+  text-align: center;
+  font-size: 16px;
+  font-weight: 600;
+  color: brown;
+  margin-top: 10px;
+  transition: all 0.45s ease;
+  
+}
+.slider-container__title-link {
+            width: 100%;
             line-height: 24px;
             text-align: center;
             overflow: hidden;
@@ -23,22 +63,51 @@ h4 {
             display: inline-block;
             position: relative;
             font-size: 18px;
-            font-weight: 200;
+            font-weight: 200 !important;
             line-height: 36px;
             text-transform: uppercase;
-            color: brown;
+            color: #15a69d;
             vertical-align: middle;
             text-decoration: none;
-          
+            box-sizing: border-box;
+            background-color: rgb(235 231 231);
+            height: 30px;
+
+            h4:before {
+                right: 100%;
+                margin-right: 15px;
+                content: "";
+                position: absolute;
+                height: 1px;
+                width: 1000px;
+                border-top: 1px dashed #15a69d;
+                top: 18px;
+            }
+
+            h4:after {
+                left: 100%;
+                margin-left: 15px;
+                content: "";
+                position: absolute;
+                height: 1px;
+                width: 1000px;
+                border-top: 1px dashed #15a69d;
+                top: 18px;
+            }
         }
-    }
-    
+// Các cấu hình responsive
+@media (max-width: 768px) {
+  .slider-container {
+    padding: 10px;
+  }
+  
+  .slick-slide h4 {
+    font-size: 14px;
+  }
 }
-.slider-container_product { 
-        width: 1200px;
-    }
+
 @media (max-width: 500px) {
-    .slider-container_product { 
-        width: 350px;
-    }
+  .slider-container {
+    padding: 5px;
+  }
 }
