@@ -32,8 +32,7 @@ const HeaderComponent = () => {
   const [isToggle, setIsToggle] = useState(false);
   const { isLogin, userInfo } = useSelector((state) => state.user);
   const dispatch = useDispatch();
-  const handleFilterChangeInput = (newFilter) => {
-  };
+  const handleFilterChangeInput = (newFilter) => {};
   const [isShowMenuMobile, setIsShowMenuMobile] = useState(false);
   const [isMobileNavOpen, setIsMobileNavOpen] = useState(false); // State to toggle mobile menu
   const [isSubMenuOpen, setIsSubMenuOpen] = useState(false);
@@ -95,7 +94,9 @@ const HeaderComponent = () => {
     // Hàm lấy danh sách danh mục
     const fetchCategories = async () => {
       try {
-        const response = await axios.get('https://media.denlongthiendang.com/categories');
+        const response = await axios.get(
+          "https://media.denlongthiendang.com/categories"
+        );
         setCategories(response.data);
       } catch (error) {
         console.error("Error fetching categories:", error);
@@ -115,32 +116,37 @@ const HeaderComponent = () => {
                 </div>
             </div> */}
       <div className="header-container-menu-bar row d-flex">
-        <div className="header-container-menu-bar__logo " style={{ alignSelf: "center" }}>
+        <div
+          className="header-container-menu-bar__logo "
+          style={{ alignSelf: "center" }}
+        >
           <Link
             className="header-container-menu-bar__logo__link"
             to={ROUTES.HOME_PAGE}
           >
-            <img
-              src={`${API_URL}/den/logo/slogan.png`}
-              alt="logo"
-            />
+            <img src={`${API_URL}/den/logo/slogan.jpg`} alt="logo" />
           </Link>
-
         </div>
         {/* Mobile menu toggle icon */}
         <div className="header-container-menu-bar__toggle-icon mobile-show toogle-hiden">
-          <MenuOutlined style={{ fontSize: "30px" }} onClick={handleToggleMobileNav} />
+          <MenuOutlined
+            style={{ fontSize: "30px" }}
+            onClick={handleToggleMobileNav}
+          />
         </div>
         {/* Mobile-only navigation menu */}
         {isMobileNavOpen && (
           <div className="header-container-nav-mobile">
             <ul className="header-container-nav-mobile__list">
               <li className="header-container-nav-mobile__item">
-                <Link to={ROUTES.HOME_PAGE} onClick={handleToggleMobileNav}>Trang chủ</Link>
+                <Link to={ROUTES.HOME_PAGE} onClick={handleToggleMobileNav}>
+                  Trang chủ
+                </Link>
               </li>
               <li className="header-container-nav-mobile__item">
-                <div >
-                  <Link onClick={toggleSubMenu} >Danh Mục
+                <div>
+                  <Link onClick={toggleSubMenu}>
+                    Danh Mục
                     <CaretDownOutlined />
                   </Link>
                 </div>
@@ -152,26 +158,36 @@ const HeaderComponent = () => {
                         className="header-container-nav-mobile__item__sub"
                         onClick={() => handleRedirectToProductPage(category.id)}
                       >
-                        <Link onClick={handleToggleMobileNav} >{category.name}</Link>
-
+                        <Link onClick={handleToggleMobileNav}>
+                          {category.name}
+                        </Link>
                       </li>
                     ))}
                   </ul>
                 )}
               </li>
               <li className="header-container-nav-mobile__item">
-                <Link to={ROUTES.ABOUT_US_PAGE} onClick={handleToggleMobileNav}>Giới Thiệu</Link>
+                <Link to={ROUTES.ABOUT_US_PAGE} onClick={handleToggleMobileNav}>
+                  Giới Thiệu
+                </Link>
               </li>
               <li className="header-container-nav-mobile__item">
-                <Link to={ROUTES.BLOG_PAGE} onClick={handleToggleMobileNav}>Không gian trang trí</Link>
+                <Link to={ROUTES.BLOG_PAGE} onClick={handleToggleMobileNav}>
+                  Không gian trang trí
+                </Link>
               </li>
               <li className="header-container-nav-mobile__item">
-                <a href="tel:0988015093" onClick={handleToggleMobileNav}>Liên Hệ</a>
+                <a href="tel:0988015093" onClick={handleToggleMobileNav}>
+                  Liên Hệ
+                </a>
               </li>
               <li className="header-container-nav-mobile__item">
                 <div className="header-left" style={{ color: "white" }}>
                   {!isLogin && (
-                    <Link to={ROUTES.LOGIN_PAGE} onClick={handleToggleMobileNav}>
+                    <Link
+                      to={ROUTES.LOGIN_PAGE}
+                      onClick={handleToggleMobileNav}
+                    >
                       <UserOutlined />
                     </Link>
                   )}
@@ -211,8 +227,9 @@ const HeaderComponent = () => {
         >
           <div className="header-navBar">
             <div
-              className={`header-navBar__list-grp ${isToggle ? "header-navBar__list-grp-show" : ""
-                }`}
+              className={`header-navBar__list-grp ${
+                isToggle ? "header-navBar__list-grp-show" : ""
+              }`}
             >
               <ul className="header-navBar__list">
                 <li className="header-navBar__listItem header-navBar__shopItem">
@@ -276,7 +293,10 @@ const HeaderComponent = () => {
                           <img src={userInfo?.avatarURL} alt="" />
                         </div>
                       ) : (
-                        <UserOutlined style={{ fontSize: "18px" }} color="white" />
+                        <UserOutlined
+                          style={{ fontSize: "18px" }}
+                          color="white"
+                        />
                       )}
                     </Dropdown>
                   </div>
