@@ -4,6 +4,8 @@ import "./style.scss";
 import { API_URL } from "../../apis/api";
 import { useSelector } from "react-redux";
 import axios from "axios";
+import { Link, useNavigate } from "react-router-dom";
+import { ROUTES } from "../../constants/routes";
 
 const CarouselComponent = () => {
   const { isLogin } = useSelector((state) => state.user);
@@ -19,6 +21,7 @@ const CarouselComponent = () => {
     `${API_URL}/den/slide/9.png`
   ]);
   const [selectedFile, setSelectedFile] = useState(null);
+  const navigate = useNavigate();
 
   const handleOk = async () => {
     if (!selectedFile) {
@@ -57,26 +60,25 @@ const CarouselComponent = () => {
     // Chọn file đầu tiên từ fileList để làm selectedFile
     setSelectedFile(fileList.length > 0 ? fileList[0].originFileObj : null);
   };
-
+  const handleRedirect = () => {
+    navigate(ROUTES.PRODUCT_PAGE);
+  };
   return (
     <div className="carousel-container">
-      <Carousel
-        className="carousel"
-        autoplay
-        effect="fade"
-        waitForAnimate="true"
-      >
+      <Carousel className="carousel" autoplay effect="fade" waitForAnimate="true">
         {carouselImages.map((image, index) => (
           <div className="carousel__item" key={index}>
-            <img className="carousel__item1" src={image} alt={`Slide ${index + 1}`} />
+            <Link to={ROUTES.BLOG_PAGE}>
+              <img className="carousel__item1" src={image} alt={`Slide ${index + 1}`} />
+            </Link>
           </div>
         ))}
       </Carousel>
-      {isLogin && (
+      {/* {isLogin && (
         <div>
           <Button onClick={() => setShowEditSlide(true)}>Sửa</Button>
         </div>
-      )}
+      )} */}
       <Modal open={showEditSlide} onOk={handleOk} onCancel={handleCancel} style={{ top: "50%" }}>
         <Upload
           listType="picture"

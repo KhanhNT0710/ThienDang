@@ -1,13 +1,52 @@
- .decor-space-wrapper {
-  max-width: 850px;
-  img {
-       
-        width: 100%;
-        max-width: 250px;
-        height: 250px;
-        cursor: pointer;
-        padding: 5px;
-      }
- }
- 
-      
+/* style.scss */
+.decor-space-wrapper {
+  padding: 10px 20px;
+    text-align: center;
+
+}
+
+.btn-remove {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.image-gallery .decor-image {
+  width: 100%;
+  height: 250px; /* Đặt chiều cao cố định */
+  object-fit: cover; /* Đảm bảo ảnh không bị bóp méo */
+  border-radius: 8px; /* Tạo góc bo tròn */
+  transition: transform 0.3s;
+}
+
+.image-gallery .decor-image:hover {
+  transform: scale(1.05); /* Hiệu ứng phóng to khi hover */
+}
+
+.image-preview {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.image-preview img {
+  max-width: 300px;
+  height: auto;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+
+.image-preview img:hover {
+  transform: scale(1.05); /* Hiệu ứng phóng to khi hover */
+}
+@media screen and (max-width: 500px) {
+  .image-preview img {
+    max-width: 250px;
+    height: auto;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: transform 0.3s;
+  }
+}
+
