@@ -1,38 +1,43 @@
-* {
-  box-sizing: border-box;
-}
+// * {
+//   box-sizing: border-box;
+// }
 
 .detail-product-card-wrapper {
   display: flex;
   justify-content: center;
-  
   width: 100%;
-  max-width: 950px;
-
-  .detail-product-card-top-container {}
-
+p {
+  font-size: 14px;
+}
+.detail-product-card-container {
+  max-width: 80vw;
+}
+  .detail-product-card-top-container,
   .detail-product-card-top-wrapper,
   .detail-product-card-bottom-wrapper {
     display: flex;
     justify-content: center;
+    width: 100%;
   }
-
+.image-slider {
+  max-width: 100vw;
+  text-align: center;
+}
   .detail-product-card-top {
-max-width: 100%;
-width: 80%;
-    padding: 20px 0;
+    max-width: 100%;
+    width: 100%;
 
-    &__img-grp {}
-
-    &__large-img {
+    &__img-grp,
+    &__information-product-grp {
       display: flex;
-      justify-content: center;
+      flex-direction: column;
+      align-items: center;
+    }
 
-      img {
-        max-width: 600px;
-        width: 100%;
-        object-fit: cover;
-      }
+    &__large-img img {
+      max-width: 600px;
+      width: 100%;
+      object-fit: cover;
     }
 
     &__img-small-grp {
@@ -48,52 +53,17 @@ width: 80%;
       }
     }
 
-    &__information-product-grp {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
+    &__product-name h3 {
+      font-size: 22px;
+      font-weight: 400;
+      padding: 20px 0;
     }
 
-    &__product-name {
-      h3 {
-        font-size: 32px;
-        font-weight: 400;
-        padding: 20px 0;
-      }
-    }
-
-    &__product-price {
-      h3 {
-        color: black;
-        font-size: 26px;
-        font-weight: 600;
-        padding-bottom: 20px;
-        text-transform: none;	
-      }
-    }
-
-    &__product-style,
-    &__product-material {
-      width: 150px;
-      justify-content: center;
-      text-align: left;
-      // align-items: center;
-      padding-bottom: 30px;
-    }
-
-    &__product-style-title,
-    &__product-material-title {
-      h5 {
-        font-size: 17px;
-        font-weight: 500;
-      }
-
+    &__product-price h3 {
+      color: black;
+      font-size: 22px;
+      font-weight: 600;
       padding-bottom: 20px;
-    }
-
-    &__product-style-selected,
-    &__product-material-selected {
-      width: 200px;
     }
 
     &__product-quantity-grp {
@@ -101,90 +71,25 @@ width: 80%;
       border-top: 1px solid rgb(213, 213, 213);
       border-bottom: 1px solid rgb(213, 213, 213);
     }
-
-    &__quantity-title {
-      p {
-        color: rgb(119, 164, 100);
-      }
+   &__shipping-warranty-grp {
+      padding: 0 20px;
     }
-
-    &__product-quantity-grp-bottom {}
-
-    &__product-quantity {
-      display: flex;
-      justify-content: center;
-      padding: 20px;
-
-      &--btn-decrement,
-      &--btn-increment,
-      &--number {
-        border: 1px solid rgb(193, 193, 193);
-        border-radius: 0 !important;
-        width: 40px;
-        height: 40px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        font-size: 24px;
-      }
-
-      &--number {
-        border-left: none;
-        border-right: none;
-      }
-    }
-
     &__btn-add-cart {
       display: flex;
       justify-content: center;
       padding-bottom: 20px;
-
+   
       button {
         width: 220px;
-        font-size: 20px;
         height: 50px;
+        font-size: 20px;
         color: white;
         background-color: #15a69d;
       }
-    }
 
-    &__btn-add-cart:hover {
-      button {
-        border: none !important;
+      button:hover {
         color: orange !important;
-      }
-    }
-
-    &__shipping-warranty-grp {
-      width: 80%;
-      border-bottom: 1px solid rgb(213, 213, 213);
-      padding: 20px 0;
-      display: flex;
-      flex-direction: column;
-      gap: 10px;
-    }
-
-    &__shipping,
-    &__warranty-return {
-      display: flex;
-      gap: 20px;
-      cursor: pointer;
-
-      p {
-        margin: 0;
-        padding: 0;
-        font-size: 17px;
-      }
-
-      svg {
-        font-size: 20px;
-      }
-    }
-
-    &__shipping:hover,
-    &__warranty-return:hover {
-      p {
-        text-decoration: underline;
+        background-color: #127f79;
       }
     }
   }
@@ -192,36 +97,18 @@ width: 80%;
   .detail-product-card-describe-wrapper {
     font-family: "Muli", "Roboto Condensed", "sans-serif";
     font-size: 17px;
+
     h3,
     h5 {
       color: #15a69d;
     }
   }
 
-
   .detail-product-card-bottom {
-    width: 100vw;
+    width: 100%;
     display: flex;
     justify-content: center;
     padding-bottom: 30px;
-
-    &__related-products-grp {
-      &--title {
-        padding: 20px 20px;
-
-        h3 {
-          font-size: 24px;
-          font-weight: 400;
-        }
-      }
-    }
-
-    &__related-products-grp-item-grp {
-      display: flex;
-      justify-content: center;
-      text-align: center;
-      align-items: center;
-    }
 
     &__related-products-grp-item {
       padding: 20px 10px;
@@ -238,29 +125,11 @@ width: 80%;
         font-size: 17px;
       }
 
-      &--name:hover {
-        p {
-          text-decoration: underline;
-        }
-      }
-
       &--price {
         font-weight: 600;
         font-size: 17px;
       }
     }
-  }
-
-}
-
-@media screen and (max-width: 1224px) {
-  .detail-product-card-wrapper {
-  }
-}
-
-@media screen and (max-width: 900px) {
-  .detail-product-card-wrapper {
-    padding-top: 0;
   }
 }
 
@@ -276,7 +145,7 @@ width: 80%;
     padding: 20px;
     display: flex;
     p {
-      font-size: 24px;
+      font-size: 16px;
       font-weight: 500;
     }
   }
@@ -291,7 +160,7 @@ width: 80%;
     &--title-review {
       padding-bottom: 10px;
       p {
-        font-size: 18px;
+        font-size: 16px;
         font-weight: 500;
       }
     }
@@ -406,7 +275,7 @@ width: 80%;
     &--title {
       margin-left: 10px;
       p {
-        font-size: 18px;
+        font-size: 16px;
         font-weight: 500;
       }
     }
@@ -496,88 +365,41 @@ width: 80%;
   }
 }
 
-.detail-product-card-comment-wrapper {
-  display: flex;
-  justify-content: center;
-}
-.product-images {
-  position: relative; /* Để định vị các nút trong slider-image */
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .detail-product-card-wrapper {
+    flex-direction: column;
+    padding: 0 16px;
+  }
+
+  .detail-product-card-top {
     width: 100%;
-}
-.image-slider {
-    position: relative; /* Để định vị các nút điều hướng */
-    width: 100%; /* Đặt chiều rộng của slider */
-    max-width: 800px; /* Tối đa chiều rộng */
-    margin: auto; /* Căn giữa slider */
-    overflow: hidden; /* Ẩn các phần hình ảnh vượt ra ngoài slider */
-    // border: 1px solid #ccc; /* Đường viền cho slider */
-    // border-radius: 8px; /* Góc bo tròn */
-    // box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Đổ bóng */
-    text-align: center;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .detail-product-card-top__btn-add-cart button {
+    width: 100%;
+  }
+
+  .detail-product-card-comment {
+    width: 100%;
+  }
 }
 
-.slider-image .button-prev,
-.slider-image .button-next {
-   position: absolute;
-    top: 50%; /* Đặt nút ở giữa theo chiều dọc */
-    transform: translateY(-50%); /* Căn giữa theo chiều dọc */
-    background: rgba(0, 0, 0, 0.5); /* Nền trong suốt cho nút */
-    color: white; /* Màu chữ */
-    border: none; /* Không có đường viền */
-    border-radius: 5px; /* Bo tròn góc */
-    padding: 10px; /* Khoảng đệm cho nút */
-    cursor: pointer; /* Con trỏ tay khi hover */
-    transition: background-color 0.3s; /* Hiệu ứng chuyển tiếp cho màu nền */
+@media (min-width: 768px) and (max-width: 1024px) {
+  .detail-product-card-top {
+    width: 85%;
+  }
 }
 
-.slider-image .button-prev {
-  left: 150px;
-  z-index: 100000;
-}
+@media (max-width: 400px) {
+  .detail-product-card-top__img-small-grp img {
+    width: 80px;
+    height: 80px;
+  }
 
-.slider-image .button-next {
-  right: 10px;
-}
-.slider-image {
-    width: 100%; /* Đặt chiều rộng của mỗi hình ảnh */
-}
-
-.slide-number {
-    position: absolute; /* Định vị số thứ tự hình ảnh */
-    bottom: 10px; /* Cách đáy 10px */
-    left: 50%; /* Căn giữa */
-    transform: translateX(-50%); /* Căn giữa theo trục x */
-    color: white; /* Màu chữ */
-    background-color: rgba(0, 0, 0, 0.5); /* Nền bán trong suốt */
-    padding: 5px 10px; /* Khoảng đệm */
-    border-radius: 5px; /* Bo tròn góc */
-    font-weight: bold; /* Chữ đậm */
-}
-
-button {
-    background-color: rgba(255, 255, 255, 0.8); /* Nền bán trong suốt cho nút */
-    border: none; /* Không có đường viền */
-    border-radius: 50%; /* Bo tròn nút */
-    cursor: pointer; /* Con trỏ tay khi hover */
-    padding: 10px; /* Khoảng đệm cho nút */
-    transition: background-color 0.3s; /* Hiệu ứng chuyển tiếp cho màu nền */
-}
-
-button:hover {
-    background-color: rgba(255, 255, 255, 1); /* Đổi màu nền khi hover */
-}
-.slider-image {
-    width: 100%; /* Đảm bảo hình ảnh chiếm toàn bộ chiều rộng của slider */
-    display: flex; /* Sử dụng flexbox để căn giữa hình ảnh */
-    justify-content: center; /* Căn giữa theo chiều ngang */
-    align-items: center; /* Căn giữa theo chiều dọc */
-    overflow: hidden; /* Ẩn bất kỳ phần nào của hình ảnh vượt ra ngoài */
-}
-
-.slider-image img {
-    max-width: 100%; /* Đảm bảo hình ảnh không vượt quá chiều rộng của slider */
-    height: auto; /* Giữ tỉ lệ khung hình của hình ảnh */
-    border-radius: 8px; /* Bo tròn góc hình ảnh */
-    object-fit: cover;
-  object-position: center;
+  .detail-product-card-top__product-name h3 {
+    font-size: 24px;
+  }
 }

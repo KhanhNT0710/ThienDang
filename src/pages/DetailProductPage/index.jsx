@@ -11,9 +11,9 @@ const DetailProductPage = () => {
   }, [params.id_product])
 
   return (
-    <div>
+    <>
       <DetailProductCard />
-    </div>
+    </>
   );
 };
 

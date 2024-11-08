@@ -413,7 +413,7 @@ const DetailProductCard = () => {
                         <div className="detail-product-card-comment__star-average">
                             <div className="detail-product-card-comment__star-average--star">
                                 <div className="detail-product-card-comment__star-average--title-review">
-                                    <p>Star average:</p>
+                                    <p>Đánh giá sản phẩm:</p>
                                 </div>
                                 <div className="detail-product-card-comment__star-average--star-avg">
                                     <Rate value={5} />
@@ -518,7 +518,7 @@ const DetailProductCard = () => {
                                         lg={24}
                                         className="detail-product-card-bottom__related-products-grp--title"
                                     >
-                                        <h3>Sản Phẩm Liên Quan</h3>
+                                        {/* <h3>Sản Phẩm Liên Quan</h3> */}
                                     </Col>
 
                                     {/* <Row className="detail-product-card-bottom__related-products-grp-item-grp">
