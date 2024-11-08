@@ -124,7 +124,7 @@ const HeaderComponent = () => {
             className="header-container-menu-bar__logo__link"
             to={ROUTES.HOME_PAGE}
           >
-            <img src={`${API_URL}/den/logo/slogan.jpg`} alt="logo" />
+            <img src={`${API_URL}/uploads/logo-header.png`} alt="logo" />
           </Link>
         </div>
         {/* Mobile menu toggle icon */}
@@ -176,8 +176,13 @@ const HeaderComponent = () => {
                   Không gian trang trí
                 </Link>
               </li>
+              {/* <li className="header-container-nav-mobile__item">
+                <Link to={ROUTES.BLOG_PAGE} onClick={handleToggleMobileNav}>
+                  Trải nghiệm làm đèn lồng
+                </Link>
+              </li> */}
               <li className="header-container-nav-mobile__item">
-                <a href="tel:0988015093" onClick={handleToggleMobileNav}>
+                <a href="tel:+84988015093" onClick={handleToggleMobileNav}>
                   Liên Hệ
                 </a>
               </li>
@@ -262,10 +267,15 @@ const HeaderComponent = () => {
                     <span>Không gian trang trí</span>
                   </Link>
                 </li>
+                {/* <li className="header-navBar__listItem">
+                  <Link to={ROUTES.BLOG_PAGE}>
+                    <span>Trải nghiệm làm đèn lồng</span>
+                  </Link>
+                </li> */}
                 <li className="header-navBar__listItem">
-                  <a href="tel:0988015093">
-                    <span>LIÊN HỆ</span>
-                  </a>
+                  <Link to={ROUTES.BLOG_PAGE}>
+                    <span>Trải nghiệm làm đèn lồng</span>
+                  </Link>
                 </li>
               </ul>
             </div>

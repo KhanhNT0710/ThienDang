@@ -129,7 +129,7 @@ const FooterComponent = () => {
             </p>
             <p className="footer-item__description">
               <a target="_blank" href="https://zalo.me/0988015093">
-                Điện thoại: 0988015093
+                Điện thoại: +8488015093
               </a>
             </p>
             <p className="footer-item__description">

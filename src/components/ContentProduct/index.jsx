@@ -10,7 +10,7 @@ const ContentProduct = () => {
   return (
     <div className="content-product-all-wrapper">
       <div className="content-product-all-container">
-        <div className="content-product-all-container__breadcrumb">
+        {/* <div className="content-product-all-container__breadcrumb">
           <Breadcrumb
             items={[
               {
@@ -34,12 +34,11 @@ const ContentProduct = () => {
               },
             ]}
           />
-        </div>
+        </div> */}
         <div className="content-product-all-container__description">
           <h3>Sản phẩm Đèn Lồng Thiên Đăng</h3>
         </div>
         <div className="content-product-container">
-
           <div className="content-product-container__product-content">
             <ListProductCard />
           </div>
