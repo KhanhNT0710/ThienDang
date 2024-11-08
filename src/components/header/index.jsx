@@ -182,9 +182,9 @@ const HeaderComponent = () => {
                 </Link>
               </li> */}
               <li className="header-container-nav-mobile__item">
-                <a href="tel:+84988015093" onClick={handleToggleMobileNav}>
-                  Liên Hệ
-                </a>
+                <Link to={ROUTES.TRAVEL_PAGE} onClick={handleToggleMobileNav}>
+                  Trải nghiệm làm đèn lồng
+                </Link>
               </li>
               <li className="header-container-nav-mobile__item">
                 <div className="header-left" style={{ color: "white" }}>
