@@ -273,7 +273,7 @@ const HeaderComponent = () => {
                   </Link>
                 </li> */}
                 <li className="header-navBar__listItem">
-                  <Link to={ROUTES.BLOG_PAGE}>
+                  <Link to={ROUTES.TRAVEL_PAGE}>
                     <span>Trải nghiệm làm đèn lồng</span>
                   </Link>
                 </li>

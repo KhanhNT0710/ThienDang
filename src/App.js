@@ -20,6 +20,7 @@ import UserPurchaseHistoryPage from './pages/UserPurchaseHistoryPage';
 import AboutPage from './pages/AboutPage';
 import i18next from 'i18next';
 import ManaProductPage from './pages/ManaProductPage';
+import TravelPage from './pages/Travel';
 
 function App() {
   const dispatch = useDispatch();
@@ -43,6 +44,7 @@ function App() {
             <Route path={ROUTES.MANA_PRODUCT_PAGE} element={<ManaProductPage />} />
             <Route path={ROUTES.BLOG_PAGE} element={<BlogPage />} />
             <Route path={ROUTES.ABOUT_US_PAGE} element={<AboutPage />} />
+            <Route path={ROUTES.TRAVEL_PAGE} element={<TravelPage />} />
             <Route path={ROUTES.DETAIL_PRODUCT_PAGE} element={<DetailProductPage />} />
             <Route path={ROUTES.LOGIN_PAGE} element={<LoginPage />} />
             <Route path={ROUTES.REGISTER_PAGE} element={<RegisterPage />} />

@@ -13,5 +13,6 @@ export const ROUTES = {
   USER_PURCHASE_HISTORY_PAGE: "/user/purchase-history",
   ORDER_PAGE: "/order",
   PAYMENT_PAGE: "/payment",
-  MANA_PRODUCT_PAGE: "/mana"
+  MANA_PRODUCT_PAGE: "/mana",
+  TRAVEL_PAGE: "/travel"
 };
