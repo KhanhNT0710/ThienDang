@@ -33,10 +33,11 @@ const ProductCard = (props) => {
 
   return (
     <div className="product-card-wrapper">
-      <div className="product-card">
+      <div className="product-card"
+        onClick={handleRedirectToDetailProductPage}
+      >
         <div className="product-card__img">
           <img src={urls[0]} alt={name}
-            onClick={handleRedirectToDetailProductPage}
           />
           <div className="button-shop">
             <button>Xem ngay</button>
@@ -48,7 +49,6 @@ const ProductCard = (props) => {
           </div>
           <div
             className="product-card__name"
-            onClick={handleRedirectToDetailProductPage}
           >
             <h4>{name}</h4>
           </div>

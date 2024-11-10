@@ -20,7 +20,6 @@ const CarouselComponent = () => {
       // Lấy danh sách imgDecors từ API và chỉ giữ lại tối đa 10 ảnh
       const imgDecors = response.data.imgDecors || [];
       setCarouselImages(imgDecors.slice(0, 10));
-      console.log(carouselImages, "carouselImages");
     } catch (error) {
       console.error("Error fetching images:", error);
     }
