@@ -4,7 +4,38 @@
   background-color: #f9f9f9; // Màu nền nhẹ cho slider
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  margin-top: 30px;
+   position: relative;
+
+    .custom-prev,
+    .custom-next {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        color: #fff;
+        border: none;
+        border-radius: 50%;
+        width: 40px;
+        height: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        z-index: 1;
+    }
+
+    .custom-prev {
+        left: 5px;
+    }
+
+    .custom-next {
+        right: 5px;
+    }
+    
+    .centered-image {
+        max-width: 100%;
+        max-height: 100%;
+        object-fit: contain;
+    }
 }
 
 // Tiêu đề của slider

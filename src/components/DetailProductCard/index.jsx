@@ -349,8 +349,23 @@ const DetailProductCard = () => {
             <div className="detail-product-card-container">
                 <div className="detail-product-card-top-wrapper">
                     <div className="detail-product-card-top">
-                        <div className="product-images">
+                        {/* <div className="product-images">
                             <ImageSlider urls={productInfo?.urls} />
+                        </div> */}
+                        <div className={`image-grid ${productInfo?.urls && productInfo.urls.length === 1 ? 'single-image' : ''}`}>
+                            {productInfo?.urls && Array.isArray(productInfo.urls) && productInfo.urls.length > 0 ? (
+                                productInfo.urls.map((image, index) => (
+                                    <div key={index} className="grid-image">
+                                        <Image
+                                            loading="lazy"
+                                            src={image}
+                                            alt={`Image ${index + 1}`}
+                                        />
+                                    </div>
+                                ))
+                            ) : (
+                                <p>No images available</p>
+                            )}
                         </div>
                         <form
                             onSubmit={handleSubmit(onValid)}

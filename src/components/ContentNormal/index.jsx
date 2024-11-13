@@ -8,16 +8,22 @@ import Section1 from "../section1";
 import Section5 from "../section5";
 import SLideProduct from "../SlideProducts";
 import OpenLanterns from "../OpenLanterns";
+import SlideOtherProduct from "../OtherProduct";
 
 const ContentNormal = () => {
   return (
     <div className="content-normal-container">
       <div>      <CarouselComponent /></div>
       <div>      <Section2 /></div>
-      {/* <div><Section5 /> </div> */}
 
       <div>      <Section1 /></div>
+      {/* đèn lồng khác  */}
+      <div>
+        <SlideOtherProduct />
+      </div>
+      {/* sản phẩm nổi bật  */}
       <div> <SLideProduct /> </div>
+      {/* xưởng */}
       <div>      <Section4 />      </div>
       <OpenLanterns />
     </div>

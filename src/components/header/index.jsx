@@ -1,16 +1,12 @@
 import React, { useEffect, useState } from "react";
 import logo from "./logo.png";
-import { Button, Dropdown, Form, Input, Menu } from "antd";
+import { Button, Dropdown } from "antd";
 import "./style.scss";
 import {
   BarsOutlined,
   CaretDownOutlined,
-  FacebookOutlined,
-  MailOutlined,
   MenuOutlined,
-  PhoneOutlined,
   SearchOutlined,
-  ShoppingCartOutlined,
   UserOutlined,
 } from "@ant-design/icons";
 import { Link, Route, useNavigate } from "react-router-dom";
@@ -19,12 +15,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { logout } from "../../redux/features/user/userSlice";
 import PostFilterForm from "../PostFilterForm";
 import { API_URL } from "../../apis/api";
-import {
-  actFetchAllProducts,
-  setNewPage,
-  setSearchKey,
-} from "../../redux/features/product/productSlice";
-import { useTranslation } from "react-i18next";
+
 import axios from "axios";
 
 const HeaderComponent = () => {
@@ -32,7 +23,7 @@ const HeaderComponent = () => {
   const [isToggle, setIsToggle] = useState(false);
   const { isLogin, userInfo } = useSelector((state) => state.user);
   const dispatch = useDispatch();
-  const handleFilterChangeInput = (newFilter) => {};
+  const handleFilterChangeInput = (newFilter) => { };
   const [isShowMenuMobile, setIsShowMenuMobile] = useState(false);
   const [isMobileNavOpen, setIsMobileNavOpen] = useState(false); // State to toggle mobile menu
   const [isSubMenuOpen, setIsSubMenuOpen] = useState(false);
@@ -232,9 +223,8 @@ const HeaderComponent = () => {
         >
           <div className="header-navBar">
             <div
-              className={`header-navBar__list-grp ${
-                isToggle ? "header-navBar__list-grp-show" : ""
-              }`}
+              className={`header-navBar__list-grp ${isToggle ? "header-navBar__list-grp-show" : ""
+                }`}
             >
               <ul className="header-navBar__list">
                 <li className="header-navBar__listItem header-navBar__shopItem">

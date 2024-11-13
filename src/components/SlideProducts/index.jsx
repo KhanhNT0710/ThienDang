@@ -4,6 +4,7 @@ import './style.scss'
 import { Link } from "react-router-dom";
 import { ROUTES } from "../../constants/routes";
 import { API_URL } from "../../apis/api";
+import { LeftOutlined, RightOutlined } from "@ant-design/icons";
 
 function SlideProduct() {
     const [display, setDisplay] = useState(true);
@@ -13,6 +14,9 @@ function SlideProduct() {
         speed: 500,
         slidesToShow: 4,  // Mặc định hiển thị 4 ảnh
         slidesToScroll: 1,
+        autoplay: true,
+        prevArrow: <PrevButton />, // Nút trái tùy chỉnh
+        nextArrow: <NextButton />, // Nút phải tùy chỉnh
         responsive: [
             {
                 breakpoint: 500,  // Kích thước màn hình dưới 500px
@@ -123,5 +127,24 @@ function SlideProduct() {
         </div>
     );
 }
+// Nút điều hướng tùy chỉnh
+const PrevButton = (props) => {
+    const { className, onClick } = props;
+    return (
+        <button className={`${className} custom-prev`} onClick={onClick}>
+            <LeftOutlined />
+        </button>
+    );
+};
+
+const NextButton = (props) => {
+    const { className, onClick } = props;
+    return (
+        <button className={`${className} custom-next`} onClick={onClick}>
+            <RightOutlined />
+        </button>
+    );
+};
+
 
 export default SlideProduct;

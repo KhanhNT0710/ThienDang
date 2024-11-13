@@ -16,6 +16,7 @@ p {
   cursor: zoom-in;
 }
 .detail-product-card-container {
+  margin: 0 auto;
   max-width: 80vw;
 }
   .detail-product-card-top-container,
@@ -25,6 +26,48 @@ p {
     justify-content: center;
     width: 100%;
   }
+  .image-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2 ảnh trên máy tính */
+    gap: 10px;
+    justify-items: center;
+     img {
+      width: 100%;
+      height: auto;
+    }
+}
+.single-image {
+   display: grid;
+        grid-template-columns: 1fr; /* 1 ảnh trên điện thoại */
+    gap: 10px;
+    justify-items: center;
+    img {
+      width: 30vw;
+    }
+}
+
+.grid-image {
+    width: 100%;
+}
+
+/* Media query cho điện thoại (một ảnh mỗi hàng) */
+@media (max-width: 768px) {
+    .image-grid {
+        grid-template-columns: 1fr; /* 1 ảnh trên điện thoại */
+    }
+    .single-image {
+   display: grid;
+        grid-template-columns: 1fr; /* 1 ảnh trên điện thoại */
+    gap: 10px;
+    justify-items: center;
+    img {
+      width: 100%;
+      height: auto;
+    }
+}
+}
+
+
 .image-slider {
   max-width: 100vw;
   text-align: center;
