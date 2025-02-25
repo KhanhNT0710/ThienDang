@@ -44,22 +44,22 @@ const ProductCard = (props) => {
           </div>
         </div>
         <div className="product-card__infor">
-          <div className="product-card__category">
+          {/* <div className="product-card__category">
             <span>{category}</span>
-          </div>
+          </div> */}
           <div
             className="product-card__name"
           >
             <h4>{name}</h4>
           </div>
-          {style && (
+          {/* {style && (
             <div className="product-card__price">
               <span>{style}</span>
             </div>
-          )}
-          <div className="product-card__price">
+          )} */}
+          {/* <div className="product-card__price">
             <p>Giá: Liên hệ</p>
-          </div>
+          </div> */}
         </div>
 
       </div>

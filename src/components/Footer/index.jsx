@@ -123,14 +123,14 @@ const FooterComponent = () => {
           </div>
           <div className="footer-item__description-grp">
             <p className="footer-item__description">
-              Bảo tồn làng nghề - giữ gìn tinh hoa.
+              CÔNG TY TNHH SX TM DV THIÊN ĐĂNG
             </p>
             <p className="footer-item__description">
               Bồng Lai - Điện Minh - Điện Bàn - Quảng Nam
             </p>
             <p className="footer-item__description">
               <a target="_blank" href="https://zalo.me/0988015093">
-                Điện thoại: +84 88015093
+                Điện thoại: 0988015093
               </a>
             </p>
             <p className="footer-item__description">

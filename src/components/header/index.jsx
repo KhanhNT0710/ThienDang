@@ -57,7 +57,10 @@ const HeaderComponent = () => {
       key: "1",
       label: <Link to={ROUTES.MANA_PRODUCT_PAGE}>Thêm sản phẩm</Link>,
     },
-
+    {
+      key: "3",
+      label: <Link to={ROUTES.MANA_PRODUCT_PAGE}>Viết bài giới thiệu</Link>,
+    },
     {
       type: "divider",
     },
@@ -167,6 +170,11 @@ const HeaderComponent = () => {
                   Không gian trang trí
                 </Link>
               </li>
+              <li className="header-container-nav-mobile__item">
+                <Link to={ROUTES.BLOG_PAGE} onClick={handleToggleMobileNav}>
+                  Tin tức
+                </Link>
+              </li>
               {/* <li className="header-container-nav-mobile__item">
                 <Link to={ROUTES.BLOG_PAGE} onClick={handleToggleMobileNav}>
                   Trải nghiệm làm đèn lồng
@@ -257,6 +265,7 @@ const HeaderComponent = () => {
                     <span>Không gian trang trí</span>
                   </Link>
                 </li>
+
                 {/* <li className="header-navBar__listItem">
                   <Link to={ROUTES.BLOG_PAGE}>
                     <span>Trải nghiệm làm đèn lồng</span>
