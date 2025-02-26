@@ -1,6 +1,6 @@
 import React from "react";
 import CarouselComponent from "../Carousel";
-import Section2 from "../section2";
+import AboutContent from "../section2";
 import "./style.scss";
 import Section3 from "../section3";
 import Section4 from "../section4";
@@ -14,7 +14,7 @@ const ContentNormal = () => {
   return (
     <div className="content-normal-container">
       <div>      <CarouselComponent /></div>
-      <div>      <Section2 /></div>
+      <div>      <AboutContent /></div>
 
       <div>      <Section1 /></div>
       {/* đèn lồng khác  */}

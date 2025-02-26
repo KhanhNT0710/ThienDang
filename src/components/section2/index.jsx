@@ -5,7 +5,7 @@ import { useNavigate } from "react-router-dom";
 import { ROUTES } from "../../constants/routes";
 import { API_URL } from "../../apis/api";
 
-const Section2 = () => {
+const AboutContent = () => {
     const navigate = useNavigate();
 
     const handleRedirectToProductPage = () => {
@@ -26,7 +26,6 @@ const Section2 = () => {
                         </div>
                     </div>
                 </Col>
-
                 <Col xs={24} sm={24} md={12} lg={12} xl={12}>
                     <div className="section2-right mobile_none">
                         <img
@@ -41,4 +40,4 @@ const Section2 = () => {
     );
 };
 
-export default Section2;
+export default AboutContent;
